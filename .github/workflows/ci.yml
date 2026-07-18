@@ -1,0 +1,33 @@
+name: CI Gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  gate:
+    permissions:
+      actions: write
+      contents: read
+      pull-requests: read
+    uses: dryvist/.github/.github/workflows/_ci-gate.yml@main
+    with:
+      nix_validate: true
+      all_systems: true
+      markdown_lint: true
+      file_size: true
+      filters: |
+        markdown:
+          - '**.md'
+          - '.markdownlint*'
+        nix:
+          - '**.nix'
+          - 'flake.lock'

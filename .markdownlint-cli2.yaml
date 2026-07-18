@@ -1,0 +1,16 @@
+config:
+  MD013:
+    line_length: 160
+    tables: true
+    strict: true
+
+ignores:
+  - "flake.lock"
+  # Runtime prompt bodies preserve source formatting and may intentionally use
+  # repeated headings, template tags, or literal long lines. OKF frontmatter is
+  # validated separately; ordinary repository and catalog index Markdown stays
+  # under the canonical lint rules.
+  - "auto-ai-agent/!(index).md"
+  - "automation/!(index).md"
+  - "applications/!(index).md"
+  - "developer-tools/!(index).md"

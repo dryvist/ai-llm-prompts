@@ -1,0 +1,37 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: end-of-file-fixer
+        exclude: '^(auto-ai-agent|automation|applications|developer-tools)/(?!index\.md$).*\.md$'
+      - id: trailing-whitespace
+        exclude: '^(auto-ai-agent|automation|applications|developer-tools)/(?!index\.md$).*\.md$'
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: mixed-line-ending
+        args: [--fix=lf]
+        exclude: '^(auto-ai-agent|automation|applications|developer-tools)/(?!index\.md$).*\.md$'
+      - id: check-added-large-files
+        args: [--maxkb=100, --enforce-all]
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.20.0
+    hooks:
+      - id: markdownlint-cli2
+
+  - repo: local
+    hooks:
+      - id: okf-frontmatter
+        name: Validate prompt OKF frontmatter
+        language: system
+        entry: >-
+          find auto-ai-agent automation applications developer-tools
+          -maxdepth 1 -type f -name *.md ! -name index.md
+          -exec yq --front-matter extract --exit-status
+          '(.type == "LLM Prompt" or .type == "LLM Prompt Fragment") and
+          has("title") and has("description") and has("resource") and
+          has("tags") and has("timestamp") and has("status") and
+          has("consumers") and has("render") and has("source_history")'
+          {} ;
+        pass_filenames: false
+        always_run: true

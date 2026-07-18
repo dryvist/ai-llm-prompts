@@ -1,0 +1,57 @@
+# Automation
+
+Prompts and reusable fragments for repository automation, cloud routines, and retired workflow references.
+
+## Prompts
+
+* [DRY Enforcer Agent](ai-workflows-agent-dry-enforcer.md) - Dormant Copilot agent profile for code simplification and DRY enforcement.
+* [Issue Analyst Agent](ai-workflows-agent-issue-analyst.md) - Dormant Copilot agent profile for issue-intent analysis.
+* [Label Expert Agent](ai-workflows-agent-label-expert.md) - Dormant Copilot agent profile for canonical issue labeling.
+* [Momentum Analyst Agent](ai-workflows-agent-momentum-analyst.md) - Dormant Copilot agent profile for development-momentum analysis.
+* [Best Practices Recommender](ai-workflows-best-practices.md) - Weekly repository-practices audit prompt.
+* [CI Failure Issue](ai-workflows-ci-fail-issue.md) - Dormant prompt for creating an issue from a main-branch CI failure.
+* [CI Failure Auto-Fix](ai-workflows-ci-fix.md) - Prompt for diagnosing and minimally fixing CI failures.
+* [Code Simplifier](ai-workflows-code-simplifier.md) - Behavior-preserving code simplification prompt.
+* [Dependency Update Risk Review](ai-workflows-dep-review.md) - Advisory dependency-update risk review prompt.
+* [DRY Principles](ai-workflows-dry-principles-fragment.md) - Reusable code-simplification and duplication rules.
+* [Issue Analysis](ai-workflows-issue-analysis-fragment.md) - Reusable issue categorization and duplicate-detection rules.
+* [Issue Backlog Sweep](ai-workflows-issue-backlog-sweep.md) - Read-only issue-backlog triage prompt.
+* [Issue Hygiene](ai-workflows-issue-hygiene.md) - Issue duplicate and housekeeping analysis prompt.
+* [Issue Linker](ai-workflows-issue-linker.md) - PR-to-issue association and lifecycle prompt.
+* [Issue Auto-Resolver](ai-workflows-issue-resolver.md) - Prompt for implementing a minimal fix for one GitHub issue.
+* [Issue Sweeper](ai-workflows-issue-sweeper.md) - Weekly issue status-analysis prompt.
+* [Issue Triage](ai-workflows-issue-triage.md) - Issue categorization, deduplication, and labeling prompt.
+* [Label Sync](ai-workflows-label-sync.md) - Canonical repository-label synchronization prompt.
+* [Merge Momentum](ai-workflows-merge-momentum-fragment.md) - Reusable development-direction analysis rules.
+* [Next Steps](ai-workflows-next-steps.md) - Development-momentum analysis prompt.
+* [Post-Merge Docs Review](ai-workflows-post-merge-docs-review.md) - Post-merge documentation quality review prompt.
+* [Post-Merge Test Coverage](ai-workflows-post-merge-tests.md) - Post-merge test-coverage improvement prompt.
+* [PR Review Responder](ai-workflows-pr-review-responder.md) - Prompt for evaluating and resolving pull-request feedback.
+* [AI Provenance Footer](ai-workflows-provenance-footer.md) - Canonical provenance footer fragment for AI-created pull requests.
+* [Release Notes](ai-workflows-release-notes.md) - Release-highlight drafting prompt.
+* [Repository Orchestrator](ai-workflows-repo-orchestrator.md) - Multi-repository workflow dispatch prompt.
+* [CI Failure Doctor](ci-failure-doctor.md) - Investigates failed GitHub Actions runs and reports root causes and remediation.
+* [Daily Malicious Code Scan](daily-malicious-code-scan.md) - Reviews recent code changes for malicious behavior and supply-chain compromise indicators.
+* [Dependabot PR Bundler](dependabot-pr-bundler.md) - Bundles compatible dependency security updates into tested draft pull requests.
+* [GitHub Agentic Workflows Reference Template](gh-aw-reference-template.md) - Historical, non-production example of the retired GH-AW workflow format.
+* [Public Docs Updater](public-docs-updater.md) - Reviews recent public repository activity and prepares one safe documentation update.
+* [Repository Health Audit](repo-health-audit.md) - Audits repository automation, security, and maintenance health and files structured findings.
+* [Bot PR Merge](routine-bot-pr-merge.md) - Security triage and allowlisted bot pull-request merge routine prompt.
+* [Deploy Routines Reference](routine-deploy-reference.md) - Historical auto-deployment prompt retained from the broken RemoteTrigger workflow.
+* [Documentation Polish](routine-docs-polish.md) - Documentation quality improvement routine prompt.
+* [Documentation Sync](routine-docs-sync.md) - Cross-site documentation synchronization routine prompt.
+* [Estate Briefing](routine-estate-briefing.md) - Read-only daily GitHub estate briefing routine prompt.
+* [Estate Janitor](routine-estate-janitor.md) - GitHub estate maintenance routine prompt.
+* [Routine Attribution](routine-fragment-attribution.md) - Shared provenance and attribution rules for cloud routines.
+* [Routine Hard Rules](routine-fragment-hard-rules.md) - Shared load-bearing safety and mutation rules for cloud routines.
+* [Routine Connectivity Preflight](routine-fragment-preflight.md) - Shared authentication and egress preflight for cloud routines.
+* [Routine Prerequisites](routine-fragment-prerequisites.md) - Shared runtime tools and environment prerequisites for cloud routines.
+* [Routine Redaction](routine-fragment-redaction.md) - Shared sensitive-data redaction rules for cloud routines.
+* [Routine Skip List](routine-fragment-skip-list.md) - Shared repository exclusions for cloud routines.
+* [Routine Slack Output](routine-fragment-slack-output.md) - Shared Slack output and sanitization rules for cloud routines.
+* [Routine State File](routine-fragment-state-file.md) - Shared durable cross-run state contract for cloud routines.
+* [Routine State Migration](routine-fragment-state-migrate.md) - Shared one-run state migration fragment for renamed routines.
+* [Issue Solver](routine-issue-solver.md) - GitHub Actions task-driver prompt for resolving one Linear task.
+* [Pre-Commit Bump](routine-precommit-bump.md) - Estate-wide pre-commit hook update routine prompt.
+* [Repository Audit](routine-repo-audit.md) - Rotating estate-wide repository audit routine prompt.
+* [Sub-Issue Closer](sub-issue-closer.md) - Recursively closes parent issues after every tracked sub-issue is complete.

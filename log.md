@@ -1,5 +1,15 @@
 # Change Log
 
+## 2026-07-19
+
+* **Capability (hermes surface)**: Added the OpenRouter escalation contract —
+  discover current models/prices via the keyless public catalog (the
+  `dryvist/openrouter-models` skill), escalate deliberately for complicated
+  reasoning or advanced coding through the router only, hard $1.00/day budget
+  tracked in memory, `:free`-variant preference with a confidentiality rule.
+  Added the attribution rule: every delivered message ends with one line naming
+  the exact model id(s) actually used.
+
 ## 2026-07-18
 
 * **Correction (hermes surface)**: Dropped the generic `ai-default` alias — the

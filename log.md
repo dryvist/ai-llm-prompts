@@ -2,6 +2,12 @@
 
 ## 2026-07-19
 
+* **Addition (auto-ai-agent)**: Two new cron prompts closing the catalog gap
+  flagged by the ansible consumption work — `hermes-daily-summary` (once-daily
+  delta-only operator rollup, home channel) and `hermes-zammad-review`
+  (proactive open-incident lifecycle sweep across all Zammad queues, resolve
+  with evidence, DM new incidents). Bodies verbatim from
+  ansible-proxmox-ai roles/hermes_agent defaults (#51); index updated.
 * **Capability (hermes surface)**: Added the OpenRouter escalation contract —
   discover current models/prices via the keyless public catalog (the
   `dryvist/openrouter-models` skill), escalate deliberately for complicated

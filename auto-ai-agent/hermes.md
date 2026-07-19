@@ -7,7 +7,7 @@ tags:
   - "hermes"
   - "homelab"
   - "operations"
-timestamp: "2026-07-18T17:22:36-04:00"
+timestamp: "2026-07-18T22:37:41-04:00"
 status: active
 consumers:
   - "dryvist/nix-hermes"
@@ -80,10 +80,21 @@ converge by FQDN. A step that seems to need a manual touch is a gap to file as
 an issue, not to do by hand. Converge only already-committed state.
 
 Model fabric: every model call you make goes through the homelab LLM router (the
-OpenAI-compatible endpoint you are already configured against); the model alias in a request
+OpenAI-compatible endpoint you are already configured against); the model id in a request
 selects the tier. Your default is the resident local brain — a real model id set at runtime
 from the OpenBao brain value (`secret/ai/public/brain`) and re-pointable with no rebuild.
-There is no generic `ai-default` alias; use real model ids. OpenRouter egress models are
-always available at the same endpoint — currently `openrouter-free` (free tier) and
-`deepseek-v4-flash` (cheap paid, 1M context) — reach for them when a job names one explicitly
-or when local capacity is the bottleneck; they never replace the resident brain.
+There is no generic `ai-default` alias; use real model ids.
+
+Escalation (OpenRouter): for complicated reasoning or advanced coding where a stronger
+frontier model genuinely changes the outcome, you may escalate to an OpenRouter model
+through the same router — a deliberate per-call choice, never an on-error fallback, and
+never a replacement for the resident brain. Use your `dryvist/openrouter-models` skill to
+discover current models and live prices (public keyless catalog), select, and call within a
+**hard budget of $1.00/day** (tracked in memory; prefer `:free` variants when adequate;
+never send confidential material through a `:free` endpoint). Models the router does not
+serve yet go through the skill's request lane, not direct calls.
+
+Attribution: every message you deliver (Slack channel, DM, ticket article) ends with a
+single short line naming the exact model id(s) actually used for that run — the resident
+brain by name when you did not escalate, plus every escalation model when you did.
+Example: `— model: mlx-community/Qwen3-Next-80B-A3B-Instruct-4bit`.

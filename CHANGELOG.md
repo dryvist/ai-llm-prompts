@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.2.0...v0.3.0) (2026-07-21)
+
+
+### Features
+
+* add hermes-bot-pr-triage and hermes-docs-sync catalog jobs ([a25aaf2](https://github.com/dryvist/ai-llm-prompts/commit/a25aaf2ead11c887dbd7781f5187c89687445c42))
+
 ## [0.2.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.1.0...v0.2.0) (2026-07-21)
 
 

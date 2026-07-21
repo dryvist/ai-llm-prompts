@@ -1,5 +1,18 @@
 # Change Log
 
+## 2026-07-20
+
+* **Removal (automation)**: Retired `routine-issue-solver` — a Linear-JAC
+  GitHub-Actions task driver that duplicated the `ai-workflows` GitHub
+  issue→PR path and never went live. Its goal is a candidate for a future
+  Hermes job.
+* **Refactor (automation)**: Split `routine-bot-pr-merge` (Phase A →
+  `routine-fragment-bot-pr-security-triage`, Phase B →
+  `routine-fragment-bot-pr-merge-gates`) and `routine-docs-sync` (Step 8 →
+  `routine-fragment-docs-sync-pr-authoring`) via `include`, verbatim and
+  lossless, so every catalog file clears the 12KB file-size limit. Index
+  updated.
+
 ## 2026-07-19
 
 * **Addition (auto-ai-agent)**: Two new cron prompts closing the catalog gap

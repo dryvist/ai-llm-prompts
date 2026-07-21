@@ -14,5 +14,4 @@ System and user prompt assets consumed by applications and infrastructure servic
 * [Nix AI vault search example](nix-ai-vault-search-example.md) - Executable example system prompt for grounded Obsidian-vault retrieval.
 * [Raycast Smart Issue system prompt](raycast-smart-issue-system.md) - System role for turning brief ideas into structured GitHub issues.
 * [Raycast Smart Issue user template](raycast-smart-issue-user.md) - Dynamic context, output contract, and example used to generate a GitHub issue.
-* [Screenpipe shared system prompt](screenpipe-shared-system.md) - Shared system instructions applied to Screenpipe AI presets without an override.
 * [Vizzy IT consultant](vizzy-system.md) - System persona and ticket-handling rules for the Vizzy customer-portal assistant.

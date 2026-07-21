@@ -1,8 +1,8 @@
 ---
 type: LLM Prompt Fragment
-title: "Routine Attribution"
+title: "Attribution"
 description: "Shared provenance and attribution rules for cloud routines."
-resource: "prompt://dryvist/automation/routine/attribution"
+resource: "prompt://dryvist/automation/attribution"
 tags:
   - "automation"
   - "routine"

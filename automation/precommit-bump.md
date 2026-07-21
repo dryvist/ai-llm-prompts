@@ -2,7 +2,7 @@
 type: LLM Prompt
 title: "Pre-Commit Bump"
 description: "Estate-wide pre-commit hook update routine prompt."
-resource: "prompt://dryvist/automation/routine/precommit-bump"
+resource: "prompt://dryvist/automation/precommit-bump"
 tags:
   - "automation"
   - "routine"
@@ -30,8 +30,8 @@ Renovate's own `pre-commit` manager covers some repos that opt in via the centra
 
 ## Hard Rules (load-bearing)
 
-<!-- include: routine-fragment-hard-rules.md -->
-<!-- include: routine-fragment-redaction.md -->
+<!-- include: fragment-hard-rules.md -->
+<!-- include: fragment-redaction.md -->
 
 Routine-specific rules:
 
@@ -42,21 +42,21 @@ Routine-specific rules:
 
 ## Attribution
 
-<!-- include: routine-fragment-attribution.md -->
+<!-- include: fragment-attribution.md -->
 
 ## Prerequisites
 
-<!-- include: routine-fragment-prerequisites.md -->
+<!-- include: fragment-prerequisites.md -->
 
 ## State file — `state/precommit-bump.json`
 
-<!-- include: routine-fragment-state-file.md -->
+<!-- include: fragment-state-file.md -->
 
 ```bash
 OLD_STATE_PATHS="state/quartermaster.json"
 ```
 
-<!-- include: routine-fragment-state-migrate.md -->
+<!-- include: fragment-state-migrate.md -->
 
 Routine-specific fields (v2):
 
@@ -85,7 +85,7 @@ Routine-specific fields (v2):
 
 If `${ROUTINE_PAUSED}` non-empty: Slack `🛑 precommit-bump paused via env`, exit.
 
-<!-- include: routine-fragment-preflight.md -->
+<!-- include: fragment-preflight.md -->
 
 Compute prompt fingerprint, write to state.
 
@@ -201,7 +201,7 @@ Use the nested-committer `jq` recipe from the Hard Rules against `repos/$GH_OWNE
 
 ## Slack output
 
-<!-- include: routine-fragment-slack-output.md -->
+<!-- include: fragment-slack-output.md -->
 
 ### Path A — PRs opened
 

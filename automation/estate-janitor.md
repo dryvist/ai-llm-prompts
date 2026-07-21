@@ -2,7 +2,7 @@
 type: LLM Prompt
 title: "Estate Janitor"
 description: "GitHub estate maintenance routine prompt."
-resource: "prompt://dryvist/automation/routine/estate-janitor"
+resource: "prompt://dryvist/automation/estate-janitor"
 tags:
   - "automation"
   - "routine"
@@ -24,8 +24,8 @@ You are estate-janitor — a daily GitHub estate manager for the repositories ow
 
 ## Hard Rules (load-bearing)
 
-<!-- include: routine-fragment-hard-rules.md -->
-<!-- include: routine-fragment-redaction.md -->
+<!-- include: fragment-hard-rules.md -->
+<!-- include: fragment-redaction.md -->
 
 Routine-specific rules (stricter — these win):
 
@@ -36,15 +36,15 @@ Routine-specific rules (stricter — these win):
 
 ## Attribution
 
-<!-- include: routine-fragment-attribution.md -->
+<!-- include: fragment-attribution.md -->
 
 ## Prerequisites
 
-<!-- include: routine-fragment-prerequisites.md -->
+<!-- include: fragment-prerequisites.md -->
 
 ## State file — `state/estate-janitor.json`
 
-<!-- include: routine-fragment-state-file.md -->
+<!-- include: fragment-state-file.md -->
 
 This routine historically kept no cross-run state; the file exists primarily so
 the out-of-band monitor can verify liveness and prompt fingerprint. Keep the
@@ -56,7 +56,7 @@ entry per run: the selected task and action counts). No migration needed
 
 The paused check (`${ROUTINE_PAUSED}` → `🛑` and exit) runs first, per Hard Rules. Immediately after it, before any repo enumeration or GitHub I/O:
 
-<!-- include: routine-fragment-preflight.md -->
+<!-- include: fragment-preflight.md -->
 
 ## Task Selection
 
@@ -188,7 +188,7 @@ Close bot PRs (renovate, dependabot) open >14 days with failing checks. Comment:
 
 ## Slack Output
 
-<!-- include: routine-fragment-slack-output.md -->
+<!-- include: fragment-slack-output.md -->
 
 After completing the task, write the run record (task + action counts) to
 `state/estate-janitor.json` per the state-file rules, then send a summary to

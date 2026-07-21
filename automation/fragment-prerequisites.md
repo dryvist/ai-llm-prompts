@@ -1,8 +1,8 @@
 ---
 type: LLM Prompt Fragment
-title: "Routine Prerequisites"
+title: "Prerequisites"
 description: "Shared runtime tools and environment prerequisites for cloud routines."
-resource: "prompt://dryvist/automation/routine/prerequisites"
+resource: "prompt://dryvist/automation/prerequisites"
 tags:
   - "automation"
   - "routine"

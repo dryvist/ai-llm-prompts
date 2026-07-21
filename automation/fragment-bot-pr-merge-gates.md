@@ -2,7 +2,7 @@
 type: LLM Prompt Fragment
 title: "Bot PR Merge Gates"
 description: "Phase B of bot-pr-merge: author/title allowlists, workflow-edit and release file-allowlist exceptions, signed-commit and age gates, and the cross-repo merge batcher. Composed back via include."
-resource: "prompt://dryvist/automation/routine/bot-pr-merge/gates"
+resource: "prompt://dryvist/automation/bot-pr-merge/gates"
 tags:
   - "automation"
   - "routine"
@@ -17,7 +17,7 @@ render:
   frontmatter: strip
 source_history:
   - repository: "dryvist/ai-llm-prompts"
-    path: "automation/routine-bot-pr-merge.md"
+    path: "automation/bot-pr-merge.md"
     note: "Extracted verbatim from bot-pr-merge Phase B to keep each catalog file under the 12KB file-size limit; recomposed via include, no content change."
 ---
 ### Bot author allowlist (corrected against 200-PR sample)

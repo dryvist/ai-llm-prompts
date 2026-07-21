@@ -2,7 +2,7 @@
 type: LLM Prompt
 title: "Deploy Routines Reference"
 description: "Historical auto-deployment prompt retained from the broken RemoteTrigger workflow."
-resource: "prompt://dryvist/automation/routine/deploy-reference"
+resource: "prompt://dryvist/automation/deploy-reference"
 tags:
   - "automation"
   - "routine"

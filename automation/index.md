@@ -36,24 +36,24 @@ Prompts and reusable fragments for repository automation, cloud routines, and re
 * [GitHub Agentic Workflows Reference Template](gh-aw-reference-template.md) - Historical, non-production example of the retired GH-AW workflow format.
 * [Public Docs Updater](public-docs-updater.md) - Reviews recent public repository activity and prepares one safe documentation update.
 * [Repository Health Audit](repo-health-audit.md) - Audits repository automation, security, and maintenance health and files structured findings.
-* [Bot PR Merge](routine-bot-pr-merge.md) - Security triage and allowlisted bot pull-request merge routine prompt.
-* [Deploy Routines Reference](routine-deploy-reference.md) - Historical auto-deployment prompt retained from the broken RemoteTrigger workflow.
-* [Documentation Polish](routine-docs-polish.md) - Documentation quality improvement routine prompt.
-* [Documentation Sync](routine-docs-sync.md) - Cross-site documentation synchronization routine prompt.
-* [Estate Briefing](routine-estate-briefing.md) - Read-only daily GitHub estate briefing routine prompt.
-* [Estate Janitor](routine-estate-janitor.md) - GitHub estate maintenance routine prompt.
-* [Bot PR Security Triage](routine-fragment-bot-pr-security-triage.md) - Phase A CodeQL/Dependabot triage and auto-label gate for bot-pr-merge.
-* [Bot PR Merge Gates](routine-fragment-bot-pr-merge-gates.md) - Phase B allowlist and merge gates for bot-pr-merge.
-* [Docs-Sync Draft PR Authoring](routine-fragment-docs-sync-pr-authoring.md) - Step 8 draft-PR authoring and provenance for docs-sync.
-* [Routine Attribution](routine-fragment-attribution.md) - Shared provenance and attribution rules for cloud routines.
-* [Routine Hard Rules](routine-fragment-hard-rules.md) - Shared load-bearing safety and mutation rules for cloud routines.
-* [Routine Connectivity Preflight](routine-fragment-preflight.md) - Shared authentication and egress preflight for cloud routines.
-* [Routine Prerequisites](routine-fragment-prerequisites.md) - Shared runtime tools and environment prerequisites for cloud routines.
-* [Routine Redaction](routine-fragment-redaction.md) - Shared sensitive-data redaction rules for cloud routines.
-* [Routine Skip List](routine-fragment-skip-list.md) - Shared repository exclusions for cloud routines.
-* [Routine Slack Output](routine-fragment-slack-output.md) - Shared Slack output and sanitization rules for cloud routines.
-* [Routine State File](routine-fragment-state-file.md) - Shared durable cross-run state contract for cloud routines.
-* [Routine State Migration](routine-fragment-state-migrate.md) - Shared one-run state migration fragment for renamed routines.
-* [Pre-Commit Bump](routine-precommit-bump.md) - Estate-wide pre-commit hook update routine prompt.
-* [Repository Audit](routine-repo-audit.md) - Rotating estate-wide repository audit routine prompt.
+* [Bot PR Merge](bot-pr-merge.md) - Security triage and allowlisted bot pull-request merge routine prompt.
+* [Deploy Routines Reference](deploy-reference.md) - Historical auto-deployment prompt retained from the broken RemoteTrigger workflow.
+* [Documentation Polish](docs-polish.md) - Documentation quality improvement routine prompt.
+* [Documentation Sync](docs-sync.md) - Cross-site documentation synchronization routine prompt.
+* [Estate Briefing](estate-briefing.md) - Read-only daily GitHub estate briefing routine prompt.
+* [Estate Janitor](estate-janitor.md) - GitHub estate maintenance routine prompt.
+* [Bot PR Security Triage](fragment-bot-pr-security-triage.md) - Phase A CodeQL/Dependabot triage and auto-label gate for bot-pr-merge.
+* [Bot PR Merge Gates](fragment-bot-pr-merge-gates.md) - Phase B allowlist and merge gates for bot-pr-merge.
+* [Docs-Sync Draft PR Authoring](fragment-docs-sync-pr-authoring.md) - Step 8 draft-PR authoring and provenance for docs-sync.
+* [Attribution](fragment-attribution.md) - Shared provenance and attribution rules for cloud routines.
+* [Hard Rules](fragment-hard-rules.md) - Shared load-bearing safety and mutation rules for cloud routines.
+* [Connectivity Preflight](fragment-preflight.md) - Shared authentication and egress preflight for cloud routines.
+* [Prerequisites](fragment-prerequisites.md) - Shared runtime tools and environment prerequisites for cloud routines.
+* [Redaction](fragment-redaction.md) - Shared sensitive-data redaction rules for cloud routines.
+* [Skip List](fragment-skip-list.md) - Shared repository exclusions for cloud routines.
+* [Slack Output](fragment-slack-output.md) - Shared Slack output and sanitization rules for cloud routines.
+* [State File](fragment-state-file.md) - Shared durable cross-run state contract for cloud routines.
+* [State Migration](fragment-state-migrate.md) - Shared one-run state migration fragment for renamed routines.
+* [Pre-Commit Bump](precommit-bump.md) - Estate-wide pre-commit hook update routine prompt.
+* [Repository Audit](repo-audit.md) - Rotating estate-wide repository audit routine prompt.
 * [Sub-Issue Closer](sub-issue-closer.md) - Recursively closes parent issues after every tracked sub-issue is complete.

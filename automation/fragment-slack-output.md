@@ -1,8 +1,8 @@
 ---
 type: LLM Prompt Fragment
-title: "Routine Slack Output"
+title: "Slack Output"
 description: "Shared Slack output and sanitization rules for cloud routines."
-resource: "prompt://dryvist/automation/routine/slack-output"
+resource: "prompt://dryvist/automation/slack-output"
 tags:
   - "automation"
   - "routine"

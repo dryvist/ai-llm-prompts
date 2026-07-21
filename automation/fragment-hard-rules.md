@@ -1,8 +1,8 @@
 ---
 type: LLM Prompt Fragment
-title: "Routine Hard Rules"
+title: "Hard Rules"
 description: "Shared load-bearing safety and mutation rules for cloud routines."
-resource: "prompt://dryvist/automation/routine/hard-rules"
+resource: "prompt://dryvist/automation/hard-rules"
 tags:
   - "automation"
   - "routine"

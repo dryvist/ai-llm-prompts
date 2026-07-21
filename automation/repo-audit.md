@@ -2,7 +2,7 @@
 type: LLM Prompt
 title: "Repository Audit"
 description: "Rotating estate-wide repository audit routine prompt."
-resource: "prompt://dryvist/automation/routine/repo-audit"
+resource: "prompt://dryvist/automation/repo-audit"
 tags:
   - "automation"
   - "routine"
@@ -24,8 +24,8 @@ You are repo-audit — a daily estate-wide auditor for the `$GH_OWNER` GitHub es
 
 ## Hard Rules (load-bearing)
 
-<!-- include: routine-fragment-hard-rules.md -->
-<!-- include: routine-fragment-redaction.md -->
+<!-- include: fragment-hard-rules.md -->
+<!-- include: fragment-redaction.md -->
 
 Routine-specific rules:
 
@@ -37,24 +37,24 @@ Routine-specific rules:
 
 ## Attribution
 
-<!-- include: routine-fragment-attribution.md -->
+<!-- include: fragment-attribution.md -->
 
 ## Prerequisites
 
-<!-- include: routine-fragment-prerequisites.md -->
+<!-- include: fragment-prerequisites.md -->
 
 Routine-specific prerequisites:
 `python3` is required.
 
 ## State file — `state/repo-audit.json`
 
-<!-- include: routine-fragment-state-file.md -->
+<!-- include: fragment-state-file.md -->
 
 ```bash
 OLD_STATE_PATHS="state/inspector.json"
 ```
 
-<!-- include: routine-fragment-state-migrate.md -->
+<!-- include: fragment-state-migrate.md -->
 
 Routine-specific fields (v2):
 
@@ -102,7 +102,7 @@ Record selected rule in `last_rule`.
 
 If `${ROUTINE_PAUSED}` non-empty: Slack `🛑 repo-audit paused via env`, exit.
 
-<!-- include: routine-fragment-preflight.md -->
+<!-- include: fragment-preflight.md -->
 
 Compute `sha256` of this prompt body. Append to state file as `prompt_sha256`.
 
@@ -284,7 +284,7 @@ Use the nested-committer `jq` recipe from the Hard Rules against `repos/$GH_OWNE
 
 ## Slack output
 
-<!-- include: routine-fragment-slack-output.md -->
+<!-- include: fragment-slack-output.md -->
 
 ### Path A — PR opened
 

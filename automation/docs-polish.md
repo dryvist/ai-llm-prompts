@@ -2,7 +2,7 @@
 type: LLM Prompt
 title: "Documentation Polish"
 description: "Documentation quality improvement routine prompt."
-resource: "prompt://dryvist/automation/routine/docs-polish"
+resource: "prompt://dryvist/automation/docs-polish"
 tags:
   - "automation"
   - "routine"
@@ -30,8 +30,8 @@ README quality is driven by community best practice (<https://www.makeareadme.co
 
 ## Hard Rules (load-bearing)
 
-<!-- include: routine-fragment-hard-rules.md -->
-<!-- include: routine-fragment-redaction.md -->
+<!-- include: fragment-hard-rules.md -->
+<!-- include: fragment-redaction.md -->
 
 Routine-specific rules:
 
@@ -43,21 +43,21 @@ Routine-specific rules:
 
 ## Attribution
 
-<!-- include: routine-fragment-attribution.md -->
+<!-- include: fragment-attribution.md -->
 
 ## Prerequisites
 
-<!-- include: routine-fragment-prerequisites.md -->
+<!-- include: fragment-prerequisites.md -->
 
 ## State file — `state/docs-polish.json`
 
-<!-- include: routine-fragment-state-file.md -->
+<!-- include: fragment-state-file.md -->
 
 ```bash
 OLD_STATE_PATHS="state/archivist.json state/daily-polish.json"
 ```
 
-<!-- include: routine-fragment-state-migrate.md -->
+<!-- include: fragment-state-migrate.md -->
 
 Migration merge semantics: from `state/archivist.json` carry `run_log`,
 `readme_scores`, and `cooldowns` — strip the `:readme-quality` suffix from
@@ -90,13 +90,13 @@ Routine-specific fields (v2):
 
 Apply the global skip-list:
 
-<!-- include: routine-fragment-skip-list.md -->
+<!-- include: fragment-skip-list.md -->
 
 ## Phase 0 — Paused, preflight, fingerprint, budget
 
 If `${ROUTINE_PAUSED}` non-empty: Slack `🛑 docs-polish paused via env`, exit.
 
-<!-- include: routine-fragment-preflight.md -->
+<!-- include: fragment-preflight.md -->
 
 Compute prompt fingerprint, write to state.
 
@@ -227,7 +227,7 @@ Append the run record to `run_log`, set `cooldowns[$repo]`, rewrite `readme_scor
 
 ## Slack output
 
-<!-- include: routine-fragment-slack-output.md -->
+<!-- include: fragment-slack-output.md -->
 
 ### Path A — PR opened
 

@@ -2,7 +2,7 @@
 type: LLM Prompt
 title: "Bot PR Merge"
 description: "Security triage and allowlisted bot pull-request merge routine prompt."
-resource: "prompt://dryvist/automation/routine/bot-pr-merge"
+resource: "prompt://dryvist/automation/bot-pr-merge"
 tags:
   - "automation"
   - "routine"
@@ -36,8 +36,8 @@ Security triage (Phase A), ground-truthed 2026-05: (a) Dependabot alerts are zer
 
 ## Hard Rules (load-bearing)
 
-<!-- include: routine-fragment-hard-rules.md -->
-<!-- include: routine-fragment-redaction.md -->
+<!-- include: fragment-hard-rules.md -->
+<!-- include: fragment-redaction.md -->
 
 Routine-specific rules (stricter — these win):
 
@@ -56,7 +56,7 @@ Routine-specific rules (stricter — these win):
 
 ## Prerequisites
 
-<!-- include: routine-fragment-prerequisites.md -->
+<!-- include: fragment-prerequisites.md -->
 
 Routine-specific prerequisites:
 
@@ -64,13 +64,13 @@ Routine-specific prerequisites:
 
 ## State file — `state/bot-pr-merge.json`
 
-<!-- include: routine-fragment-state-file.md -->
+<!-- include: fragment-state-file.md -->
 
 ```bash
 OLD_STATE_PATHS="state/conductor.json state/apothecary.json"
 ```
 
-<!-- include: routine-fragment-state-migrate.md -->
+<!-- include: fragment-state-migrate.md -->
 
 Migration merge semantics: union the two old files — carry `release_allowlist_extensions` (from conductor), `escalation_cooldown` and `codeql_ignore` (from apothecary), and concatenate both `run_log` arrays.
 
@@ -101,19 +101,19 @@ Routine-specific fields (v2):
 
 The paused check (`${ROUTINE_PAUSED}` → `🛑 bot-pr-merge paused via env` and exit) runs first, per Hard Rules. Immediately after it, before any repo enumeration or state I/O:
 
-<!-- include: routine-fragment-preflight.md -->
+<!-- include: fragment-preflight.md -->
 
 ## Phase A — Security triage (label + escalate)
 
-<!-- include: routine-fragment-bot-pr-security-triage.md -->
+<!-- include: fragment-bot-pr-security-triage.md -->
 
 ## Phase B — Allowlist gate and merges
 
-<!-- include: routine-fragment-bot-pr-merge-gates.md -->
+<!-- include: fragment-bot-pr-merge-gates.md -->
 
 ## Slack output
 
-<!-- include: routine-fragment-slack-output.md -->
+<!-- include: fragment-slack-output.md -->
 
 One combined message per run, with a `Security:` block (Phase A) and a `Merges:` block (Phase B):
 

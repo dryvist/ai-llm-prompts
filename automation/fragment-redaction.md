@@ -1,8 +1,8 @@
 ---
 type: LLM Prompt Fragment
-title: "Routine Redaction"
+title: "Redaction"
 description: "Shared sensitive-data redaction rules for cloud routines."
-resource: "prompt://dryvist/automation/routine/redaction"
+resource: "prompt://dryvist/automation/redaction"
 tags:
   - "automation"
   - "routine"

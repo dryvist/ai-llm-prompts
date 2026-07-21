@@ -2,6 +2,11 @@
 
 ## 2026-07-20
 
+* **Rename (automation)**: Dropped the `routine` naming across the catalog —
+  every `automation/routine-*.md` becomes `automation/*.md`, resource ids move
+  from `prompt://dryvist/automation/routine/*` to `prompt://dryvist/automation/*`,
+  and all `include` refs and index links follow. Bodies unchanged. No live
+  consumer moves (`claude-code-routines` main does not consume the catalog yet).
 * **Creation (auto-ai-agent)**: Added the `maintenance-windows` fragment —
   shared homelab hands-off state tracked as Vikunja tasks, checked before
   touching live infrastructure. Staged; hand-consumed by the workstation agent

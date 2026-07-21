@@ -2,7 +2,7 @@
 type: LLM Prompt Fragment
 title: "Bot PR Security Triage"
 description: "Phase A of bot-pr-merge: CodeQL/Dependabot alert enumeration, the high-severity auto-label gate, and escalation. Composed back into bot-pr-merge via include."
-resource: "prompt://dryvist/automation/routine/bot-pr-merge/security-triage"
+resource: "prompt://dryvist/automation/bot-pr-merge/security-triage"
 tags:
   - "automation"
   - "routine"
@@ -17,7 +17,7 @@ render:
   frontmatter: strip
 source_history:
   - repository: "dryvist/ai-llm-prompts"
-    path: "automation/routine-bot-pr-merge.md"
+    path: "automation/bot-pr-merge.md"
     note: "Extracted verbatim from bot-pr-merge Phase A to keep each catalog file under the 12KB file-size limit; recomposed via include, no content change."
 ---
 ### Phase A1 — Enumerate target repos
@@ -30,7 +30,7 @@ gh repo list "$GH_OWNER" --limit 100 \
 
 Apply the global skip-list:
 
-<!-- include: routine-fragment-skip-list.md -->
+<!-- include: fragment-skip-list.md -->
 
 ### Phase A2 — Fetch open CodeQL alerts (primary)
 

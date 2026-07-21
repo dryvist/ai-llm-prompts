@@ -2,7 +2,7 @@
 type: LLM Prompt
 title: "Documentation Sync"
 description: "Cross-site documentation synchronization routine prompt."
-resource: "prompt://dryvist/automation/routine/docs-sync"
+resource: "prompt://dryvist/automation/docs-sync"
 tags:
   - "automation"
   - "routine"
@@ -29,9 +29,9 @@ work.
 
 ## Hard Rules (load-bearing)
 
-<!-- include: routine-fragment-hard-rules.md -->
-<!-- include: routine-fragment-preflight.md -->
-<!-- include: routine-fragment-redaction.md -->
+<!-- include: fragment-hard-rules.md -->
+<!-- include: fragment-preflight.md -->
+<!-- include: fragment-redaction.md -->
 
 Routine-specific rules:
 
@@ -62,14 +62,14 @@ Routine-specific rules:
 
 ## Attribution
 
-<!-- include: routine-fragment-attribution.md -->
+<!-- include: fragment-attribution.md -->
 
 docs-sync divergence: PRs are DRAFT (see Hard Rules); Slack messages may keep
 emoji — the no-emoji rule covers PR/issue titles and bodies only.
 
 ## Prerequisites
 
-<!-- include: routine-fragment-prerequisites.md -->
+<!-- include: fragment-prerequisites.md -->
 
 Routine-specific prerequisites:
 
@@ -89,7 +89,7 @@ frontmatter shape — read the live convention each run (it may have drifted).
 
 ## Step 1 — Load state
 
-<!-- include: routine-fragment-state-file.md -->
+<!-- include: fragment-state-file.md -->
 
 Read `state/docs-sync.json` in `$STATE_REPO` (tracks documented concepts + open
 branches, so each run is incremental, not repetitive) using the read +
@@ -194,7 +194,7 @@ the intended state. Do not invent work that was not evidenced in the change wind
 
 ## Step 8 — Open the two draft PRs
 
-<!-- include: routine-fragment-docs-sync-pr-authoring.md -->
+<!-- include: fragment-docs-sync-pr-authoring.md -->
 
 ## Step 9 — Self-cleanup (mandatory, every run)
 
@@ -226,7 +226,7 @@ on 409). Merge today's new concept keys into `documented` (deduplicated) and set
 
 ## Slack Output
 
-<!-- include: routine-fragment-slack-output.md -->
+<!-- include: fragment-slack-output.md -->
 
 ### Path A: PR(s) opened (happy path)
 

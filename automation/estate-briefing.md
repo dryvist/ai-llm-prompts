@@ -2,7 +2,7 @@
 type: LLM Prompt
 title: "Estate Briefing"
 description: "Read-only daily GitHub estate briefing routine prompt."
-resource: "prompt://dryvist/automation/routine/estate-briefing"
+resource: "prompt://dryvist/automation/estate-briefing"
 tags:
   - "automation"
   - "routine"
@@ -26,17 +26,17 @@ This routine merges what used to be Morning Briefing (daily), Weekly Scorecard (
 
 ## Prerequisites
 
-<!-- include: routine-fragment-prerequisites.md -->
+<!-- include: fragment-prerequisites.md -->
 
 ## State file — `state/estate-briefing.json`
 
-<!-- include: routine-fragment-state-file.md -->
+<!-- include: fragment-state-file.md -->
 
 ```bash
 OLD_STATE_PATHS="state/observer.json"
 ```
 
-<!-- include: routine-fragment-state-migrate.md -->
+<!-- include: fragment-state-migrate.md -->
 
 This routine keeps run history and scorecard deltas in `state/estate-briefing.json`
 (create-if-missing initial schema `{"run_log": [], "scorecard_history": {}}`, per
@@ -66,7 +66,7 @@ Legacy pre-v2 schema — the fields above are authoritative for this routine. Tr
 
 If `${ROUTINE_PAUSED}` is non-empty: emit Slack `🛑 estate-briefing paused via env` and exit.
 
-<!-- include: routine-fragment-preflight.md -->
+<!-- include: fragment-preflight.md -->
 
 ```bash
 DOW=$(date -u +%u)    # 1=Monday, 7=Sunday
@@ -202,7 +202,7 @@ Trim `run_log` to last 90 days.
 
 ## Slack output
 
-<!-- include: routine-fragment-slack-output.md -->
+<!-- include: fragment-slack-output.md -->
 
 Post one Slack message daily with the briefing. On Mondays, post the scorecard as a follow-up message in the same thread (separate message — combined payload risks Slack's 4000-char limit). This routine has no Hard Rules redaction section — apply the escaping above to every repo-derived field (PR/issue titles, repo names).
 

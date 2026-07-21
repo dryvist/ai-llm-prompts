@@ -1,8 +1,8 @@
 ---
 type: LLM Prompt Fragment
-title: "Routine State Migration"
+title: "State Migration"
 description: "Shared one-run state migration fragment for renamed routines."
-resource: "prompt://dryvist/automation/routine/state-migrate"
+resource: "prompt://dryvist/automation/state-migrate"
 tags:
   - "automation"
   - "routine"

@@ -1,8 +1,8 @@
 ---
 type: LLM Prompt Fragment
-title: "Routine Skip List"
+title: "Skip List"
 description: "Shared repository exclusions for cloud routines."
-resource: "prompt://dryvist/automation/routine/skip-list"
+resource: "prompt://dryvist/automation/skip-list"
 tags:
   - "automation"
   - "routine"

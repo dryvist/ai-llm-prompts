@@ -2,7 +2,7 @@
 type: LLM Prompt Fragment
 title: "Docs-Sync Draft PR Authoring"
 description: "Step 8 of docs-sync: per-repo branch/commit creation, the draft-PR body template with provenance, and the public secret-scan gate poll. Composed back via include."
-resource: "prompt://dryvist/automation/routine/docs-sync/pr-authoring"
+resource: "prompt://dryvist/automation/docs-sync/pr-authoring"
 tags:
   - "automation"
   - "routine"
@@ -17,7 +17,7 @@ render:
   frontmatter: strip
 source_history:
   - repository: "dryvist/ai-llm-prompts"
-    path: "automation/routine-docs-sync.md"
+    path: "automation/docs-sync.md"
     note: "Extracted verbatim from docs-sync Step 8 to keep each catalog file under the 12KB file-size limit; recomposed via include, no content change."
 ---
 Skip a repo entirely if zero concepts routed to it this run — no branch, no

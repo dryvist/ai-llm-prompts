@@ -1,8 +1,8 @@
 ---
 type: LLM Prompt Fragment
-title: "Routine Connectivity Preflight"
+title: "Connectivity Preflight"
 description: "Shared authentication and egress preflight for cloud routines."
-resource: "prompt://dryvist/automation/routine/preflight"
+resource: "prompt://dryvist/automation/preflight"
 tags:
   - "automation"
   - "routine"

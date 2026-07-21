@@ -1,8 +1,8 @@
 ---
 type: LLM Prompt Fragment
-title: "Routine State File"
+title: "State File"
 description: "Shared durable cross-run state contract for cloud routines."
-resource: "prompt://dryvist/automation/routine/state-file"
+resource: "prompt://dryvist/automation/state-file"
 tags:
   - "automation"
   - "routine"

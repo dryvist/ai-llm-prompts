@@ -1,5 +1,15 @@
 # Change Log
 
+## 2026-07-21
+
+* **Creation (auto-ai-agent)**: Added two Hermes jobs distilled from the retired
+  automation fragments. `hermes-bot-pr-triage` reads CodeQL/Dependabot alerts,
+  runs the 8 deterministic gates, labels `auto-merge-deps`, and Slack/Codex-
+  escalates — it never merges, so CI still owns the merge. `hermes-docs-sync`
+  runs a bounded delta discovery and defers privacy routing and signed draft
+  PRs to the `docs-pr` skill. Both staged pending the `ansible-proxmox-ai` card
+  wiring. Index updated.
+
 ## 2026-07-20
 
 * **Rename (automation)**: Dropped the `routine` naming across the catalog —

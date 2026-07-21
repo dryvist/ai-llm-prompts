@@ -5,6 +5,7 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 ## Prompts
 
 * [Autonomous Agent Base](autonomous-base.md) - Shared behavioral base for autonomous engineering agents.
+* [Hermes bot PR triage](hermes-bot-pr-triage.md) - Delta-aware bot-PR security triage that labels and escalates dependency PRs but never merges.
 * [Hermes curriculum application fleet health](hermes-curriculum-apps.md) - Fleet-health and repository cross-reference curriculum job.
 * [Hermes curriculum self-improvement](hermes-curriculum-improve.md) - Bounded evidence-based self-improvement curriculum job.
 * [Hermes curriculum orientation](hermes-curriculum-orient.md) - Verified self-orientation curriculum job.
@@ -12,6 +13,7 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Hermes curriculum Splunk investigation](hermes-curriculum-splunk.md) - Evidence-driven Splunk investigation curriculum job.
 * [Hermes daily fabric status](hermes-daily-fabric-status.md) - Hourly AI-fabric status and delta-reporting prompt.
 * [Hermes daily summary](hermes-daily-summary.md) - Once-daily delta-only operator rollup for the home channel.
+* [Hermes docs sync](hermes-docs-sync.md) - Bounded docs-sync pass that routes doc-worthy changes to public or private docs via signed draft PRs.
 * [Hermes GitHub triage](hermes-github-triage.md) - Read-only delta-aware Dryvist GitHub organization triage prompt.
 * [Hermes inbound webhook relay](hermes-inbound-webhook.md) - Prompt template for relaying the raw inbound webhook payload.
 * [Hermes nightly wiki health](hermes-nightly-wiki-health.md) - Nightly wiki lint and health-check prompt.

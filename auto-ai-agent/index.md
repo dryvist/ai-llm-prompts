@@ -23,5 +23,6 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Hermes Splunk triage](hermes-splunk-triage.md) - Broad bounded Splunk anomaly-sweep prompt.
 * [Hermes Surface](hermes.md) - Canonical Hermes identity, tools, investigation discipline, escalation routing, homelab constraints, and model fabric.
 * [Large-Tier Surface](large-tier.md) - Deep-reasoning and synthesis delta for a staged large-model serving tier.
+* [Maintenance Windows](maintenance-windows.md) - Shared homelab hands-off state as Vikunja tasks, checked before touching live infrastructure.
 * [Monitor Agent Discipline](monitor-agent-discipline.md) - Bounded-query, durable-state, and alerting discipline for always-on monitoring agents.
 * [Open WebUI Surface](open-webui.md) - Interactive chat-surface delta for Open WebUI.

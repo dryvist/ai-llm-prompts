@@ -2,6 +2,13 @@
 
 ## 2026-07-20
 
+* **Creation (auto-ai-agent)**: Added the `maintenance-windows` fragment —
+  shared homelab hands-off state tracked as Vikunja tasks, checked before
+  touching live infrastructure. Staged; hand-consumed by the workstation agent
+  config, intended repo consumer `dryvist/nix-hermes`. Index updated.
+* **Release**: Wired release-please (`release-type: simple`, `VERSION`-tracked)
+  for automated releases on every push to `main`, seeded at the existing
+  `v0.1.0`.
 * **Removal (automation)**: Retired `routine-issue-solver` — a Linear-JAC
   GitHub-Actions task driver that duplicated the `ai-workflows` GitHub
   issue→PR path and never went live. Its goal is a candidate for a future

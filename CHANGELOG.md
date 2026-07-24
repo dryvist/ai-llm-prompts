@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.3.0...v0.4.0) (2026-07-24)
+
+
+### Features
+
+* **auto-ai-agent:** add 8 Hermes direct-deliver digest prompts ([#15](https://github.com/dryvist/ai-llm-prompts/issues/15)) ([6eb6907](https://github.com/dryvist/ai-llm-prompts/commit/6eb6907fe09648e9272589979817cc949433314a))
+
 ## [0.3.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.2.0...v0.3.0) (2026-07-21)
 
 

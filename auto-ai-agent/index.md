@@ -13,6 +13,14 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Hermes curriculum Splunk investigation](hermes-curriculum-splunk.md) - Evidence-driven Splunk investigation curriculum job.
 * [Hermes daily fabric status](hermes-daily-fabric-status.md) - Hourly AI-fabric status and delta-reporting prompt.
 * [Hermes daily summary](hermes-daily-summary.md) - Once-daily delta-only operator rollup for the home channel.
+* [Hermes digest: anomaly hunt](hermes-digest-anomaly-hunt.md) - Twice-daily auto-delivered unmonitored-pattern anomaly hunt.
+* [Hermes digest: daily operator summary](hermes-digest-daily-operator-summary.md) - Daily auto-delivered ingest-volume operator summary.
+* [Hermes digest: GitHub org triage](hermes-digest-github-org-triage.md) - Daily auto-delivered dryvist org PR/issue triage.
+* [Hermes digest: homelab AI fabric status](hermes-digest-homelab-ai-fabric-status.md) - 6-hourly auto-delivered AI fabric component health probe.
+* [Hermes digest: Splunk error triage](hermes-digest-splunk-error-triage.md) - Hourly auto-delivered Splunk error/failure triage digest.
+* [Hermes digest: Splunk parsing quality](hermes-digest-splunk-parsing-quality.md) - Daily auto-delivered Splunk per-sourcetype parsing-quality digest.
+* [Hermes digest: Splunk security lens](hermes-digest-splunk-security-lens.md) - 6-hourly auto-delivered Splunk security-relevant pattern digest.
+* [Hermes digest: Zammad incident review](hermes-digest-zammad-incident-review.md) - Daily auto-delivered open Zammad incident review.
 * [Hermes docs sync](hermes-docs-sync.md) - Bounded docs-sync pass that routes doc-worthy changes to public or private docs via signed draft PRs.
 * [Hermes GitHub triage](hermes-github-triage.md) - Read-only delta-aware Dryvist GitHub organization triage prompt.
 * [Hermes inbound webhook relay](hermes-inbound-webhook.md) - Prompt template for relaying the raw inbound webhook payload.

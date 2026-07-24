@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/dryvist/ai-llm-prompts/compare/v0.4.0...v0.4.1) (2026-07-24)
+
+
+### Bug Fixes
+
+* **auto-ai-agent:** stop tool-call syntax leaking into error-triage digest ([#17](https://github.com/dryvist/ai-llm-prompts/issues/17)) ([1cdcc6e](https://github.com/dryvist/ai-llm-prompts/commit/1cdcc6e86d40f8ed74b2ff6c5b4bb6abb56ea980))
+
 ## [0.4.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.3.0...v0.4.0) (2026-07-24)
 
 

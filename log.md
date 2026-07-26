@@ -1,5 +1,18 @@
 # Change Log
 
+## 2026-07-26
+
+* **Fix (auto-ai-agent)**: `hermes-digest-daily-operator-summary` was caught
+  live posting "All hosts reporting; no gaps" from a query that could only see
+  its own `head 12` truncation — a live cross-check against Splunk for the
+  exact same window found 61 real hosts, not 12. Dropped the dead
+  `index=network` (stale since 2026-06-12) in favor of `index=firewall`
+  (Hermes' other expected-continuous index), added an `index` grouping
+  dimension so a whole index going silent is explicit rather than folded away,
+  added a memory-recalled baseline for a real delta, and forbade the model
+  from asserting completeness it cannot support — it must now state "top N of
+  M hosts shown" instead. No `head` truncation left in the SPL itself.
+
 ## 2026-07-21
 
 * **Creation (auto-ai-agent)**: Added two Hermes jobs distilled from the retired

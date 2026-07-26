@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/dryvist/ai-llm-prompts/compare/v0.4.2...v0.4.3) (2026-07-26)
+
+
+### Bug Fixes
+
+* **auto-ai-agent:** stop daily-operator-summary asserting completeness it can't see ([#21](https://github.com/dryvist/ai-llm-prompts/issues/21)) ([30bab7c](https://github.com/dryvist/ai-llm-prompts/commit/30bab7c9e4ec8fab67ea61c98940b3f6175dcade))
+
 ## [0.4.2](https://github.com/dryvist/ai-llm-prompts/compare/v0.4.1...v0.4.2) (2026-07-24)
 
 

@@ -24,7 +24,6 @@ Prompts injected by development workflows, scheduled jobs, guards, and hooks.
 * [Inline workflow script block guidance](inline-workflow-script-block.md) - Model-visible denial reason for complex shell code embedded in workflow YAML.
 * [Main-branch edit block guidance](main-branch-edit-block.md) - Model-visible reason returned when an edit targets the main branch.
 * [Nix Darwin flake update review](nix-darwin-flake-review.md) - Claude review instructions for risk-classifying flake.lock changes.
-* [Nix Darwin Studio repository hygiene](nix-darwin-studio-hygiene.md) - Unattended Claude prompt for safe cleanup of local repository worktrees.
 * [Private infrastructure leak block guidance](private-infrastructure-leak-block.md) - Denial guidance for leaked infrastructure identifiers.
 * [Script prevention classifier](script-prevention-classifier.md) - Local classification prompt for legitimate artifacts versus unnecessary scripts.
 * [Script write denial guidance](script-write-denial.md) - Model-visible denial reason after the local script classifier rejects a new file.

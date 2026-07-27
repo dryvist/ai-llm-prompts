@@ -1,5 +1,11 @@
 # Change Log
 
+## 2026-07-27
+
+* **Removal (developer-tools)**: Retired `nix-darwin-studio-hygiene` with its
+  Studio-only scheduled Claude job. Repository maintenance remains an explicit
+  operator action; the obsolete consumer wiring was removed from `nix-darwin`.
+
 ## 2026-07-26
 
 * **Fix (auto-ai-agent)**: `hermes-digest-daily-operator-summary` was caught

@@ -69,10 +69,12 @@ structured extraction, a first-pass read — rarely needs the model reasoning ab
 task. Send those through the shared model router, choosing the cheapest tier that can actually
 do that subtask, and never hold or call a provider credential directly. Model names change far
 faster than this rule does: fetch them from the router's published contract at call time rather
-than trusting a name you remember. Budgets and the allowed model set are enforced at the router
-— a rejection is a correct answer, so drop to a cheaper tier or defer. Bound every delegated
-call with a timeout, and when the router is unreachable say so and choose explicitly; silently
-absorbing the work back into your own context is the cost you were avoiding.
+than trusting a name you remember. WHICH models you may reach is enforced at the router, so a
+rejection there is a correct answer — drop to a cheaper tier or defer. HOW MUCH you spend
+generally is not: treat any stated budget as yours to honour, count against it yourself, and
+stop when you reach it, because nothing else will. Bound every delegated call with a timeout,
+and when the router is unreachable say so and choose explicitly; silently absorbing the work
+back into your own context is the cost you were avoiding.
 
 ## Measure honestly
 Warm before you measure: the first request after a load carries cold-start cost — fire a

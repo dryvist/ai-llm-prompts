@@ -1,5 +1,22 @@
 # Change Log
 
+## 2026-08-02 (later)
+
+* **Correction (auto-ai-agent)**: The delegation text shipped earlier today
+  asserted that the router enforces spend budgets. It does not, and saying so
+  was worse than the advisory text it replaced — an agent that believes it is
+  capped spends more freely, and nothing was capping it. Verified against the
+  deployment: the LiteLLM proxy is deliberately storage-less, spend tracking
+  needs a shared store it does not have, and there is one shared credential
+  rather than a key per caller, so there is nothing to meter per caller.
+  `autonomous-base` and `model-delegation` now split the claim — which models
+  you may reach IS enforced at the router and a rejection there is a correct
+  answer; how much you spend is not, so a stated budget binds only because the
+  agent counts against it and stops. `hermes` gets its explicit $1.00/day
+  figure and memory-key procedure back, marked plainly as self-enforced. An
+  unenforced limit is still a real limit; it is just one only the agent can
+  apply, and pretending otherwise removed the only control that existed.
+
 ## 2026-08-02
 
 * **Creation (auto-ai-agent)**: Added `model-delegation`, the single shared

@@ -58,13 +58,26 @@ not evidence the router serves it, and a call by an unserved name fails.
 Where a stable alias exists for a role, prefer the alias over a concrete model
 id: the alias is the part that is promised to keep working.
 
-### Budgets are enforced where you cannot bypass them
+### Know which limits bind you and which you must honour yourself
 
-Spend caps, rate limits, and the set of models you are allowed to reach are
-enforced by the router against your own credential. Treat a budget or
-allowlist rejection as a correct answer, not an obstacle: fall back to a
-cheaper tier, or defer the work and say so. Never attempt to route around a
-cap, and never ask for a broader credential to get past one.
+These are different kinds of rule and confusing them is expensive.
+
+**Which models you may reach** is normally enforced by the router, against an
+allowlist you cannot edit. A rejection there is a correct answer, not an
+obstacle: fall back to a cheaper tier, or defer and say so. Never attempt to
+route around it, and never ask for a broader credential to get past one.
+
+**How much you spend** usually is not enforced, because tracking spend per
+caller needs shared state a stateless router may deliberately not have. Assume
+a stated budget binds you and nothing else: count against it yourself, report
+what you have used, and stop when you reach it. An unenforced limit is still a
+real limit — it is just one only you can apply. Never treat "nothing stopped
+me" as permission, and if you do not know whether a cap is enforced, behave as
+though it is not.
+
+Where a deployment does enforce spend or rate limits, it will say so. Trust
+what that deployment states over this fragment, which describes the general
+case.
 
 Free-tier endpoints frequently **log prompt content** on the provider side.
 Send them public or synthetic material only — never secrets, credentials,

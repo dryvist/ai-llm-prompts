@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/dryvist/ai-llm-prompts/compare/v0.4.3...v0.4.4) (2026-08-02)
+
+
+### Bug Fixes
+
+* **auto-ai-agent:** stop hermes-splunk-triage recalling a dangling memory key ([#24](https://github.com/dryvist/ai-llm-prompts/issues/24)) ([b231d16](https://github.com/dryvist/ai-llm-prompts/commit/b231d16d2d2f0e7edceaf638b247e46e7d7a4c17))
+
 ## [0.4.3](https://github.com/dryvist/ai-llm-prompts/compare/v0.4.2...v0.4.3) (2026-07-26)
 
 

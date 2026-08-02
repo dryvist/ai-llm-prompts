@@ -1,5 +1,22 @@
 # Change Log
 
+## 2026-08-02
+
+* **Creation (auto-ai-agent)**: Added `model-delegation`, the single shared
+  statement of delegation doctrine for every agent surface — offload bounded
+  subtasks to the shared model router, take the cheapest tier that can
+  actually do the subtask, fetch model names from the router's published
+  contract instead of hardcoding them, treat a budget or allowlist rejection
+  as a correct answer, and report honestly rather than falling back silently
+  when the router is unreachable. Deliberately vendor-neutral and
+  topology-free so it stays publishable.
+* **Update (auto-ai-agent)**: `autonomous-base` gains a delegation section
+  distilled from that fragment, so every consumer of the shared base — the
+  Hermes persona among them — inherits the doctrine without a second copy.
+  Section placement and altitude match the surrounding rules; the
+  `autonomous engineering agent` opening line consumers assert on is
+  unchanged.
+
 ## 2026-08-01
 
 * **Fix (auto-ai-agent)**: `hermes-splunk-triage` recalled a dangling memory

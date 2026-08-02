@@ -1,5 +1,17 @@
 # Change Log
 
+## 2026-08-01
+
+* **Fix (auto-ai-agent)**: `hermes-splunk-triage` recalled a dangling memory
+  key. It asked to check `"splunk-digest-last"` — the fingerprint written by
+  the `hermes-splunk-digest` job — before alerting, so it would suppress a
+  real finding already covered by that digest. The digest job's consumer
+  retired it in favor of a script-fed replacement outside the LLM fact path,
+  so nothing writes that key anymore and the check silently always misses.
+  `hermes-splunk-triage` now recalls and saves its own key
+  (`"splunk-triage-last"`), matching every other dedup-by-memory prompt in
+  this catalog (each owns the key it reads).
+
 ## 2026-07-27
 
 * **Removal (developer-tools)**: Retired `nix-darwin-studio-hygiene` with its

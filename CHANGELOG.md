@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/dryvist/ai-llm-prompts/compare/v0.5.0...v0.5.1) (2026-08-02)
+
+
+### Bug Fixes
+
+* **auto-ai-agent:** parameterize the fabric-status probe hosts ([#28](https://github.com/dryvist/ai-llm-prompts/issues/28)) ([b4dabc1](https://github.com/dryvist/ai-llm-prompts/commit/b4dabc138db708ebcf45a032a31d8ed9b19e9486))
+
 ## [0.5.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.4.4...v0.5.0) (2026-08-02)
 
 

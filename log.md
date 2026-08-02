@@ -16,6 +16,14 @@
   Section placement and altitude match the surrounding rules; the
   `autonomous engineering agent` opening line consumers assert on is
   unchanged.
+* **Update (auto-ai-agent)**: `hermes` stops restating the general delegation
+  rules now that the base carries them, and points at the base instead. Its
+  `Model fabric:` paragraph keeps only what is genuinely Hermes-specific — the
+  brain value, and the fact that this router publishes no `ai-default` alias.
+  Its escalation paragraph now describes the spend cap as router-enforced
+  rather than naming a figure the persona cannot enforce and that would drift
+  from router config. Both `Model fabric:` and `Escalation routing:` line
+  anchors are unchanged, since consumers grep for them.
 
 ## 2026-08-01
 

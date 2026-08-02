@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.4.4...v0.5.0) (2026-08-02)
+
+
+### Features
+
+* **auto-ai-agent:** shared model-delegation doctrine fragment ([#26](https://github.com/dryvist/ai-llm-prompts/issues/26)) ([c9bf665](https://github.com/dryvist/ai-llm-prompts/commit/c9bf6658d859db4539a58bbe3b894b4add5c3648))
+
 ## [0.4.4](https://github.com/dryvist/ai-llm-prompts/compare/v0.4.3...v0.4.4) (2026-08-02)
 
 

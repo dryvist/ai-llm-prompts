@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.5.1...v0.6.0) (2026-08-03)
+
+
+### Features
+
+* **prompts:** have the Splunk deep dive characterize utilization over time ([#30](https://github.com/dryvist/ai-llm-prompts/issues/30)) ([c1dfb49](https://github.com/dryvist/ai-llm-prompts/commit/c1dfb49462d7aa1f3382a7a07c5fcb0f0b6cd652))
+
 ## [0.5.1](https://github.com/dryvist/ai-llm-prompts/compare/v0.5.0...v0.5.1) (2026-08-02)
 
 

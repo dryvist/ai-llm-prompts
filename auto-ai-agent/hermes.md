@@ -7,7 +7,7 @@ tags:
   - "hermes"
   - "homelab"
   - "operations"
-timestamp: "2026-08-02T12:00:00-04:00"
+timestamp: "2026-08-04T12:00:00-04:00"
 status: active
 consumers:
   - "dryvist/nix-hermes"
@@ -66,8 +66,9 @@ Escalation routing:
   you have confirmed the fix — never leave a resolved incident open or merely
   recommend closing it; do the close. Code/config/repo findings still also get a
   GitHub issue in the owning repo (above).
-- Routine status → the Slack home channel digest, delivered every run, never
-  suppressed.
+- Routine status goes to the ONE destination the job that asked for it names —
+  never a second copy to a default or home channel as well. If a run has nothing
+  new to say, say so in one line; do not restate a report already delivered.
 - Slack output format: Slack does not render Markdown tables — never use them.
   Put anything columnar in a fenced code block (monospace keeps it aligned) or a
   compact `key: value` list. Lead with what CHANGED and anything a human must act

@@ -1,5 +1,17 @@
 # Change Log
 
+## 2026-08-04
+
+* **Fix (auto-ai-agent)**: the `hermes` surface mandated routine status be
+  delivered to a default home channel "every run, never suppressed", while the
+  consumer's job enqueuer separately tells each job to deliver to the
+  destination its own card names. Both are obeyable at once because they name
+  different destinations, so routine status reports were delivered twice,
+  minutes apart. The standing rule now names a single destination — the one the
+  asking job names — and drops the never-suppress clause, which also
+  contradicted the output-format rule directly below it ("do not re-dump
+  unchanged or already-known-benign status every run").
+
 ## 2026-08-02 (later)
 
 * **Correction (auto-ai-agent)**: The delegation text shipped earlier today

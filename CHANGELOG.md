@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/dryvist/ai-llm-prompts/compare/v0.6.0...v0.6.1) (2026-08-04)
+
+
+### Bug Fixes
+
+* **auto-ai-agent:** deliver routine status once, to one destination ([#33](https://github.com/dryvist/ai-llm-prompts/issues/33)) ([237b4be](https://github.com/dryvist/ai-llm-prompts/commit/237b4be62d3605540239eaf9b97653c3c2e60c74))
+
 ## [0.6.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.5.1...v0.6.0) (2026-08-03)
 
 

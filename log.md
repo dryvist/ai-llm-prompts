@@ -1,5 +1,17 @@
 # Change Log
 
+## 2026-08-05
+
+* **Update (auto-ai-agent)**: `hermes-splunk-parsing` gained a named dedup
+  baseline. It previously said only "Record findings and baselines to memory" —
+  no key name — so there was nothing deterministic to recall, and a parsing
+  defect that stayed unfixed was re-reported on every run. It now recalls
+  `splunk-parsing-last` first, filters against it, states how many findings it
+  suppressed as already-known instead of relisting them, and saves the updated
+  fingerprint back. This is the same four-element pattern the other Hermes
+  surfaces already use, and it is the one prompt of its family whose card is
+  currently unpaused, so it was the only one repeating in a live channel.
+
 ## 2026-08-04
 
 * **Update (auto-ai-agent)**: the `hermes` surface gained an output contract.

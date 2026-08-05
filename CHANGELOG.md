@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.7.0...v0.8.0) (2026-08-05)
+
+
+### Features
+
+* **hermes:** give the Splunk parsing sweep a named dedup baseline ([#37](https://github.com/dryvist/ai-llm-prompts/issues/37)) ([bbb464a](https://github.com/dryvist/ai-llm-prompts/commit/bbb464ab751c61fc87744466f831b2528759591e))
+
 ## [0.7.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.6.1...v0.7.0) (2026-08-05)
 
 

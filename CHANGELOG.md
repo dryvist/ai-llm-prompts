@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.6.1...v0.7.0) (2026-08-05)
+
+
+### Features
+
+* **auto-ai-agent:** give the Hermes surface a Slack output contract ([#35](https://github.com/dryvist/ai-llm-prompts/issues/35)) ([ed8e4b4](https://github.com/dryvist/ai-llm-prompts/commit/ed8e4b450d9645dbb5764c01e1d7839b0f40fe90))
+
 ## [0.6.1](https://github.com/dryvist/ai-llm-prompts/compare/v0.6.0...v0.6.1) (2026-08-04)
 
 

@@ -2,6 +2,20 @@
 
 ## 2026-08-04
 
+* **Update (auto-ai-agent)**: the `hermes` surface gained an output contract.
+  Channel routing is now stated as a rule the agent can apply — real findings to
+  the all channel, self-breakage to issues (one post per problem, not per
+  occurrence), everything FYI or repeated to noise — because an audit of three
+  days of live output found one recurring alert template filling 38% of the
+  issues channel and routine sweeps repeating three to five times a day in the
+  all channel. A 24-hour no-repeat rule now covers the core channels, with only
+  an active unhandled P1 exempt. The format rules ask for a status emoji and one
+  bold takeaway first, so a reader can triage a message at a glance. A new
+  triage rule ends alert-and-stop behavior: a confirmed problem now also gets a
+  deduped ticket and a bounded follow-up investigation. Model guidance gained a
+  tiering line so the small fast model stays a deliberate choice for quick or
+  bulk work rather than becoming the default.
+
 * **Fix (auto-ai-agent)**: the `hermes` surface mandated routine status be
   delivered to a default home channel "every run, never suppressed", while the
   consumer's job enqueuer separately tells each job to deliver to the

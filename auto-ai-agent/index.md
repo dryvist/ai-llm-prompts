@@ -5,6 +5,7 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 ## Prompts
 
 * [Autonomous Agent Base](autonomous-base.md) - Shared behavioral base for autonomous engineering agents.
+* [Donna Surface](donna.md) - Donna identity and operating voice: executive-assistant archetype, response shapes, and interaction boundaries.
 * [Hermes bot PR triage](hermes-bot-pr-triage.md) - Delta-aware bot-PR security triage that labels and escalates dependency PRs but never merges.
 * [Hermes curriculum application fleet health](hermes-curriculum-apps.md) - Fleet-health and repository cross-reference curriculum job.
 * [Hermes curriculum self-improvement](hermes-curriculum-improve.md) - Bounded evidence-based self-improvement curriculum job.

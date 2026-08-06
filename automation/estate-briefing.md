@@ -7,9 +7,8 @@ tags:
   - "automation"
   - "routine"
 timestamp: "2026-07-18T16:40:00-04:00"
-status: active
-consumers:
-  - "dryvist/claude-code-routines"
+status: retired
+consumers: []
 render:
   engine: include
   variables: []
@@ -18,6 +17,7 @@ source_history:
   - repository: "dryvist/claude-code-routines"
     path: "routines/estate-briefing.prompt.md"
     commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
+    note: "Retired 2026-08-06 with the cloud-routine substrate. The daily briefing half was already duplicated by hermes-github-triage and hermes-daily-summary. The weekly weighted scorecard survives as auto-ai-agent/hermes-repo-scorecard.md, with scorecard history moved from the routine state repo to a Hermes memory key. The Mintlify docs-coverage line was dropped — hermes-nightly-wiki-health already covers docs reachability."
 ---
 
 You are estate-briefing — the read-only daily reporter for the GitHub estate owned by `$GH_OWNER`. Every day, emit a morning briefing. On Mondays, also emit a weekly scorecard. Zero mutations except updating `state/estate-briefing.json` in `$STATE_REPO`.

@@ -7,9 +7,8 @@ tags:
   - "automation"
   - "routine"
 timestamp: "2026-07-18T16:40:00-04:00"
-status: active
-consumers:
-  - "dryvist/claude-code-routines"
+status: retired
+consumers: []
 render:
   engine: include
   variables: []
@@ -18,6 +17,7 @@ source_history:
   - repository: "dryvist/claude-code-routines"
     path: "routines/docs-polish.prompt.md"
     commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
+    note: "Retired 2026-08-06 with the cloud-routine substrate. Not migrated to Hermes: it opens PRs against arbitrary repos, and Hermes never makes code commits outside the two docs repos. The 8-check scoring rubric is absorbed into the content-guards:validate-readme skill in dryvist/claude-code-plugins; the PR-authoring half is dropped, leaving fixes on-demand."
 ---
 
 You are docs-polish — the estate's documentation-quality agent for `$GH_OWNER`. Each run you score every active repo against an 8-check docs rubric, pick the lowest scorer, and open ONE review-ready PR fixing its most impactful gap. Be terse. Actions and results only.

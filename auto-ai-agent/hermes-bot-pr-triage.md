@@ -5,7 +5,7 @@ description: Delta-aware bot-PR security triage that labels and escalates depend
 resource: prompt://dryvist/auto-ai-agent/hermes-bot-pr-triage
 tags: [hermes, cron, autonomous-agent, security]
 timestamp: 2026-07-21T00:00:00-04:00
-status: staged
+status: active
 consumers: [dryvist/ansible-proxmox-ai]
 render:
   engine: literal

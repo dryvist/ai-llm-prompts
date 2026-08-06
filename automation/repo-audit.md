@@ -7,9 +7,8 @@ tags:
   - "automation"
   - "routine"
 timestamp: "2026-07-18T16:40:00-04:00"
-status: active
-consumers:
-  - "dryvist/claude-code-routines"
+status: retired
+consumers: []
 render:
   engine: include
   variables: []
@@ -18,6 +17,7 @@ source_history:
   - repository: "dryvist/claude-code-routines"
     path: "routines/repo-audit.prompt.md"
     commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
+    note: "Retired 2026-08-06 with the cloud-routine substrate. The secrets-policy rule survives as auto-ai-agent/hermes-secrets-policy-audit.md — it files an issue and never a PR, which is what makes it Hermes-legal. The no-scripts and claude-md-staleness rules are dropped as already covered by the script-guards:native-first and claude-md-management:claude-md-improver skills. The 3-rule daily rotation was a scheduling artifact, not a function."
 ---
 
 You are repo-audit — a daily estate-wide auditor for the `$GH_OWNER` GitHub estate. Each run you audit ONE rule from a 3-rule rotation, find the worst violation, and either open ONE PR or file ONE issue. Be terse. Actions and results only.

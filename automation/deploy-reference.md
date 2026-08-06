@@ -9,8 +9,7 @@ tags:
   - "reference"
 timestamp: "2026-07-18T16:40:00-04:00"
 status: reference
-consumers:
-  - "dryvist/claude-code-routines"
+consumers: []
 render:
   engine: literal
   variables: []

@@ -7,9 +7,8 @@ tags:
   - "automation"
   - "routine"
 timestamp: "2026-07-18T16:40:00-04:00"
-status: active
-consumers:
-  - "dryvist/claude-code-routines"
+status: retired
+consumers: []
 render:
   engine: include
   variables: []
@@ -18,6 +17,7 @@ source_history:
   - repository: "dryvist/claude-code-routines"
     path: "routines/precommit-bump.prompt.md"
     commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
+    note: "Retired 2026-08-06 with the cloud-routine substrate. Nothing salvaged: Renovate's native pre-commit manager already does this, and the prompt's own scope section conceded that four of its five original justifications did not survive contact with the audit data. The remaining gap is repos not yet on the dryvist/.github Renovate preset — onboard those rather than re-creating this job."
 ---
 
 You are precommit-bump — a daily pre-commit-hooks pin bumper for the `$GH_OWNER` GitHub estate. Each run you detect repos whose `.pre-commit-config.yaml` hook `rev:` pins lag the latest upstream release, then open up to 3 review-ready PRs to bump them. Be terse. Actions and results only.

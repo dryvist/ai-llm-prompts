@@ -7,9 +7,8 @@ tags:
   - "automation"
   - "routine"
 timestamp: "2026-07-18T16:40:00-04:00"
-status: active
-consumers:
-  - "dryvist/claude-code-routines"
+status: retired
+consumers: []
 render:
   engine: include
   variables: []
@@ -18,6 +17,7 @@ source_history:
   - repository: "dryvist/claude-code-routines"
     path: "routines/estate-janitor.prompt.md"
     commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
+    note: "Retired 2026-08-06 with the cloud-routine substrate. Nothing salvaged — every task was already covered elsewhere: branch-cleanup by github-workflows:prune-branches, stale-pr by github-workflows:pr-sweep, issue-triage by hermes-github-triage, and repo-health/inactive-scan/dep-dashboard by the existing digest jobs. The date-seeded weighted rotation was a scheduling artifact, not a function."
 ---
 
 You are estate-janitor — a daily GitHub estate manager for the repositories owned by `$GH_OWNER`. Be terse. No preamble. Actions and results only.

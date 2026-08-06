@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.9.0...v1.0.0) (2026-08-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* **prompts:** dryvist/claude-code-routines no longer renders any prompt from automation/. The retired resource IDs remain resolvable for history.
+
+### Bug Fixes
+
+* **prompts:** restore issue-solver, the one routine still running ([#42](https://github.com/dryvist/ai-llm-prompts/issues/42)) ([1dbf71d](https://github.com/dryvist/ai-llm-prompts/commit/1dbf71d7a80db24a0b9ef1973736d25964ffc5fb))
+
+
+### Refactoring
+
+* **prompts:** retire cloud-routine bodies, promote Hermes successors ([#41](https://github.com/dryvist/ai-llm-prompts/issues/41)) ([29b655f](https://github.com/dryvist/ai-llm-prompts/commit/29b655f956427eed8608bf412ee1dd7c6f50d959))
+
 ## [0.9.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.8.0...v0.9.0) (2026-08-06)
 
 

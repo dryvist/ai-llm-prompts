@@ -1,5 +1,18 @@
 # Change Log
 
+## 2026-08-06 (later)
+
+* **Fix (automation)**: restore `issue-solver` as `automation/issue-solver.md`,
+  `status: active`, and un-retire the `fragment-prerequisites` it includes. Both
+  were swept up in the cloud-routine retirement, and that was wrong: issue-solver
+  never ran on the cloud substrate. It runs in GitHub Actions on a GitHub App
+  token, has succeeded twice daily throughout the five weeks the cloud routines
+  were dead, and is the one routine still live. The removal left the body of a
+  working job existing only at its consumer's pinned submodule commit and on no
+  main branch anywhere, so any repin would have silently broken it. The earlier
+  entry below saying the consumer renders nothing from this directory is
+  corrected by this one: it renders `issue-solver`, and only `issue-solver`.
+
 ## 2026-08-06
 
 * **Retire (automation)**: the seven cloud-routine bodies and their twelve shared

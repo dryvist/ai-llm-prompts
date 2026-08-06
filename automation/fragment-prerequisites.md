@@ -8,8 +8,9 @@ tags:
   - "routine"
   - "fragment"
 timestamp: "2026-07-18T16:40:00-04:00"
-status: retired
-consumers: []
+status: active
+consumers:
+  - "dryvist/claude-code-routines"
 render:
   engine: literal
   variables: []

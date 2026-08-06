@@ -8,6 +8,9 @@ history, not as runnable prompts. Each retired entry's `source_history` note rec
 its content went — Hermes jobs under `auto-ai-agent/`, an existing skill, or nowhere because
 a native feature already covered it.
 
+`issue-solver` is the exception and is still active. It never ran on that substrate — it runs
+in GitHub Actions on a GitHub App token — so it and the one fragment it includes stay live.
+
 ## Prompts
 
 * [DRY Enforcer Agent](ai-workflows-agent-dry-enforcer.md) - Dormant Copilot agent profile for code simplification and DRY enforcement.
@@ -54,7 +57,8 @@ a native feature already covered it.
 * [Attribution](fragment-attribution.md) - Retired 2026-08-06. Shared provenance and attribution rules for cloud routines.
 * [Hard Rules](fragment-hard-rules.md) - Retired 2026-08-06. Shared load-bearing safety and mutation rules for cloud routines.
 * [Connectivity Preflight](fragment-preflight.md) - Retired 2026-08-06. Shared authentication and egress preflight for cloud routines.
-* [Prerequisites](fragment-prerequisites.md) - Retired 2026-08-06. Shared runtime tools and environment prerequisites for cloud routines.
+* [Issue Solver](issue-solver.md) - GitHub Actions task-driver prompt for resolving one Linear task.
+* [Prerequisites](fragment-prerequisites.md) - Shared runtime tools and environment prerequisites; still consumed by issue-solver.
 * [Redaction](fragment-redaction.md) - Retired 2026-08-06. Shared sensitive-data redaction rules for cloud routines.
 * [Skip List](fragment-skip-list.md) - Retired 2026-08-06. Shared repository exclusions for cloud routines.
 * [Slack Output](fragment-slack-output.md) - Retired 2026-08-06. Shared Slack output and sanitization rules for cloud routines.

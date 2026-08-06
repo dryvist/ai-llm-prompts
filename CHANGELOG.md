@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.8.0...v0.9.0) (2026-08-06)
+
+
+### Features
+
+* **auto-ai-agent:** add the Donna persona fragment ([#39](https://github.com/dryvist/ai-llm-prompts/issues/39)) ([0b6815f](https://github.com/dryvist/ai-llm-prompts/commit/0b6815f23a4901ca94534002033fdaf7164c6e8d))
+
 ## [0.8.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.7.0...v0.8.0) (2026-08-05)
 
 

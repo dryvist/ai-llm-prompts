@@ -1,5 +1,32 @@
 # Change Log
 
+## 2026-08-06
+
+* **Retire (automation)**: the seven cloud-routine bodies and their twelve shared
+  fragments moved to `status: retired`. The Anthropic cloud-routine substrate they
+  ran on has produced nothing since 2026-07-01 — every repo-scoped call returns a
+  session/repo binding 403, the deploy path has been unusable since 2026-05-19, and
+  no state file has been written in five weeks. The bodies stay here as history;
+  each one's `source_history` note now records where its content went, so the
+  catalog answers "where did this go" rather than only "this used to exist".
+  `consumers` is cleared on all of them, `dryvist/claude-code-routines` no longer
+  renders any prompt from this directory.
+
+* **Add (auto-ai-agent)**: `hermes-repo-scorecard` and `hermes-secrets-policy-audit`
+  salvage the two pieces of the retired routines that were neither duplicated
+  elsewhere nor blocked by Hermes doctrine. The scorecard keeps the weighted 0-100
+  rubric and week-over-week deltas from `estate-briefing`, with history in a Hermes
+  memory key instead of the routine state repo. The secrets audit keeps the one
+  `repo-audit` rule that files an issue and never a pull request — which is exactly
+  what makes it Hermes-legal — and gates on the `contents:read` token so it fails
+  visibly instead of reporting a clean estate it never read.
+
+* **Promote (auto-ai-agent)**: `hermes-docs-sync` and `hermes-bot-pr-triage` move
+  from `staged` to `active`. Draft-only commits to the two docs repos are the single
+  code-commit carve-out Hermes has, so docs-sync transfers intact; bot-PR work
+  transfers as its triage half only, because Hermes never merges and the org Renovate
+  preset already merges bot PRs directly via API.
+
 ## 2026-08-05
 
 * **Update (auto-ai-agent)**: `hermes-splunk-parsing` gained a named dedup

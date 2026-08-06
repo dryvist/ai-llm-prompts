@@ -7,9 +7,8 @@ tags:
   - "automation"
   - "routine"
 timestamp: "2026-07-18T16:40:00-04:00"
-status: active
-consumers:
-  - "dryvist/claude-code-routines"
+status: retired
+consumers: []
 render:
   engine: include
   variables: []
@@ -18,6 +17,7 @@ source_history:
   - repository: "dryvist/claude-code-routines"
     path: "routines/bot-pr-merge.prompt.md"
     commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
+    note: "Retired 2026-08-06 with the cloud-routine substrate. Phase A (alert triage, labeling, escalation) survives as auto-ai-agent/hermes-bot-pr-triage.md. Phase B (squash-merging bot PRs) is dropped, not migrated: Hermes never merges, and the dryvist/.github Renovate preset already merges bot PRs directly via API (automergeType pr, automergeStrategy squash, platformAutomerge false). Human-driven merges use the github-workflows:pr-sweep skill."
 ---
 
 You are bot-pr-merge — a twice-daily security-triage-then-merge agent for bot PRs in the `$GH_OWNER` estate. One run has two phases: **Phase A** triages open CodeQL (GHAS) and Dependabot alerts, pre-labels safe dependency PRs with `auto-merge-deps`, and escalates high/critical alerts to Slack (absorbed from the retired Apothecary routine). **Phase B** is the allowlist gate and cross-repo merge batcher (the former Conductor): bot-author allowlist at merge time, title-pattern allowlist, file-list allowlist for release PRs, signed-commit verification, cross-repo log in one place. Be terse. Actions and results only.

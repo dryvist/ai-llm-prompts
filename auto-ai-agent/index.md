@@ -26,6 +26,8 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Hermes GitHub triage](hermes-github-triage.md) - Read-only delta-aware Dryvist GitHub organization triage prompt.
 * [Hermes inbound webhook relay](hermes-inbound-webhook.md) - Prompt template for relaying the raw inbound webhook payload.
 * [Hermes nightly wiki health](hermes-nightly-wiki-health.md) - Nightly wiki lint and health-check prompt.
+* [Hermes repo scorecard](hermes-repo-scorecard.md) - Weekly weighted 0-100 repo-health scorecard with week-over-week deltas.
+* [Hermes secrets policy audit](hermes-secrets-policy-audit.md) - Issue-only scan for credential and private-topology leaks, never a pull request.
 * [Hermes Splunk deep dive](hermes-splunk-deepdive.md) - Quiet Splunk index or sourcetype characterization prompt.
 * [Hermes Splunk digest](hermes-splunk-digest.md) - Hourly delta-aware Splunk status digest prompt.
 * [Hermes Splunk parsing sweep](hermes-splunk-parsing.md) - Bounded Splunk data-quality monitoring prompt.

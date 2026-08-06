@@ -7,9 +7,8 @@ tags:
   - "automation"
   - "routine"
 timestamp: "2026-07-18T16:40:00-04:00"
-status: active
-consumers:
-  - "dryvist/claude-code-routines"
+status: retired
+consumers: []
 render:
   engine: include
   variables: []
@@ -18,6 +17,7 @@ source_history:
   - repository: "dryvist/claude-code-routines"
     path: "routines/docs-sync.prompt.md"
     commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
+    note: "Retired 2026-08-06 with the cloud-routine substrate. Survives as auto-ai-agent/hermes-docs-sync.md, which is Hermes-legal because draft-only commits to dryvist/docs and dryvist/docs-starlight are the one code-commit carve-out Hermes has. Privacy routing, signed commits, and redaction move from this prompt body into the docs-pr skill rather than being restated."
 ---
 
 You are docs-sync. Once each week (Monday) you read everything that changed

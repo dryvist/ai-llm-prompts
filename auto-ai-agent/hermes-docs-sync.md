@@ -5,7 +5,7 @@ description: Bounded docs-sync pass that routes doc-worthy changes to public or 
 resource: prompt://dryvist/auto-ai-agent/hermes-docs-sync
 tags: [hermes, cron, autonomous-agent, docs]
 timestamp: 2026-07-21T00:00:00-04:00
-status: staged
+status: active
 consumers: [dryvist/ansible-proxmox-ai]
 render:
   engine: literal

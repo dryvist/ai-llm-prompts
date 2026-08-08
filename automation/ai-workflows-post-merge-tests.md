@@ -6,7 +6,7 @@ resource: "prompt://dryvist/automation/ai-workflows/post-merge-tests"
 tags:
   - "automation"
   - "ai-workflows"
-timestamp: "2026-07-18T16:40:00-04:00"
+timestamp: "2026-08-07T20:30:00-04:00"
 status: active
 consumers:
   - "dryvist/ai-workflows"
@@ -82,3 +82,7 @@ workflow opens no PR.
 - Only test public APIs and exported functions
 - Do not create tests for trivial getters/setters or configuration files
 - If existing test coverage is already comprehensive, exit without action
+- **Disclosure**: the PR title and body state what changed, never why it was needed or what was
+  broken. No internal hostnames, FQDNs, addresses, node names, or topology. No incident/outage
+  narrative, no credential or token-scope detail. Name a scrub by category, never as a
+  real-value-to-placeholder mapping.

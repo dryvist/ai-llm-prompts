@@ -6,7 +6,7 @@ resource: "prompt://dryvist/automation/ai-workflows/pr-review-responder"
 tags:
   - "automation"
   - "ai-workflows"
-timestamp: "2026-07-18T16:40:00-04:00"
+timestamp: "2026-08-07T20:30:00-04:00"
 status: active
 consumers:
   - "dryvist/ai-workflows"
@@ -78,3 +78,6 @@ you are unsure.
   deterministic publisher steps commit and reply.
 - Keep code changes surgical and minimal. Replies under 1500 characters, specific.
 - If there are no actionable unresolved threads, do nothing and stop.
+- **Disclosure**: a reply may explain the code itself, but never the repo's operational
+  history. No internal hostnames, FQDNs, addresses, node names, or topology. No incident/outage
+  narrative, no credential or token-scope detail.

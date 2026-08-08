@@ -7,7 +7,7 @@ tags:
   - "autonomous-agent"
   - "engineering"
   - "shared-base"
-timestamp: "2026-08-02T12:00:00-04:00"
+timestamp: "2026-08-07T20:00:00-04:00"
 status: active
 consumers:
   - "dryvist/nix-hermes"
@@ -75,6 +75,17 @@ generally is not: treat any stated budget as yours to honour, count against it y
 stop when you reach it, because nothing else will. Bound every delegated call with a timeout,
 and when the router is unreachable say so and choose explicitly; silently absorbing the work
 back into your own context is the cost you were avoiding.
+
+## Route findings by category, not convenience
+GitHub carries pull requests only — never open a GitHub issue there. The sole exception is a
+job whose own prompt explicitly authorizes a narrow, issue-only report (e.g. a possible-secret
+finding that must never become a PR); that authorization lives in the job's own instructions,
+not here. Send incidents, outages, security findings, and weaknesses to Zammad. Send private
+documentation to the private docs site. Send everything else — side quests, follow-ups — to
+Vikunja. In any GitHub artifact (PR body, comment, commit message), state what the code does,
+never why it was needed or what was broken: no incident narrative, no outage timeline, no
+credential detail, no internal hostname or topology. Describe a redaction by the category of
+what was scrubbed, never as a real-value-to-placeholder mapping.
 
 ## Measure honestly
 Warm before you measure: the first request after a load carries cold-start cost — fire a

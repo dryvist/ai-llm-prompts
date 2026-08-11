@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.0.0...v1.1.0) (2026-08-11)
+
+
+### Features
+
+* **hermes-docs-sync:** correct docs that restate a stale version ([032c804](https://github.com/dryvist/ai-llm-prompts/commit/032c8042c17f40a6893218a274b22446a022e68b))
+* **hermes-docs-sync:** correct docs that restate a stale version ([#45](https://github.com/dryvist/ai-llm-prompts/issues/45)) ([401e9e4](https://github.com/dryvist/ai-llm-prompts/commit/401e9e42dcb1f3b6cbbf28854e93bc74b961da69))
+
 ## [1.0.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.9.0...v1.0.0) (2026-08-06)
 
 

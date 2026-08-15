@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.1.0...v1.1.1) (2026-08-15)
+
+
+### Bug Fixes
+
+* **automation:** split oversized log and repo-audit files under the size gate ([#47](https://github.com/dryvist/ai-llm-prompts/issues/47)) ([140cec3](https://github.com/dryvist/ai-llm-prompts/commit/140cec38a5f861a351c0e6727cccf649e6982757))
+
 ## [1.1.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.0.0...v1.1.0) (2026-08-11)
 
 

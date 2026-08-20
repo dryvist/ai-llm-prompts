@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.1.1...v1.2.0) (2026-08-20)
+
+
+### Features
+
+* **auto-ai-agent:** add disclosure routing law to autonomous base prompt ([fa6a06f](https://github.com/dryvist/ai-llm-prompts/commit/fa6a06f5230c971fe9fc1bbe66cfad648ba9b8bd))
+
 ## [1.1.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.1.0...v1.1.1) (2026-08-15)
 
 

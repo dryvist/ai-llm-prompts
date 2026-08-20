@@ -6,7 +6,7 @@ resource: "prompt://dryvist/automation/ai-workflows/release-notes"
 tags:
   - "automation"
   - "ai-workflows"
-timestamp: "2026-07-18T16:40:00-04:00"
+timestamp: "2026-08-07T20:30:00-04:00"
 status: active
 consumers:
   - "dryvist/ai-workflows"
@@ -53,3 +53,6 @@ Rules:
   unless they change consumer behavior.
 - If the release is trivial (e.g. one dependency bump), one or two honest
   bullets beat six padded ones.
+- **Disclosure**: describe user-visible impact only, never why a change was needed or what was
+  broken internally. No internal hostnames, FQDNs, addresses, node names, or topology. No
+  incident/outage narrative, no credential or token-scope detail.

@@ -6,7 +6,7 @@ resource: "prompt://dryvist/automation/ai-workflows/code-simplifier"
 tags:
   - "automation"
   - "ai-workflows"
-timestamp: "2026-07-18T16:40:00-04:00"
+timestamp: "2026-08-07T20:30:00-04:00"
 status: active
 consumers:
   - "dryvist/ai-workflows"
@@ -81,6 +81,10 @@ Then write your PR description to a file named `.claude-pr.md` in the repo root:
 
 - **First line**: a clear conventional-commit PR title, e.g. `refactor: simplify X helper`.
 - **Remaining lines**: a body explaining what was simplified and why it is clearer.
+- **Disclosure**: describe the simplification itself, never the surrounding repo's operational
+  history. No internal hostnames, FQDNs, addresses, node names, or topology. No incident/outage
+  narrative, no credential or token-scope detail. Name a scrub by category, never as a
+  real-value-to-placeholder mapping.
 
 Do **not** run git, do **not** `gh pr create`, do **not** push — the workflow commits your edits
 and opens a verified PR from `.claude-pr.md` automatically (and appends the AI Provenance footer).

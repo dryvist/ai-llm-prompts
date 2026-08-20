@@ -6,7 +6,7 @@ resource: "prompt://dryvist/automation/ai-workflows/dep-review"
 tags:
   - "automation"
   - "ai-workflows"
-timestamp: "2026-07-18T16:40:00-04:00"
+timestamp: "2026-08-07T20:30:00-04:00"
 status: active
 consumers:
   - "dryvist/ai-workflows"
@@ -55,6 +55,9 @@ here.
 - **Default to `risk:medium` whenever you are uncertain.** `risk:low` is a
   positive assertion that you verified the update is routine and clean. Doubt is
   not low.
+- **Disclosure**: the posted advisory states what the update changes and how this repo uses the
+  dependency, never internal hostnames, FQDNs, addresses, node names, or broader topology. No
+  incident/outage narrative, no credential or token-scope detail.
 
 ## What to inspect
 

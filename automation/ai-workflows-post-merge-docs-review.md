@@ -6,7 +6,7 @@ resource: "prompt://dryvist/automation/ai-workflows/post-merge-docs-review"
 tags:
   - "automation"
   - "ai-workflows"
-timestamp: "2026-07-18T16:40:00-04:00"
+timestamp: "2026-08-07T20:30:00-04:00"
 status: active
 consumers:
   - "dryvist/ai-workflows"
@@ -98,3 +98,7 @@ If the threshold is NOT met, make no edits and write no `.claude-pr.md` — the 
 - If unsure whether something is an issue, skip it
 - Maximum 1 PR per run
 - Do not create PRs that only fix formatting or style
+- **Disclosure**: the PR title and body state what changed, never why it was needed or what was
+  broken. No internal hostnames, FQDNs, addresses, node names, or topology. No incident/outage
+  narrative, no credential or token-scope detail. Name a scrub by category, never as a
+  real-value-to-placeholder mapping.

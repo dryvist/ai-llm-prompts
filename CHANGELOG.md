@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.1.0...v1.1.1) (2026-08-15)
+
+
+### Bug Fixes
+
+* **automation:** split oversized log and repo-audit files under the size gate ([#47](https://github.com/dryvist/ai-llm-prompts/issues/47)) ([140cec3](https://github.com/dryvist/ai-llm-prompts/commit/140cec38a5f861a351c0e6727cccf649e6982757))
+
+## [1.1.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.0.0...v1.1.0) (2026-08-11)
+
+
+### Features
+
+* **hermes-docs-sync:** correct docs that restate a stale version ([032c804](https://github.com/dryvist/ai-llm-prompts/commit/032c8042c17f40a6893218a274b22446a022e68b))
+* **hermes-docs-sync:** correct docs that restate a stale version ([#45](https://github.com/dryvist/ai-llm-prompts/issues/45)) ([401e9e4](https://github.com/dryvist/ai-llm-prompts/commit/401e9e42dcb1f3b6cbbf28854e93bc74b961da69))
+
 ## [1.0.0](https://github.com/dryvist/ai-llm-prompts/compare/v0.9.0...v1.0.0) (2026-08-06)
 
 

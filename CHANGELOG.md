@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.2.0...v1.2.1) (2026-09-01)
+
+
+### Bug Fixes
+
+* **hermes-github-triage:** pin the query and stop an implausible total ([#51](https://github.com/dryvist/ai-llm-prompts/issues/51)) ([e435425](https://github.com/dryvist/ai-llm-prompts/commit/e435425700766b02ccaaedbe98bafb6accd01d60))
+
 ## [1.2.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.1.1...v1.2.0) (2026-08-20)
 
 

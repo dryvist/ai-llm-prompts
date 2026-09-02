@@ -1,5 +1,13 @@
 # Change Log
 
+## 2026-09-02
+
+* **Creation (developer-tools)**: `agent-service-integration-pattern.md` records
+  how an agent reaches an external service across every CLI harness — a shell
+  command plus a manual-invoke skill, scoped per repository — instead of an
+  always-on MCP server measured at 20,930 tokens of every session for a
+  single-harness capability.
+
 ## 2026-08-07
 
 * **Update (auto-ai-agent)**: `autonomous-base.md` gains a routing-law section —

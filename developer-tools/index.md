@@ -4,6 +4,7 @@ Prompts injected by development workflows, scheduled jobs, guards, and hooks.
 
 ## Prompts
 
+* [Agent service integration pattern](agent-service-integration-pattern.md) - How an agent reaches an external service across every CLI harness at near-zero session cost.
 * [Bash script heredoc block guidance](bash-script-heredoc-block.md) - Model-visible denial reason for creating script files with heredocs.
 * [Bash script location block guidance](bash-script-location-block.md) - Denial reason for scripts outside approved directories.
 * [Bash script redirect block guidance](bash-script-redirect-block.md) - Model-visible denial reason for creating script files with Bash redirects.

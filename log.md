@@ -1,5 +1,19 @@
 # Change Log
 
+## 2026-09-05
+
+* **Retire (auto-ai-agent)**: `hermes-docs-sync` moves to `status: retired` with
+  `consumers` cleared. Public documentation is now produced by the docs publish
+  workflow, which projects the pages marked publishable in the private docs
+  source, opens the pull request as a dedicated publisher identity, and merges on
+  the target branch's required status checks. Every step the routine performed has
+  a native owner: selection is a frontmatter flag defaulting to unpublished,
+  authoring is a deterministic transform rather than a per-concept judgement, and
+  the merge gate is the required checks rather than an agent polling a check and
+  renaming the pull request to flag a human. The body is kept as history and its
+  `source_history` records the successor. The version-drift check has no successor
+  and the retired body says so.
+
 ## 2026-08-07
 
 * **Update (auto-ai-agent)**: `autonomous-base.md` gains a routing-law section —

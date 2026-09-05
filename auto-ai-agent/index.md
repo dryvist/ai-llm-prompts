@@ -22,7 +22,7 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Hermes digest: Splunk parsing quality](hermes-digest-splunk-parsing-quality.md) - Daily auto-delivered Splunk per-sourcetype parsing-quality digest.
 * [Hermes digest: Splunk security lens](hermes-digest-splunk-security-lens.md) - 6-hourly auto-delivered Splunk security-relevant pattern digest.
 * [Hermes digest: Zammad incident review](hermes-digest-zammad-incident-review.md) - Daily auto-delivered open Zammad incident review.
-* [Hermes docs sync](hermes-docs-sync.md) - Bounded docs-sync pass that routes doc-worthy changes to public or private docs via signed draft PRs.
+* [Hermes docs sync](hermes-docs-sync.md) - Retired 2026-09-05. Bounded pass that routed doc-worthy changes to public or private docs via draft PRs.
 * [Hermes GitHub triage](hermes-github-triage.md) - Read-only delta-aware Dryvist GitHub organization triage prompt.
 * [Hermes inbound webhook relay](hermes-inbound-webhook.md) - Prompt template for relaying the raw inbound webhook payload.
 * [Hermes nightly wiki health](hermes-nightly-wiki-health.md) - Nightly wiki lint and health-check prompt.

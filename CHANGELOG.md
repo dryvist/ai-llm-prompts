@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/dryvist/ai-llm-prompts/compare/v1.2.1...v1.2.2) (2026-09-05)
+
+
+### Bug Fixes
+
+* **agents:** restore the trailing newline on AGENTS.md ([#54](https://github.com/dryvist/ai-llm-prompts/issues/54)) ([c8c8ce6](https://github.com/dryvist/ai-llm-prompts/commit/c8c8ce67b32cd6673734449818e36554a868bcec))
+
 ## [1.2.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.2.0...v1.2.1) (2026-09-01)
 
 

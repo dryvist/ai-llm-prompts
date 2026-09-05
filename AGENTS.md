@@ -1,3 +1,6 @@
+---
+skill-groups: [core, ai]
+---
 # AI Agents Configuration
 
 ## Repository purpose

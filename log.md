@@ -1,5 +1,19 @@
 # Change Log
 
+## 2026-09-11
+
+* **Update (auto-ai-agent)**: `hermes`'s `Model fabric:` paragraph stops telling the
+  agent to send physical model ids to the router. The router now publishes a fixed
+  role vocabulary (`lead`, `subagent`, `cheap`, among others) that resolves to a
+  physical model without the caller naming one, so the stale `no generic ai-default
+  alias, so send real model ids` claim and the OpenBao brain-value detail it needed
+  are dropped in favor of naming a role. `Tier by job` and `Escalation (OpenRouter)`
+  are reworded onto the same roles; the escalation paragraph keeps naming physical
+  OpenRouter ids by design, since that tier is a deliberate paid per-call pick no
+  role covers. The `Attribution:` example drops its hardcoded physical model id in
+  favor of a role name. Line anchors `Model fabric:` and `Escalation routing:` are
+  unchanged.
+
 ## 2026-09-05
 
 * **Retire (auto-ai-agent)**: `hermes-docs-sync` moves to `status: retired` with

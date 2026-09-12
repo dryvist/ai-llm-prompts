@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.2.3...v1.3.0) (2026-09-12)
+
+
+### Features
+
+* **auto-ai-agent:** add a once-daily stale-open-PR report to bot-pr-triage ([#60](https://github.com/dryvist/ai-llm-prompts/issues/60)) ([4e370ab](https://github.com/dryvist/ai-llm-prompts/commit/4e370ab05c1296ba5f2c5a1f820f058e4e9bf404))
+
 ## [1.2.3](https://github.com/dryvist/ai-llm-prompts/compare/v1.2.2...v1.2.3) (2026-09-12)
 
 

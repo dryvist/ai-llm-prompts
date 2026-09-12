@@ -1,10 +1,10 @@
 ---
 type: LLM Prompt
 title: Hermes bot PR triage
-description: Delta-aware bot-PR security triage that labels and escalates dependency PRs but never merges.
+description: Delta-aware bot-PR security triage that labels and escalates dependency PRs but never merges, plus a once-daily stale-open-PR report.
 resource: prompt://dryvist/auto-ai-agent/hermes-bot-pr-triage
 tags: [hermes, cron, autonomous-agent, security]
-timestamp: 2026-07-21T00:00:00-04:00
+timestamp: 2026-09-12T00:00:00-04:00
 status: active
 consumers: [dryvist/ansible-proxmox-ai]
 render:
@@ -39,10 +39,25 @@ Label a candidate PR `auto-merge-deps` only if it clears every gate. These are d
 7. **Label provisioned** — the `auto-merge-deps` label exists in the repo. If it does not, skip the label and Slack `[label missing]`.
 8. **Cap** — the PR is not already labeled, and you have added fewer than 5 labels this run.
 
+## Stale open PR report (once per calendar day, all authors)
+
+Separate from the security triage above and not limited to bot PRs. Recall
+memory key `bot-pr-triage-stale-last-date`. If it already matches today's
+UTC date, skip this whole section for this run — the cron fires more than
+once a day and the report is not.
+
+Otherwise: list every open PR across the org's non-archived repos (apply
+your operator skip-list), sort oldest-first by days open, and take the top
+10. For each, report the repo, PR number, title, days open, and author. A
+bare PR number is not acceptable — always give the full PR URL so the
+report is one click, not a lookup. Save today's UTC date to
+`bot-pr-triage-stale-last-date`.
+
 ## Act
 
 - On a full pass, add `auto-merge-deps`. That is the whole action — CI merges from there. You never call merge.
 - Escalate every high (failed the gate for any reason except age) and every critical alert to Slack: `@here` for high, `<!here>` for critical, with CVE/GHSA, severity, repo, and link. Dedupe with memory key `bot-pr-triage-cooldown` — skip an alert already escalated in the last 3 days. Collect escalations into one combined message.
 - Cap labels at 5 per run; escalations are uncapped.
+- Include the stale-PR report (if not skipped above) in the same message as its own section, even when the security triage found nothing.
 
-If nothing cleared a gate and nothing needs escalation, reply with exactly [SILENT]. Otherwise post the combined Slack message (labels added plus escalations) to the home channel and save updated cooldowns to memory. End every delivered message with one line naming the model id(s) you used.
+If nothing cleared a gate, nothing needs escalation, and the stale-PR report was skipped (already reported today), reply with exactly [SILENT]. Otherwise post the combined Slack message (labels added, escalations, stale-PR report) to the home channel and save updated cooldowns to memory. End every delivered message with one line naming the model id(s) you used.

@@ -1,5 +1,15 @@
 # Change Log
 
+## 2026-09-12
+
+* **Update (auto-ai-agent)**: `hermes-bot-pr-triage` gains a once-per-calendar-day
+  stale-open-PR report (top 10 open PRs across the org, oldest first, full PR
+  URLs, all authors — not limited to bot PRs) alongside its existing security
+  triage. Delta-aware via a new memory key
+  (`bot-pr-triage-stale-last-date`) so the 3x/day cron does not repeat the
+  same report; the `[SILENT]` condition now also requires the report to have
+  already fired today.
+
 ## 2026-09-11
 
 * **Update (auto-ai-agent)**: `hermes`'s `Model fabric:` paragraph stops telling the

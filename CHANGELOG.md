@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/dryvist/ai-llm-prompts/compare/v1.2.2...v1.2.3) (2026-09-12)
+
+
+### Bug Fixes
+
+* **hermes:** stop hardcoding physical model ids, name router roles ([#57](https://github.com/dryvist/ai-llm-prompts/issues/57)) ([3b6bf87](https://github.com/dryvist/ai-llm-prompts/commit/3b6bf87f39cb22ee16e9493f8ef426f30a9a4f09))
+
 ## [1.2.2](https://github.com/dryvist/ai-llm-prompts/compare/v1.2.1...v1.2.2) (2026-09-05)
 
 

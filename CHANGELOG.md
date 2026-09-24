@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.3.0...v1.4.0) (2026-09-24)
+
+
+### Features
+
+* **automation:** add docs-sync prompt for per-merge CI enforcement ([5ba5971](https://github.com/dryvist/ai-llm-prompts/commit/5ba59716e046eb6dc5101ce7505b7dd251460bec))
+* **automation:** add docs-sync prompt for per-merge CI enforcement ([ad9697c](https://github.com/dryvist/ai-llm-prompts/commit/ad9697cb92c54e4a41eb778df251cd0b76152eca))
+
 ## [1.3.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.2.3...v1.3.0) (2026-09-12)
 
 

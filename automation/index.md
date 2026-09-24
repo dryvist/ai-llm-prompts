@@ -33,6 +33,7 @@ in GitHub Actions on a GitHub App token — so it and the one fragment it includ
 * [Label Sync](ai-workflows-label-sync.md) - Canonical repository-label synchronization prompt.
 * [Merge Momentum](ai-workflows-merge-momentum-fragment.md) - Reusable development-direction analysis rules.
 * [Next Steps](ai-workflows-next-steps.md) - Development-momentum analysis prompt.
+* [Docs Sync](ai-workflows-docs-sync.md) - Per-merge private-docs correction prompt, triggered once per merged pull request.
 * [Post-Merge Docs Review](ai-workflows-post-merge-docs-review.md) - Post-merge documentation quality review prompt.
 * [Post-Merge Test Coverage](ai-workflows-post-merge-tests.md) - Post-merge test-coverage improvement prompt.
 * [PR Review Responder](ai-workflows-pr-review-responder.md) - Prompt for evaluating and resolving pull-request feedback.

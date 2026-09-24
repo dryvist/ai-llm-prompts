@@ -1,5 +1,18 @@
 # Change Log
 
+## 2026-09-24
+
+* **Add (automation)**: `ai-workflows-docs-sync.md`, an event-driven docs-sync
+  prompt consumed by a new `dryvist/ai-workflows` reusable CI workflow. It
+  runs once per merged pull request in any dryvist repo, decides whether that
+  merge changed something the private docs source (`dryvist/docs-starlight`)
+  states, and drafts a correction PR when it did. It replaces the per-repo
+  agent rule proposed in `dryvist/ai-assistant-instructions#851` with an
+  enforced, local-router CI job every repo inherits instead of a convention
+  each agent has to remember. Its `source_history` records the two retired
+  `docs-sync` catalog entries it succeeds in shape (per-merge scope, one
+  target site, no state file) rather than content.
+
 ## 2026-09-12
 
 * **Update (auto-ai-agent)**: `hermes-bot-pr-triage` gains a once-per-calendar-day

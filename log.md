@@ -1,5 +1,16 @@
 # Change Log
 
+## 2026-09-25
+
+* **Add (automation/testing)**: portable, staged instruction bodies for the `ui-smoke`,
+  `spec-author`, `healer`, `perf-debug`, and `explorer` agents. The catalog records one
+  immutable prompt resource for each role; consumers supply tool wiring and execution policy.
+* **Fix (automation)**: `fragment-issue-solver-phases-1-4.md`, `fragment-issue-solver-phases-5-8.md`,
+  and `repo-audit-rules.md` were missing the `render` and `source_history` OKF fields. The catalog's
+  recursive-directory OKF check now covers nested paths and caught the pre-existing gap; both
+  fragments now mirror `issue-solver.md`'s `source_history`, and the rule file mirrors
+  `repo-audit.md`'s.
+
 ## 2026-09-24
 
 * **Add (automation)**: `ai-workflows-docs-sync.md`, an event-driven docs-sync

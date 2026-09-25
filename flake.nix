@@ -19,12 +19,11 @@
       ];
       promptFiles = nixpkgs.lib.concatMap
         (directory:
-          let entries = builtins.readDir directory;
-          in map
-            (name: directory + "/${name}")
-            (builtins.filter
-              (name: entries.${name} == "regular" && nixpkgs.lib.hasSuffix ".md" name && name != "index.md")
-              (builtins.attrNames entries)))
+          builtins.filter
+            (path:
+              nixpkgs.lib.hasSuffix ".md" (toString path)
+              && builtins.baseNameOf (toString path) != "index.md")
+            (nixpkgs.lib.filesystem.listFilesRecursive directory))
         catalogDirectories;
       requiredFields = [
         "type"

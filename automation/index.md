@@ -13,6 +13,7 @@ in GitHub Actions on a GitHub App token — so it and the one fragment it includ
 
 ## Prompts
 
+* [Testing Agents](testing/index.md) - Portable instruction bodies for specialized browser and UI-testing agents.
 * [DRY Enforcer Agent](ai-workflows-agent-dry-enforcer.md) - Dormant Copilot agent profile for code simplification and DRY enforcement.
 * [Issue Analyst Agent](ai-workflows-agent-issue-analyst.md) - Dormant Copilot agent profile for issue-intent analysis.
 * [Label Expert Agent](ai-workflows-agent-label-expert.md) - Dormant Copilot agent profile for canonical issue labeling.

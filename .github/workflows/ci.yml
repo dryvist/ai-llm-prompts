@@ -21,6 +21,17 @@ jobs:
     uses: dryvist/.github/.github/workflows/_ci-gate.yml@main
     with:
       nix_validate: true
+      # This flake's checks and packages are built per declared system
+      # (aarch64-darwin, aarch64-linux, x86_64-linux) via `import nixpkgs
+      # { system = ... }`, so each is tied to that system even though its
+      # content (OKF frontmatter validation, catalog link-farms) doesn't vary
+      # by platform. `nix flake check --all-systems` on a single-arch runner
+      # tries to build every declared system's derivations for real and fails
+      # with "platform mismatch" for the ones foreign to the runner - most
+      # unrecoverably for aarch64-darwin, which a Linux runner can never
+      # emulate. Disabled per `_nix-validate.yml`'s own documented `all_systems`
+      # escape valve for this exact case.
+      all_systems: false
       filters: |
         markdown:
           - '**.md'

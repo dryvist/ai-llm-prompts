@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.4.0...v1.5.0) (2026-09-25)
+
+
+### Features
+
+* **automation:** add testing agent instruction bodies ([#64](https://github.com/dryvist/ai-llm-prompts/issues/64)) ([29acd77](https://github.com/dryvist/ai-llm-prompts/commit/29acd77b0cc2e4469877d07bcbffcf5c24182bc2))
+
 ## [1.4.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.3.0...v1.4.0) (2026-09-24)
 
 

@@ -10,6 +10,14 @@ timestamp: "2026-07-18T16:40:00-04:00"
 status: active
 consumers:
   - "dryvist/claude-code-routines"
+render:
+  engine: include
+  variables: []
+  frontmatter: strip
+source_history:
+  - repository: "dryvist/claude-code-routines"
+    path: "routines/issue-solver.prompt.md"
+    commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
 ---
 ## Phase 1 — DISCOVER Linear (the only queue)
 

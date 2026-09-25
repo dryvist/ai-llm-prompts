@@ -9,6 +9,14 @@ tags:
 timestamp: "2026-07-18T16:40:00-04:00"
 status: retired
 consumers: []
+render:
+  engine: include
+  variables: []
+  frontmatter: strip
+source_history:
+  - repository: "dryvist/claude-code-routines"
+    path: "routines/repo-audit.prompt.md"
+    commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
 ---
 
 Companion to [repo-audit](repo-audit.md) — the full definition of each rule in its rotation.

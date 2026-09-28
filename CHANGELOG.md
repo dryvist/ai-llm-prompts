@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.6.0...v1.7.0) (2026-09-28)
+
+
+### Features
+
+* **auto-ai-agent:** license audit reads Splunk system messages and health report ([#69](https://github.com/dryvist/ai-llm-prompts/issues/69)) ([5578e3f](https://github.com/dryvist/ai-llm-prompts/commit/5578e3f254773d6dcaca673e8e3d868d30718c4b))
+
 ## [1.6.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.5.0...v1.6.0) (2026-09-28)
 
 

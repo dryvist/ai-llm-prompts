@@ -29,6 +29,8 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Hermes repo scorecard](hermes-repo-scorecard.md) - Weekly weighted 0-100 repo-health scorecard with week-over-week deltas.
 * [Hermes self-audit](hermes-self-audit.md) - Scheduled self-correction loop: own Slack output critique, own Splunk errors, subsystem health, correction cards.
 * [Hermes secrets policy audit](hermes-secrets-policy-audit.md) - Issue-only scan for credential and private-topology leaks, never a pull request.
+* [Hermes direct-cron reporting footer](hermes-direct-cron-footer.md) - Evidence and report-shape contract appended to every direct-cron prompt.
+* [Hermes direct-cron footer, quiet when healthy](hermes-direct-cron-footer-quiet.md) - Same contract for a job whose all-clear goes to a quiet channel.
 * [Hermes service pulse](hermes-service-pulse.md) - Hourly service pulse that learns its baselines, flaky list and thresholds in Hindsight between runs.
 * [Hermes Splunk deep dive](hermes-splunk-deepdive.md) - Quiet Splunk index or sourcetype characterization prompt.
 * [Hermes Splunk digest](hermes-splunk-digest.md) - Hourly delta-aware Splunk status digest prompt.

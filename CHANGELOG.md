@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.7.0...v1.8.0) (2026-09-28)
+
+
+### Features
+
+* **auto-ai-agent:** direct-cron reporting footers, report only and no worker narration ([#71](https://github.com/dryvist/ai-llm-prompts/issues/71)) ([966a941](https://github.com/dryvist/ai-llm-prompts/commit/966a941b45c2b6daff27488ee40603c4fcf6bf09))
+
 ## [1.7.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.6.0...v1.7.0) (2026-09-28)
 
 

@@ -29,10 +29,10 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Hermes repo scorecard](hermes-repo-scorecard.md) - Weekly weighted 0-100 repo-health scorecard with week-over-week deltas.
 * [Hermes self-audit](hermes-self-audit.md) - Scheduled self-correction loop: own Slack output critique, own Splunk errors, subsystem health, correction cards.
 * [Hermes secrets policy audit](hermes-secrets-policy-audit.md) - Issue-only scan for credential and private-topology leaks, never a pull request.
-* [Hermes service pulse](hermes-service-pulse.md) - Hourly one-report service pulse with counts and the delta since the last pulse.
+* [Hermes service pulse](hermes-service-pulse.md) - Hourly service pulse that learns its baselines, flaky list and thresholds in Hindsight between runs.
 * [Hermes Splunk deep dive](hermes-splunk-deepdive.md) - Quiet Splunk index or sourcetype characterization prompt.
 * [Hermes Splunk digest](hermes-splunk-digest.md) - Hourly delta-aware Splunk status digest prompt.
-* [Hermes Splunk license audit](hermes-splunk-license.md) - Two-hourly Splunk license usage audit against quota with top offenders and deltas.
+* [Hermes Splunk license audit](hermes-splunk-license.md) - Two-hourly Splunk license audit that learns ingest curves and offenders in Hindsight.
 * [Hermes Splunk parsing sweep](hermes-splunk-parsing.md) - Bounded Splunk data-quality monitoring prompt.
 * [Hermes Splunk security sweep](hermes-splunk-security.md) - Bounded Splunk security-lens monitoring prompt.
 * [Hermes Zammad review](hermes-zammad-review.md) - Proactive open-incident lifecycle sweep across all Zammad queues.

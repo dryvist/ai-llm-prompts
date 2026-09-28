@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.5.0...v1.6.0) (2026-09-28)
+
+
+### Features
+
+* **auto-ai-agent:** Hermes service pulse and Splunk license audit prompts ([#67](https://github.com/dryvist/ai-llm-prompts/issues/67)) ([4d48094](https://github.com/dryvist/ai-llm-prompts/commit/4d480940aca09077de7497da95284dac5b677bc3))
+
 ## [1.5.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.4.0...v1.5.0) (2026-09-25)
 
 

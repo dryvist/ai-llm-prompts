@@ -5,7 +5,7 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 ## Prompts
 
 * [Autonomous Agent Base](autonomous-base.md) - Shared behavioral base for autonomous engineering agents.
-* [Donna Surface](donna.md) - Donna identity and operating voice: executive-assistant archetype, response shapes, and interaction boundaries.
+* [Donna Surface](donna.md) - Donna identity and operating tone: executive-assistant archetype, response shapes, and interaction boundaries.
 * [Hermes bot PR triage](hermes-bot-pr-triage.md) - Delta-aware bot-PR security triage plus a once-daily stale-open-PR report; never merges.
 * [Hermes curriculum application fleet health](hermes-curriculum-apps.md) - Fleet-health and repository cross-reference curriculum job.
 * [Hermes curriculum self-improvement](hermes-curriculum-improve.md) - Bounded evidence-based self-improvement curriculum job.
@@ -29,8 +29,10 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Hermes repo scorecard](hermes-repo-scorecard.md) - Weekly weighted 0-100 repo-health scorecard with week-over-week deltas.
 * [Hermes self-audit](hermes-self-audit.md) - Scheduled self-correction loop: own Slack output critique, own Splunk errors, subsystem health, correction cards.
 * [Hermes secrets policy audit](hermes-secrets-policy-audit.md) - Issue-only scan for credential and private-topology leaks, never a pull request.
+* [Hermes service pulse](hermes-service-pulse.md) - Hourly service pulse that learns its baselines, flaky list and thresholds in Hindsight between runs.
 * [Hermes Splunk deep dive](hermes-splunk-deepdive.md) - Quiet Splunk index or sourcetype characterization prompt.
 * [Hermes Splunk digest](hermes-splunk-digest.md) - Hourly delta-aware Splunk status digest prompt.
+* [Hermes Splunk license audit](hermes-splunk-license.md) - Two-hourly Splunk license audit that learns ingest curves and offenders in Hindsight.
 * [Hermes Splunk parsing sweep](hermes-splunk-parsing.md) - Bounded Splunk data-quality monitoring prompt.
 * [Hermes Splunk security sweep](hermes-splunk-security.md) - Bounded Splunk security-lens monitoring prompt.
 * [Hermes Zammad review](hermes-zammad-review.md) - Proactive open-incident lifecycle sweep across all Zammad queues.

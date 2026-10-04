@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.9.0...v1.9.1) (2026-10-04)
+
+
+### Bug Fixes
+
+* silence release watch when no releases qualify ([#75](https://github.com/dryvist/ai-llm-prompts/issues/75)) ([f3f8b57](https://github.com/dryvist/ai-llm-prompts/commit/f3f8b576faffacd63ef95bda2e37d275582b21b8))
+
 ## [1.9.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.8.0...v1.9.0) (2026-10-04)
 
 

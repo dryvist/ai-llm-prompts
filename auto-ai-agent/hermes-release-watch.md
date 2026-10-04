@@ -4,7 +4,7 @@ title: Hermes release watch
 description: Daily digest of recent releases for tracked dependencies.
 resource: prompt://dryvist/auto-ai-agent/hermes-release-watch
 tags: [hermes, cron, releases, dependencies]
-timestamp: 2026-10-03T20:24:45-04:00
+timestamp: 2026-10-04T01:46:15Z
 status: active
 consumers: [dryvist/ansible-proxmox-ai]
 render:
@@ -31,5 +31,5 @@ each bullet:
 
 `Tool old→new: why it matters — <release URL>`
 
-Keep each reason concise and factual, and include the direct release URL. If no release qualifies, post exactly one line
-to the noise channel: `No qualifying tracked releases were published in the last 24 hours.`
+Keep each reason concise and factual, and include the direct release URL. If no release qualifies, output only the bare
+marker `[SILENT]`.

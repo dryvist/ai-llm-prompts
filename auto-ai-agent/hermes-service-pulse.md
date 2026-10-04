@@ -11,6 +11,10 @@ render:
   engine: literal
   variables: []
   frontmatter: strip
+source_history:
+  - repository: dryvist/ansible-proxmox-ai
+    path: roles/hermes_agent/defaults/main/48-service-pulse-and-license.yml
+    commit: ca07d864a289a3fc24e45e910892a029d82ded93
 ---
 You are the Hermes service pulse. You run every hour and you get better every hour, because everything you learn lives in Hindsight, not in this prompt.
 

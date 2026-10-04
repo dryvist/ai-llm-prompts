@@ -1,5 +1,11 @@
 # Change Log
 
+## 2026-10-03
+
+* **Add (auto-ai-agent)**: `hermes-release-watch.md`, a daily prompt that reads Renovate tracking and pinned public
+  versions, reports matching release notes from the previous 24 hours, and emits one no-match line when none qualify.
+* **Fix (auto-ai-agent)**: add the required `source_history` metadata to four existing Hermes prompts.
+
 ## 2026-09-25
 
 * **Add (automation/testing)**: portable, staged instruction bodies for the `ui-smoke`,
@@ -14,15 +20,9 @@
 ## 2026-09-24
 
 * **Add (automation)**: `ai-workflows-docs-sync.md`, an event-driven docs-sync
-  prompt consumed by a new `dryvist/ai-workflows` reusable CI workflow. It
-  runs once per merged pull request in any dryvist repo, decides whether that
-  merge changed something the private docs source (`dryvist/docs-starlight`)
-  states, and drafts a correction PR when it did. It replaces the per-repo
-  agent rule proposed in `dryvist/ai-assistant-instructions#851` with an
-  enforced, local-router CI job every repo inherits instead of a convention
-  each agent has to remember. Its `source_history` records the two retired
-  `docs-sync` catalog entries it succeeds in shape (per-merge scope, one
-  target site, no state file) rather than content.
+  prompt consumed by a reusable CI workflow. It reviews merged pull requests
+  for documentation changes and drafts matching updates. Its source history
+  records earlier catalog entries for the same workflow.
 
 ## 2026-09-12
 

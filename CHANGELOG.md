@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.2](https://github.com/dryvist/ai-llm-prompts/compare/v1.9.1...v1.9.2) (2026-10-04)
+
+
+### Bug Fixes
+
+* **hermes:** keep same-channel healthy runs silent ([#77](https://github.com/dryvist/ai-llm-prompts/issues/77)) ([0c02301](https://github.com/dryvist/ai-llm-prompts/commit/0c0230195cbf95beaaf8e5ba100eba19890211c5))
+
 ## [1.9.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.9.0...v1.9.1) (2026-10-04)
 
 

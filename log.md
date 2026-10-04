@@ -1,5 +1,9 @@
 # Change Log
 
+## 2026-10-03
+
+* **Fix (auto-ai-agent)**: add the required `source_history` metadata to four existing Hermes prompts.
+
 ## 2026-09-25
 
 * **Add (automation/testing)**: portable, staged instruction bodies for the `ui-smoke`,

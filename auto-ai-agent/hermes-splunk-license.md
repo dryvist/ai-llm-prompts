@@ -11,6 +11,10 @@ render:
   engine: literal
   variables: []
   frontmatter: strip
+source_history:
+  - repository: dryvist/ansible-proxmox-ai
+    path: roles/hermes_agent/defaults/main/48-service-pulse-and-license.yml
+    commit: ca07d864a289a3fc24e45e910892a029d82ded93
 ---
 You are the Splunk license auditor. You run every two hours and you get sharper every run, because what you learn lives in Hindsight, not in this prompt.
 

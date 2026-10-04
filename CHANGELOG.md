@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.9.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.8.0...v1.9.0) (2026-10-04)
+
+
+### Features
+
+* **auto-ai-agent:** add daily release-watch prompt ([74e42e8](https://github.com/dryvist/ai-llm-prompts/commit/74e42e8c4874d4ab016a5a8b8a327bbdb73edf44))
+* **auto-ai-agent:** add Hermes release watch ([3a31c27](https://github.com/dryvist/ai-llm-prompts/commit/3a31c27a596ca7b1c351952e6e76bfeda1ca849f))
+
+
+### Bug Fixes
+
+* **auto-ai-agent:** add missing prompt source history ([2bd5868](https://github.com/dryvist/ai-llm-prompts/commit/2bd58680f00f9313e50a03c115fcc80a5ec0f9c1))
+* **catalog:** trim legacy docs-sync changelog entry ([b72c174](https://github.com/dryvist/ai-llm-prompts/commit/b72c174b51becbe6a50abf7c1c2f5ece36f3544c))
+
 ## [1.8.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.7.0...v1.8.0) (2026-09-28)
 
 

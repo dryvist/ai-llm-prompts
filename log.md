@@ -2,6 +2,8 @@
 
 ## 2026-10-03
 
+* **Add (auto-ai-agent)**: `hermes-release-watch.md`, a daily prompt that reads Renovate tracking and pinned public
+  versions, reports matching release notes from the previous 24 hours, and emits one no-match line when none qualify.
 * **Fix (auto-ai-agent)**: add the required `source_history` metadata to four existing Hermes prompts.
 
 ## 2026-09-25

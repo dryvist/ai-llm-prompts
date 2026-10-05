@@ -2,7 +2,8 @@
 
 Canonical, versioned prompt assets used by Dryvist automation, applications, developer tooling, and continuously running local AI agents.
 
-Prompts are published as Open Knowledge Format Markdown. Consumers pin a release commit and select only the catalog directory they need:
+Prompts are published as Open Knowledge Format Markdown. Consumers pin a release commit and select only the catalog directory they need.
+The `applications` output composes the LangGraph homelab assistant prompt with the shared monitoring rule and skill at build time.
 
 - `auto-ai-agent/` — continuous local-agent behavior and jobs
 - `automation/` — repository and cloud automation prompts

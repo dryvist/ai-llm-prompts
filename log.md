@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-10-05
+
+* **Update (applications)**: compose the LangGraph homelab assistant's generated system prompt from the canonical
+  monitoring rule and skill sources.
+
 ## 2026-10-03
 
 * **Add (auto-ai-agent)**: `hermes-release-watch.md`, a daily prompt that reads Renovate tracking and pinned public

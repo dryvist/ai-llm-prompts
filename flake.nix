@@ -1,9 +1,21 @@
 {
   description = "Versioned Dryvist LLM prompt catalog";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-  outputs = { self, nixpkgs }:
+    ai-assistant-instructions = {
+      url = "github:dryvist/ai-assistant-instructions";
+      flake = false;
+    };
+
+    claude-code-plugins = {
+      url = "github:dryvist/claude-code-plugins";
+      flake = false;
+    };
+  };
+
+  outputs = { self, nixpkgs, ai-assistant-instructions, claude-code-plugins }:
     let
       systems = [
         "aarch64-darwin"
@@ -67,7 +79,30 @@
           ];
           auto-ai-agent = mkCatalog "auto-ai-agent" ./auto-ai-agent;
           automation = mkCatalog "automation" ./automation;
-          applications = mkCatalog "applications" ./applications;
+          applications = pkgs.runCommand "ai-llm-prompts-applications" { } ''
+            mkdir -p $out/share/ai-llm-prompts/applications
+            cp -R ${./applications}/. $out/share/ai-llm-prompts/applications/
+            chmod -R u+w $out/share/ai-llm-prompts/applications
+
+            rule_file=${ai-assistant-instructions}/agentsmd/rules/operating-core.md
+            skill_file=${claude-code-plugins}/homelab-ops/skills/monitoring-first/SKILL.md
+            rule_count=$(grep -F -c 'Check system state with monitoring first; follow the `monitoring-first` skill before direct shell probes.' "$rule_file")
+            test "$rule_count" -eq 1
+            monitoring_rule=$(grep -F 'Check system state with monitoring first;' "$rule_file" | sed 's/^- \*\*//; s/\*\*$//')
+            test "$(grep -F -c 'name: monitoring-first' "$skill_file")" -eq 1
+
+            prompt=$out/share/ai-llm-prompts/applications/langgraph-homelab-assistant.md
+            {
+              sed '1,/^---$/d' ${./applications/langgraph-homelab-assistant.md}
+              printf '\n\n## Monitoring-first operating rule\n\n%s\n' "$monitoring_rule"
+              printf '\n## Monitoring-first procedure\n\n'
+              sed '1,/^---$/d' "$skill_file"
+            } > "$prompt"
+
+            test "$(grep -F -c 'Check system state with monitoring first; follow the `monitoring-first` skill before direct shell probes.' "$prompt")" -eq 1
+            grep -Fq 'Use the monitoring stack to understand current state' "$prompt"
+            grep -Fq 'Observability stack' "$prompt"
+          '';
           developer-tools = mkCatalog "developer-tools" ./developer-tools;
         in
         {

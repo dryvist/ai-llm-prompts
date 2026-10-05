@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.9.2...v1.10.0) (2026-10-05)
+
+
+### Features
+
+* **prompts:** compose monitoring context for direct API ([9c6c2cf](https://github.com/dryvist/ai-llm-prompts/commit/9c6c2cf96528440266815511a478d666f8c8c70a))
+* **prompts:** compose monitoring context for direct API ([d29b8ca](https://github.com/dryvist/ai-llm-prompts/commit/d29b8ca0ea780e57215f082d28cb2912d372477e))
+
 ## [1.9.2](https://github.com/dryvist/ai-llm-prompts/compare/v1.9.1...v1.9.2) (2026-10-04)
 
 

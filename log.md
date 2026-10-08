@@ -1,5 +1,9 @@
 # Change Log
 
+## 2026-10-08
+
+* **Fix (auto-ai-agent)**: `hermes-service-pulse.md` reports the router readiness fields returned by its probe and uses the configured open-incident baseline.
+
 ## 2026-10-05
 
 * **Update (applications)**: compose the LangGraph homelab assistant's generated system prompt from the canonical
@@ -68,21 +72,6 @@
   renaming the pull request to flag a human. The body is kept as history and its
   `source_history` records the successor. The version-drift check has no successor
   and the retired body says so.
-
-## 2026-08-07
-
-* **Update (auto-ai-agent)**: `autonomous-base.md` gains a routing-law section —
-  GitHub carries pull requests only, incidents go to Zammad, everything else to
-  Vikunja, and public artifacts state what changed, never why. `hermes-repo-scorecard.md`
-  routes its human-action findings to Vikunja (or Zammad if incident-shaped)
-  instead of opening a GitHub issue.
-* **Update (automation)**: six PR/comment-authoring `ai-workflows-*` prompts
-  (`post-merge-docs-review`, `post-merge-tests`, `code-simplifier`,
-  `release-notes`, `pr-review-responder`, `dep-review`) gain an explicit
-  disclosure rule for the public text they draft: state what changed, never
-  why or what broke; no internal hostnames/FQDNs/topology; no incident
-  narrative; scrubs named by category, never as a value-to-placeholder
-  mapping.
 
 ## 2026-08-06 (later)
 
@@ -204,4 +193,4 @@
   from router config. Both `Model fabric:` and `Escalation routing:` line
   anchors are unchanged, since consumers grep for them.
 
-Entries before 2026-08-01: [log-archive.md](log-archive.md).
+Entries through 2026-08-07: [log-archive.md](log-archive.md).

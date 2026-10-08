@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.10.0...v1.10.1) (2026-10-08)
+
+
+### Bug Fixes
+
+* **prompt:** align Hermes service pulse contract ([#81](https://github.com/dryvist/ai-llm-prompts/issues/81)) ([d1822f4](https://github.com/dryvist/ai-llm-prompts/commit/d1822f4ae4aa1e7eeaa10a4b61a7a0fe8f8d7ad3))
+
 ## [1.10.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.9.2...v1.10.0) (2026-10-05)
 
 

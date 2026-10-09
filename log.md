@@ -1,5 +1,11 @@
 # Change Log
 
+## 2026-10-09
+
+* **Add (auto-ai-agent)**: `hermes-splunk-health.md`, a two-hourly open-ended review of Splunk's own health: admin
+  messages, health report, splunkd internal errors, license, scheduler, ingest pipeline and storage. License findings
+  are one lens among these.
+
 ## 2026-10-08
 
 * **Fix (auto-ai-agent)**: `hermes-service-pulse.md` reports the router readiness fields returned by its probe and uses the configured open-incident baseline.

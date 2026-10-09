@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.11.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.10.1...v1.11.0) (2026-10-09)
+
+
+### Features
+
+* **auto-ai-agent:** open-ended Splunk platform health prompt ([5422f0d](https://github.com/dryvist/ai-llm-prompts/commit/5422f0d5fec789f81be08bb6fe00c101fda49de0))
+* **auto-ai-agent:** open-ended Splunk platform health prompt ([55e8ed8](https://github.com/dryvist/ai-llm-prompts/commit/55e8ed8fb8827c99646f2ec6bb11d6529196f7b7))
+
 ## [1.10.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.10.0...v1.10.1) (2026-10-08)
 
 

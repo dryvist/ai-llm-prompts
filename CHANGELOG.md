@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.11.0...v1.12.0) (2026-10-10)
+
+
+### Features
+
+* **auto-ai-agent:** subagent roster and the brief-delegates rule ([#87](https://github.com/dryvist/ai-llm-prompts/issues/87)) ([c174fd1](https://github.com/dryvist/ai-llm-prompts/commit/c174fd1d23fdb46d02167c8578a160a956732a52))
+
 ## [1.11.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.10.1...v1.11.0) (2026-10-09)
 
 

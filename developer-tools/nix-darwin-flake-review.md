@@ -29,8 +29,8 @@ ${{ steps.diff.outputs.content }}
 3. Provide a clear recommendation
 
 ## Risk Levels
-- **LOW**: Routine updates - nixpkgs bumps, patch updates, documentation repos, non-code flake inputs
-- **MEDIUM**: Minor version changes, new features added, repos with breaking change potential
+- **LOW**: Routine updates - patch updates, documentation repos, non-code flake inputs
+- **MEDIUM**: Minor version changes, new features added, repos with breaking change potential, any `nixpkgs*` input move
 - **HIGH**: Major version changes, security-related updates, changes to core infrastructure (darwin, home-manager)
 
 ## Important Context

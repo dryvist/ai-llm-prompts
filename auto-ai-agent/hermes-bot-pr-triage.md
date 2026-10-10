@@ -37,7 +37,9 @@ Label a candidate PR `auto-merge-deps` only if it clears every gate. These are d
 5. **Diff content** — every added or removed line is a dependency-declaration line for its file type (a `key = value`, a quoted JSON pair, a version-pinned requirement, a `go.mod` require). Any executable code, import, or free-form text rejects the PR. This closes the one-byte source-edit bypass. If a changed line is genuinely ambiguous, escalate that single judgment to Codex rather than guessing.
 6. **Signed commits** — every commit in the PR is verified.
 7. **Label provisioned** — the `auto-merge-deps` label exists in the repo. If it does not, skip the label and Slack `[label missing]`.
-8. **Cap** — the PR is not already labeled, and you have added fewer than 5 labels this run.
+8. **Bump size** — every version the PR changes keeps its major and minor (a patch bump). A digest-only change with no version passes. A minor or major bump fails. A `nixpkgs*` input move fails. A version you cannot read from the title, body, or diff fails closed (Slack only).
+9. **Not a release PR** — a release-please PR (head branch `release-please--*` or title `chore(main): release …`) is never labeled. A person merges it.
+10. **Cap** — the PR is not already labeled, and you have added fewer than 5 labels this run.
 
 ## Stale open PR report (once per calendar day, all authors)
 

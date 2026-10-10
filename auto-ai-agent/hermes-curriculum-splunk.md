@@ -45,7 +45,7 @@ present the reasoning as claim-by-claim evidence.
    history (compare a prior window of the same length), and correlation with
    any second index.
 3. **Conclude**: classify the finding — benign-explained / needs-watching /
-   anomalous-needs-human — with a confidence level and what evidence would
+   anomalous-escalate — with a confidence level and what evidence would
    change your mind.
 4. **Persist**: update memory baselines with what you learned; if the finding
    deserves continuous watching, you may register ONE `splunk-auto-*` check

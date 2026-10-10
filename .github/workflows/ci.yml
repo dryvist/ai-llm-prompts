@@ -20,6 +20,7 @@ jobs:
       pull-requests: read
     uses: dryvist/.github/.github/workflows/_ci-gate.yml@v1
     with:
+      profile: docs
       nix_validate: true
       # This flake's checks and packages are built per declared system
       # (aarch64-darwin, aarch64-linux, x86_64-linux) via `import nixpkgs

@@ -5,12 +5,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     ai-assistant-instructions = {
-      url = "github:dryvist/ai-assistant-instructions";
+      url = "github:dryvist/ai-assistant-instructions?ref=v1";
       flake = false;
     };
 
     claude-code-plugins = {
-      url = "github:dryvist/claude-code-plugins";
+      url = "github:dryvist/claude-code-plugins?ref=v6";
       flake = false;
     };
   };

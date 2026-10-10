@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.12.0...v1.12.1) (2026-10-10)
+
+
+### Bug Fixes
+
+* **hermes-curriculum:** rename the anomalous verdict to anomalous-escalate ([#92](https://github.com/dryvist/ai-llm-prompts/issues/92)) ([ef9e6c6](https://github.com/dryvist/ai-llm-prompts/commit/ef9e6c666f9ac8373120285ffca797854bf4f324))
+
 ## [1.12.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.11.0...v1.12.0) (2026-10-10)
 
 

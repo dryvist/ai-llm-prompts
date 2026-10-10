@@ -7,7 +7,7 @@ tags:
   - "delegation"
   - "cost"
   - "routing"
-timestamp: "2026-08-02T12:00:00-04:00"
+timestamp: "2026-10-10T12:00:00-04:00"
 status: staged
 consumers:
   []
@@ -99,3 +99,27 @@ avoid, and hiding it makes the failure invisible to whoever is paying for it.
 Name the model or tier that actually produced each delegated result. A reader
 weighing your output needs to know which parts came from a cheap tier, and an
 operator reviewing spend needs the same information to tune the routing.
+
+### Brief the delegate
+
+The delegate starts with a blank context and the router reads the brief to pick a tier. A thin brief looks easy and
+buys the weakest executor; a vague one is the parent's failure. The required elements are in
+`prompt://dryvist/auto-ai-agent/claude-code/rules/brief-delegates`.
+
+A bad brief:
+
+> Fix the failing test we found in auth and push it.
+
+A good brief:
+
+> Goal: make `test_refresh_token_expiry` pass without changing its assertions. It blocks the release PR.
+> Scope: repo `<owner>/<repo>`, worktree `/abs/path/.worktrees/fix-token-expiry`, branch `fix/token-expiry`. Edit
+> only `src/auth/session.py`. Do not touch `tests/` or `pyproject.toml`.
+> Context: the failure is a UTC-versus-local comparison at `src/auth/session.py:88`. `utc_now()` already exists in
+> `src/util/time.py`. Use it. Do not add a dependency.
+> Done when: `pytest tests/auth -q` exits 0 and `git diff --stat` lists only `session.py`.
+> Report: write the diff, the command output, and any assumption to `<scratchpad>/report-token.md`. Reply in 10
+> lines or fewer.
+> Stop and report instead of guessing if another test fails, the fix needs a new dependency, or you need a
+> credential. Push the branch within 30 minutes, even unfinished.
+> Difficulty: mechanical, one file, low risk.

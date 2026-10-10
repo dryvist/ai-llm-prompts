@@ -1,5 +1,15 @@
 # Change Log
 
+## 2026-10-10
+
+* **Add (auto-ai-agent/claude-code)**: `agents/haiku-xhigh.md` and `agents/opus-medium.md`, the Claude Code subagent
+  roster migrated from the instruction repository. Defaults are xhigh effort for Haiku (never below high) and medium
+  for Opus; models are the family aliases, never a version. `rules/brief-delegates.md`, an always-loaded rule that
+  makes the parent state goal, scope, constraints, success check, output contract, stop conditions and difficulty in
+  every subagent brief.
+* **Update (auto-ai-agent)**: `model-delegation.md` gains a worked bad/good brief; `autonomous-base.md` gains one
+  sentence on briefing a delegate.
+
 ## 2026-10-09
 
 * **Add (auto-ai-agent)**: `hermes-splunk-health.md`, a two-hourly open-ended review of Splunk's own health: admin

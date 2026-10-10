@@ -47,3 +47,8 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Model Delegation](model-delegation.md) - Offloading bounded subtasks to a shared model router at the cheapest capable tier, with router-enforced budgets.
 * [Monitor Agent Discipline](monitor-agent-discipline.md) - Bounded-query, durable-state, and alerting discipline for always-on monitoring agents.
 * [Open WebUI Surface](open-webui.md) - Interactive chat-surface delta for Open WebUI.
+
+## Claude Code
+
+* [Claude Code subagents](claude-code/agents/index.md) - Subagent definitions delivered into every Claude Code session.
+* [Claude Code rules](claude-code/rules/index.md) - Always-loaded rules delivered into every Claude Code session.

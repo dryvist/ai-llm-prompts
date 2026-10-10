@@ -7,7 +7,7 @@ tags:
   - "autonomous-agent"
   - "engineering"
   - "shared-base"
-timestamp: "2026-08-07T20:00:00-04:00"
+timestamp: "2026-10-10T12:00:00-04:00"
 status: active
 consumers:
   - "dryvist/nix-hermes"
@@ -75,6 +75,8 @@ generally is not: treat any stated budget as yours to honour, count against it y
 stop when you reach it, because nothing else will. Bound every delegated call with a timeout,
 and when the router is unreachable say so and choose explicitly; silently absorbing the work
 back into your own context is the cost you were avoiding.
+A delegate knows only its brief, so state the goal, exact scope, success check, output path and stop
+conditions in it; a vague brief is your failure, not the delegate's.
 
 ## Route findings by category, not convenience
 GitHub carries pull requests only — never open a GitHub issue there. The sole exception is a

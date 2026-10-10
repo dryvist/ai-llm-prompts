@@ -1,5 +1,15 @@
 # Change Log
 
+## 2026-10-10
+
+* **Add (auto-ai-agent/claude-code)**: `agents/haiku-xhigh.md` and `agents/opus-medium.md`, the Claude Code subagent
+  roster migrated from the instruction repository. Defaults are xhigh effort for Haiku (never below high) and medium
+  for Opus; models are the family aliases, never a version. `rules/brief-delegates.md`, an always-loaded rule that
+  makes the parent state goal, scope, constraints, success check, output contract, stop conditions and difficulty in
+  every subagent brief.
+* **Update (auto-ai-agent)**: `model-delegation.md` gains a worked bad/good brief; `autonomous-base.md` gains one
+  sentence on briefing a delegate.
+
 ## 2026-10-09
 
 * **Add (auto-ai-agent)**: `hermes-splunk-health.md`, a two-hourly open-ended review of Splunk's own health: admin
@@ -156,47 +166,5 @@
   asking job names — and drops the never-suppress clause, which also
   contradicted the output-format rule directly below it ("do not re-dump
   unchanged or already-known-benign status every run").
-
-## 2026-08-02 (later)
-
-* **Correction (auto-ai-agent)**: The delegation text shipped earlier today
-  asserted that the router enforces spend budgets. It does not, and saying so
-  was worse than the advisory text it replaced — an agent that believes it is
-  capped spends more freely, and nothing was capping it. Verified against the
-  deployment: the LiteLLM proxy is deliberately storage-less, spend tracking
-  needs a shared store it does not have, and there is one shared credential
-  rather than a key per caller, so there is nothing to meter per caller.
-  `autonomous-base` and `model-delegation` now split the claim — which models
-  you may reach IS enforced at the router and a rejection there is a correct
-  answer; how much you spend is not, so a stated budget binds only because the
-  agent counts against it and stops. `hermes` gets its explicit $1.00/day
-  figure and memory-key procedure back, marked plainly as self-enforced. An
-  unenforced limit is still a real limit; it is just one only the agent can
-  apply, and pretending otherwise removed the only control that existed.
-
-## 2026-08-02
-
-* **Creation (auto-ai-agent)**: Added `model-delegation`, the single shared
-  statement of delegation doctrine for every agent surface — offload bounded
-  subtasks to the shared model router, take the cheapest tier that can
-  actually do the subtask, fetch model names from the router's published
-  contract instead of hardcoding them, treat a budget or allowlist rejection
-  as a correct answer, and report honestly rather than falling back silently
-  when the router is unreachable. Deliberately vendor-neutral and
-  topology-free so it stays publishable.
-* **Update (auto-ai-agent)**: `autonomous-base` gains a delegation section
-  distilled from that fragment, so every consumer of the shared base — the
-  Hermes persona among them — inherits the doctrine without a second copy.
-  Section placement and altitude match the surrounding rules; the
-  `autonomous engineering agent` opening line consumers assert on is
-  unchanged.
-* **Update (auto-ai-agent)**: `hermes` stops restating the general delegation
-  rules now that the base carries them, and points at the base instead. Its
-  `Model fabric:` paragraph keeps only what is genuinely Hermes-specific — the
-  brain value, and the fact that this router publishes no `ai-default` alias.
-  Its escalation paragraph now describes the spend cap as router-enforced
-  rather than naming a figure the persona cannot enforce and that would drift
-  from router config. Both `Model fabric:` and `Escalation routing:` line
-  anchors are unchanged, since consumers grep for them.
 
 Entries through 2026-08-07: [log-archive.md](log-archive.md).

@@ -3,15 +3,16 @@
     "ai-assistant-instructions": {
       "flake": false,
       "locked": {
-        "lastModified": 1791221885,
-        "narHash": "sha256-nwh0sRpLgz3z56MZo2/c5p8CwruvYKSxTYdRnOk0iO4=",
+        "lastModified": 1791599289,
+        "narHash": "sha256-HrfsbTRLKJQ8AV3wBm8gQQfytWZ4hz7Moh7KMeQ6b8s=",
         "owner": "dryvist",
         "repo": "ai-assistant-instructions",
-        "rev": "e557b211a049c940bb540f2ca0be1259df57c5eb",
+        "rev": "8726293d4189159500e8814ccc7e3afbec8ec859",
         "type": "github"
       },
       "original": {
         "owner": "dryvist",
+        "ref": "v1",
         "repo": "ai-assistant-instructions",
         "type": "github"
       }
@@ -19,15 +20,16 @@
     "claude-code-plugins": {
       "flake": false,
       "locked": {
-        "lastModified": 1791221880,
-        "narHash": "sha256-J6kgOFCD7B85T70PjjyiJSvWJHQB224DLthOO0tWxr8=",
+        "lastModified": 1791647218,
+        "narHash": "sha256-PJO22UJ60YF5V3nSSfJFA9SEIJG1zC5IJfAPHY7+awo=",
         "owner": "dryvist",
         "repo": "claude-code-plugins",
-        "rev": "105ac194aa302b1255aa4750cc1a1080fe6160e7",
+        "rev": "9d278544022eb79525a50ff235758b92867dc90a",
         "type": "github"
       },
       "original": {
         "owner": "dryvist",
+        "ref": "v6",
         "repo": "claude-code-plugins",
         "type": "github"
       }

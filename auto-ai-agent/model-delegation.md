@@ -80,10 +80,9 @@ what that deployment states over this fragment, which describes the general
 case.
 
 Free-tier endpoints frequently **log prompt content** on the provider side.
-Send them public or synthetic material only — never secrets, credentials,
-private infrastructure detail, or anyone's personal data. Anything that must
-not leave the estate goes to a locally served tier or does not get delegated
-at all.
+Send them only public or made-up material: no keys, passwords, private
+infrastructure detail, or anyone's personal data. Anything that must stay
+in-house goes to a locally served tier or is not delegated at all.
 
 ### When the router is unreachable, say so
 

@@ -2,6 +2,10 @@
 
 ## 2026-10-11
 
+* **Change (auto-ai-agent)**: `hermes-bot-pr-triage.md` gains a manual-repo risk lane. In repos whose `automerge`
+  property is `manual`, it labels low-risk Renovate and release-please PRs once CI is green, and drops the label when
+  the head commit changes.
+
 * **Add (automation)**: `ci-workbook/`, 26 seed entries describing recurring CI failure signatures. Each entry's
   `ci_workbook` frontmatter field holds its class, a match pattern for the normalized failure text and, where one
   exists, a fix or reproduce command. The body is the fix recipe.

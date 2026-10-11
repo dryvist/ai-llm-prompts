@@ -8,7 +8,7 @@ timestamp: "2026-10-11T00:00:00Z"
 status: staged
 consumers: ["dryvist/nix-agent-sandbox"]
 render: {engine: literal, variables: [], frontmatter: strip}
-ci_workbook: '{"id":"app-token-not-found","class":"human","match":{"log":"create-github-app-token[\\s\\S]*\\bnot found\\b|generate github app token :: not found"}}'
+ci_workbook: '{"id":"app-token-not-found","class":"human","match":{"log":"create-github-app-token[\\s\\S]*\\bnot found\\b|generate github app token\\W*not found"}}'
 source_history:
   - repository: "dryvist/ai-llm-prompts"
     path: "automation/ci-workbook/app-token-not-found.md"

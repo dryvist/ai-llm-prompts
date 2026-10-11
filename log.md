@@ -1,5 +1,11 @@
 # Change Log
 
+## 2026-10-11
+
+* **Add (automation)**: `ci-workbook/`, 26 seed entries describing recurring CI failure signatures. Each entry's
+  `ci_workbook` frontmatter field holds its class, a match pattern for the normalized failure text and, where one
+  exists, a fix or reproduce command. The body is the fix recipe.
+
 ## 2026-10-10
 
 * **Add (auto-ai-agent/claude-code)**: `agents/haiku-xhigh.md` and `agents/opus-medium.md`, the Claude Code subagent

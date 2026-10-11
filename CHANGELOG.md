@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.12.1...v1.13.0) (2026-10-11)
+
+
+### Features
+
+* **automation:** seed the CI workbook with recurring failure signatures ([#96](https://github.com/dryvist/ai-llm-prompts/issues/96)) ([2b7e560](https://github.com/dryvist/ai-llm-prompts/commit/2b7e5605da4bd474463ce8901e627001f10c7679))
+
 ## [1.12.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.12.0...v1.12.1) (2026-10-10)
 
 

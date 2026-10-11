@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.13.0...v1.14.0) (2026-10-11)
+
+
+### Features
+
+* **auto-ai-agent:** add a manual-repo risk lane to bot PR triage ([#104](https://github.com/dryvist/ai-llm-prompts/issues/104)) ([8b7b9f2](https://github.com/dryvist/ai-llm-prompts/commit/8b7b9f27798cf3d1359f528ea0bc696f99b03f16))
+
 ## [1.13.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.12.1...v1.13.0) (2026-10-11)
 
 

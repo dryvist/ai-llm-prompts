@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.14.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.14.0...v1.14.1) (2026-10-12)
+
+
+### Bug Fixes
+
+* **auto-ai-agent:** frame base rules as defaults and drop a duplicated output line ([115e2d6](https://github.com/dryvist/ai-llm-prompts/commit/115e2d64510e9a906ff93a5927b3abd98dd9f90f))
+* **auto-ai-agent:** name router capabilities instead of retired roles in the Hermes persona ([bc94fc7](https://github.com/dryvist/ai-llm-prompts/commit/bc94fc7dad256a8e7c122dae568dacdac010de06))
+
 ## [1.14.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.13.0...v1.14.0) (2026-10-11)
 
 

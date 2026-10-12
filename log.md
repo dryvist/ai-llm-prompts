@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-10-12
+
+* **Update (auto-ai-agent)**: `autonomous-base.md` and `hermes.md` trim shared and Hermes guidance while preserving their behavior contracts.
+* **Update (CI)**: Add ordered prompt token limits and enable the shared token-budget check.
+
 ## 2026-10-11
 
 * **Change (auto-ai-agent)**: `hermes-bot-pr-triage.md` gains a manual-repo risk lane. In repos whose `automerge`

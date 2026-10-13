@@ -7,3 +7,4 @@ Subagent definitions delivered into every Claude Code session. Each file carries
 
 * [haiku-xhigh](haiku-xhigh.md) - Default executor for scoping, bulk reads, triage and implementation chunks.
 * [opus-medium](opus-medium.md) - Strong-reasoning executor for architecture and security judgment.
+* [pr-shepherd](pr-shepherd.md) - Drives named pull requests to merged and promotes a git-flow repo afterward.

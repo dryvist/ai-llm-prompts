@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.14.1...v1.15.0) (2026-10-13)
+
+
+### Features
+
+* **auto-ai-agent:** pr-shepherd, promotion drift and shepherd sweep prompts ([#108](https://github.com/dryvist/ai-llm-prompts/issues/108)) ([15c7f03](https://github.com/dryvist/ai-llm-prompts/commit/15c7f03ad5b91f0bb028c6dfb4518ab6d2402b05))
+
 ## [1.14.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.14.0...v1.14.1) (2026-10-12)
 
 

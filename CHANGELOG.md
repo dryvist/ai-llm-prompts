@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.15.0...v1.15.1) (2026-10-13)
+
+
+### Bug Fixes
+
+* **auto-ai-agent:** maintain release-PR exclusion in manual lane ([#111](https://github.com/dryvist/ai-llm-prompts/issues/111)) ([f008d14](https://github.com/dryvist/ai-llm-prompts/commit/f008d14047fe74c1f5afda080072237be9fbff56))
+
 ## [1.15.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.14.1...v1.15.0) (2026-10-13)
 
 

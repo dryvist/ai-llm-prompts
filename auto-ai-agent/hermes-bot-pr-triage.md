@@ -38,22 +38,22 @@ Label a candidate PR `auto-merge-deps` only if it clears every gate. These are d
 6. **Signed commits** — every commit in the PR is verified.
 7. **Label provisioned** — the `auto-merge-deps` label exists in the repo. If it does not, skip the label and Slack `[label missing]`.
 8. **Bump size** — every version the PR changes keeps its major and minor (a patch bump). A digest-only change with no version passes. A minor or major bump fails. A `nixpkgs*` input move fails. A version you cannot read from the title, body, or diff fails closed (Slack only).
-9. **Not a release PR** — a release-please PR (head branch `release-please--*` or title `chore(main): release …`) is never labeled. A person merges it.
+9. **Not a release PR** — a release-please PR (head branch `release-please--*` or title `chore(main): release …`) is never labeled. It auto-merges on its own and needs no label.
 10. **Cap** — the PR is not already labeled, and you have added fewer than 5 labels this run.
 
 ## Manual-repo risk lane
 
 A repo whose GitHub custom property `automerge` is `manual` merges a bot PR only after you label it. Read the property
-for each repo; never infer it from the name. In those repos, also judge open PRs by `renovate[bot]` and
-`jacobpevans-release-please[bot]` with these gates instead of gates 1–5, 8 and 9 above:
+for each repo; never infer it from the name. In those repos, also judge open PRs by `renovate[bot]` with these gates
+instead of gates 1–5 and 8 above:
 
 1. **CI green** — every check on the current head commit has completed successfully. Pending, failed, cancelled,
    skipped-only or unreadable fails; retry on a later run.
 2. **Change type** — a digest, patch or minor update of a `dryvist` upstream; or every changed file is under
-   `.github/`; or a release-please PR.
+   `.github/`.
 3. **Upstream evidence** — the upstream changelog and diff show no breaking change, removed input or changed default
    that this repo uses. Missing or ambiguous evidence fails.
-4. Gates 6, 7 and 10 above still apply.
+4. Gates 6, 7, 9 and 10 above still apply.
 
 On a full pass, add `auto-merge-deps` and save the head SHA under memory key `bot-pr-triage-labeled-heads`. If the head
 SHA of a labeled PR changes, remove the label first, then judge the new head. When unsure, do not label: leave one

@@ -2,6 +2,12 @@
 
 ## 2026-10-12
 
+* **Add (auto-ai-agent)**: `claude-code/agents/pr-shepherd.md`, a subagent that drives named pull requests to merged
+  and promotes a git-flow repo afterward. `hermes-promotion-drift.md` opens a draft promotion PR for each git-flow
+  repo whose develop is ahead of main. `hermes-pr-shepherd-sweep.md` updates BEHIND agent PRs and enables auto-merge on
+  clean ones.
+* **Change (auto-ai-agent)**: `hermes-bot-pr-triage.md` no longer labels release-please PRs; they auto-merge without a
+  label.
 * **Update (auto-ai-agent)**: `autonomous-base.md` and `hermes.md` trim shared and Hermes guidance while preserving their behavior contracts.
 * **Update (CI)**: Add ordered prompt token limits and enable the shared token-budget check.
 

@@ -53,7 +53,7 @@ instead of gates 1–5 and 8 above:
    `.github/`.
 3. **Upstream evidence** — the upstream changelog and diff show no breaking change, removed input or changed default
    that this repo uses. Missing or ambiguous evidence fails.
-4. Gates 6, 7 and 10 above still apply.
+4. Gates 6, 7, 9 and 10 above still apply.
 
 On a full pass, add `auto-merge-deps` and save the head SHA under memory key `bot-pr-triage-labeled-heads`. If the head
 SHA of a labeled PR changes, remove the label first, then judge the new head. When unsure, do not label: leave one

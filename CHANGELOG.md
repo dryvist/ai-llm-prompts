@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.16.0...v1.16.1) (2026-10-14)
+
+
+### Bug Fixes
+
+* **developer-tools:** clarify heading-only mentions in the disclosure judge prompt ([#116](https://github.com/dryvist/ai-llm-prompts/issues/116)) ([3d257b3](https://github.com/dryvist/ai-llm-prompts/commit/3d257b3d6deae089c2dd2674873a376a8c489324))
+
 ## [1.16.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.15.1...v1.16.0) (2026-10-14)
 
 

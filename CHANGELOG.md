@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.15.1...v1.16.0) (2026-10-14)
+
+
+### Features
+
+* **developer-tools:** add public disclosure judge prompt ([#114](https://github.com/dryvist/ai-llm-prompts/issues/114)) ([b4dd0aa](https://github.com/dryvist/ai-llm-prompts/commit/b4dd0aa28810b7389f39d372bc8c4b46bf84778c))
+
 ## [1.15.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.15.0...v1.15.1) (2026-10-13)
 
 

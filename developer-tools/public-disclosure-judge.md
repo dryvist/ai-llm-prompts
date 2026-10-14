@@ -21,7 +21,7 @@ Classify the supplied text as content proposed for a public repository, pull req
 
 ## Decision rule
 
-Return `block` only when the text states an actual instance of a restricted category or explains a real situation involving one. Do not block a bare category name, heading, policy label, or general rule that gives no actual value, event, relationship, permission, or rationale. Do not infer a disclosure from neutral code descriptions or generic examples.
+Return `block` only when the text states an actual instance of a restricted category or explains a real situation involving one. Do not block a bare category name, heading, policy label, or general rule that gives no actual value, event, relationship, permission, or rationale. If text only names headings, including "Root Cause", "Credential Details", or "Topology", return allow; those labels do not disclose section contents. Do not infer a disclosure from neutral code descriptions or generic examples.
 
 ## Block
 

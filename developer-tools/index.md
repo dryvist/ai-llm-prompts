@@ -25,6 +25,7 @@ Prompts injected by development workflows, scheduled jobs, guards, and hooks.
 * [Main-branch edit block guidance](main-branch-edit-block.md) - Model-visible reason returned when an edit targets the main branch.
 * [Nix Darwin flake update review](nix-darwin-flake-review.md) - Claude review instructions for risk-classifying flake.lock changes.
 * [Private infrastructure leak block guidance](private-infrastructure-leak-block.md) - Denial guidance for leaked infrastructure identifiers.
+* [Public disclosure judge](public-disclosure-judge.md) - Fail-closed classifier for public disclosures that allows WHAT-only descriptions of code behavior.
 * [Script prevention classifier](script-prevention-classifier.md) - Local classification prompt for legitimate artifacts versus unnecessary scripts.
 * [Script write denial guidance](script-write-denial.md) - Model-visible denial reason after the local script classifier rejects a new file.
 * [WebFetch current-year warning](webfetch-current-year-warning.md) - Model-visible warning for date-sensitive searches using the current year.

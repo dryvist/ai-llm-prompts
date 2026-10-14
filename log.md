@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-10-14
+
+* **Add (developer-tools)**: `public-disclosure-judge.md`, a fail-closed one-token classifier for actual public disclosures.
+  It allows WHAT-only descriptions of code behavior.
+
 ## 2026-10-12
 
 * **Add (auto-ai-agent)**: `claude-code/agents/pr-shepherd.md`, a subagent that drives named pull requests to merged

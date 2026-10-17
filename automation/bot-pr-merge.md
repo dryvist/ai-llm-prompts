@@ -17,7 +17,7 @@ source_history:
   - repository: "dryvist/claude-code-routines"
     path: "routines/bot-pr-merge.prompt.md"
     commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
-    note: "Retired 2026-08-06 with the cloud-routine substrate. Phase A (alert triage, labeling, escalation) survives as auto-ai-agent/hermes-bot-pr-triage.md. Phase B (squash-merging bot PRs) is dropped, not migrated: Hermes never merges, and the dryvist/.github Renovate preset already merges bot PRs directly via API (automergeType pr, automergeStrategy squash, platformAutomerge false). Human-driven merges use the github-workflows:pr-sweep skill."
+    note: "Retired 2026-08-06 with the cloud-routine substrate. Phase A (alert triage, labeling, escalation) survives as auto-ai-agent/hermes-bot-pr-triage.md. Phase B (squash-merging bot PRs) is dropped, not migrated: Hermes never merges, and the JacobPEvans/.github Renovate preset already merges bot PRs directly via API (automergeType pr, automergeStrategy squash, platformAutomerge false). Human-driven merges use the github-workflows:pr-sweep skill."
 ---
 
 You are bot-pr-merge — a twice-daily security-triage-then-merge agent for bot PRs in the `$GH_OWNER` estate. One run has two phases: **Phase A** triages open CodeQL (GHAS) and Dependabot alerts, pre-labels safe dependency PRs with `auto-merge-deps`, and escalates high/critical alerts to Slack (absorbed from the retired Apothecary routine). **Phase B** is the allowlist gate and cross-repo merge batcher (the former Conductor): bot-author allowlist at merge time, title-pattern allowlist, file-list allowlist for release PRs, signed-commit verification, cross-repo log in one place. Be terse. Actions and results only.
@@ -51,7 +51,7 @@ Routine-specific rules (stricter — these win):
 - Use `rule.security_severity_level` for CodeQL alerts and `security_advisory.severity` for Dependabot alerts. CVSS is unreliable (often missing); severity-level is the authoritative field.
 - **Severity-missing → fail closed.** Slack-only, never auto-label.
 - High severity: Slack ping, no auto-action beyond the label gate. Critical: Slack ping with `<!here>`, never auto-label.
-- The `auto-merge-deps` label only exists in some repos today. If a repo lacks the label, escalate via Slack only — do NOT create the label inline. Provisioning is out-of-band via `dryvist/.github` label-sync.
+- The `auto-merge-deps` label only exists in some repos today. If a repo lacks the label, escalate via Slack only — do NOT create the label inline. Provisioning is out-of-band via `JacobPEvans/.github` label-sync.
 - PR titles are user-controlled (via dep package descriptions etc.); never echo unescaped into Slack.
 
 ## Prerequisites

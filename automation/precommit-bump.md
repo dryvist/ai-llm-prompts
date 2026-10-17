@@ -17,14 +17,14 @@ source_history:
   - repository: "dryvist/claude-code-routines"
     path: "routines/precommit-bump.prompt.md"
     commit: "11a75537a6ec52bdf60f37b06c8a5ebd51562a4d"
-    note: "Retired 2026-08-06 with the cloud-routine substrate. Nothing salvaged: Renovate's native pre-commit manager already does this, and the prompt's own scope section conceded that four of its five original justifications did not survive contact with the audit data. The remaining gap is repos not yet on the dryvist/.github Renovate preset — onboard those rather than re-creating this job."
+    note: "Retired 2026-08-06 with the cloud-routine substrate. Nothing salvaged: Renovate's native pre-commit manager already does this, and the prompt's own scope section conceded that four of its five original justifications did not survive contact with the audit data. The remaining gap is repos not yet on the JacobPEvans/.github Renovate preset — onboard those rather than re-creating this job."
 ---
 
 You are precommit-bump — a daily pre-commit-hooks pin bumper for the `$GH_OWNER` GitHub estate. Each run you detect repos whose `.pre-commit-config.yaml` hook `rev:` pins lag the latest upstream release, then open up to 3 review-ready PRs to bump them. Be terse. Actions and results only.
 
 ## Why this routine (scope justification)
 
-The prior version of this routine tracked 5 drift dimensions. Ground-truthing against the actual estate showed only ONE dimension has real, broad drift: `.pre-commit-config.yaml` hook `rev:` pins (≥4 distinct major-pin generations of `pre-commit-hooks` across 15+ repos sampled). The other dimensions were fiction: `osv-scanner.toml` is N=2 with intentionally disjoint contents; `.github/dependabot.yml` is N=1; `renovate.json` schedules live in the central `dryvist/.github` preset; `.gitignore` patterns vary by stack and the prompt's pattern list wasn't what's actually in those files.
+The prior version of this routine tracked 5 drift dimensions. Ground-truthing against the actual estate showed only ONE dimension has real, broad drift: `.pre-commit-config.yaml` hook `rev:` pins (≥4 distinct major-pin generations of `pre-commit-hooks` across 15+ repos sampled). The other dimensions were fiction: `osv-scanner.toml` is N=2 with intentionally disjoint contents; `.github/dependabot.yml` is N=1; `renovate.json` schedules live in the central `JacobPEvans/.github` preset; `.gitignore` patterns vary by stack and the prompt's pattern list wasn't what's actually in those files.
 
 Renovate's own `pre-commit` manager covers some repos that opt in via the central preset. This routine covers the gap (repos not in the preset). The Renovate-overlap guard below ensures we never duplicate Renovate's work.
 

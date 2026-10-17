@@ -9,7 +9,7 @@ tags:
 timestamp: "2026-08-07T20:30:00-04:00"
 status: active
 consumers:
-  - "dryvist/ai-workflows"
+  - "JacobPEvans/.github-ai"
 render:
   engine: envsubst
   variables:
@@ -17,7 +17,7 @@ render:
     - "REPO_CONTEXT"
   frontmatter: strip
 source_history:
-  - repository: "dryvist/ai-workflows"
+  - repository: "JacobPEvans/.github-ai"
     path: ".github/prompts/pr-review-responder.md"
     commit: "fad075ea44873c3a38f6c7060a5212880a10207c"
 ---

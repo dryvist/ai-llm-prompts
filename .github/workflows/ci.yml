@@ -18,7 +18,7 @@ jobs:
       actions: write
       contents: read
       pull-requests: read
-    uses: dryvist/.github/.github/workflows/_ci-gate.yml@1f09b25303a04bf276087348059671728ffea50a # v1.13.2
+    uses: JacobPEvans/.github/.github/workflows/_ci-gate.yml@v1
     with:
       profile: docs
       nix_validate: true

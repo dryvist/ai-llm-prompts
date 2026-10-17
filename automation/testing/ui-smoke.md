@@ -7,7 +7,7 @@ tags: [automation, testing, ui, playwright, smoke]
 timestamp: 2026-09-25T00:00:00Z
 status: staged
 consumers:
-  - dryvist/ai-workflows-testing
+  - JacobPEvans/.github-ai-testing
 render:
   engine: literal
   variables: []

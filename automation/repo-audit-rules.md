@@ -101,7 +101,7 @@ Flag paths that return 404 AND aren't in the filter list.
 **Hard relax of the "no workflow edits" guard** — for THIS rule only, this routine MAY edit `.github/workflows/*.yml` files, subject to all of:
 
 - The PR is DRAFT (`gh pr create --draft`).
-- The edit extracts inline logic to `.github/scripts/<name>.js` invoked via `actions/github-script` (the estate convention from `dryvist/ai-workflows` AGENTS.md) — NEVER to a `.sh` file; shell wrapper scripts are banned estate-wide.
+- The edit extracts inline logic to `.github/scripts/<name>.js` invoked via `actions/github-script` (the estate convention from `JacobPEvans/.github-ai` AGENTS.md) — NEVER to a `.sh` file; shell wrapper scripts are banned estate-wide.
 - No semantic change to what the workflow does (refactor only).
 - Post-edit YAML parse passes:
 

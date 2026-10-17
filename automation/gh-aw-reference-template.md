@@ -12,7 +12,7 @@ render:
   variables: []
   frontmatter: include
 source_history:
-  - repository: dryvist/ai-workflows
+  - repository: JacobPEvans/.github-ai
     path: .github/workflows
     commit: fad075ea44873c3a38f6c7060a5212880a10207c
 ---

@@ -166,7 +166,7 @@ gh label list --repo "$GH_OWNER/$REPO" --search auto-merge-deps --json name \
   --jq 'length'
 ```
 
-If 0: skip the auto-label, escalate to Slack with `[label missing]` annotation. Operator decides whether to add via `dryvist/.github` label-sync.
+If 0: skip the auto-label, escalate to Slack with `[label missing]` annotation. Operator decides whether to add via `JacobPEvans/.github` label-sync.
 
 #### Gate 8 — Already labeled / cap
 

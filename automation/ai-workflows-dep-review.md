@@ -9,7 +9,7 @@ tags:
 timestamp: "2026-08-07T20:30:00-04:00"
 status: active
 consumers:
-  - "dryvist/ai-workflows"
+  - "JacobPEvans/.github-ai"
 render:
   engine: envsubst
   variables:
@@ -17,7 +17,7 @@ render:
     - "UPDATE_TYPE"
   frontmatter: strip
 source_history:
-  - repository: "dryvist/ai-workflows"
+  - repository: "JacobPEvans/.github-ai"
     path: ".github/prompts/dep-review.md"
     commit: "fad075ea44873c3a38f6c7060a5212880a10207c"
 ---
@@ -28,7 +28,7 @@ Review dependency update PR #${PR_NUMBER} in this repository. A dependency bot
 `${UPDATE_TYPE}`. This review is **advisory only** — it runs under the separate
 AI Merge Gate and reports a risk signal for a maintainer; it never merges,
 approves, or gates anything. Patch bumps merge after the Merge Gate is green, and a
-person merges minor and major bumps (dryvist/.github → SECURITY.md → Dependency
+person merges minor and major bumps (JacobPEvans/.github → SECURITY.md → Dependency
 Trust). Assess the risk of this specific update, record a verdict label, and
 write a short advisory for the maintainer.
 

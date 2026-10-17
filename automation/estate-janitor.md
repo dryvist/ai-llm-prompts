@@ -76,7 +76,7 @@ it was entirely GraphQL (`reviewThreads` + `resolveReviewThread`, no REST
 equivalent) and the cloud egress proxy permanently blocks GraphQL
 (`403 "GraphQL proxying is not enabled"` — an Anthropic-side setting, not
 user-configurable). Its replacement is the deterministic review-thread-janitor
-workflow in `dryvist/ai-workflows`, which runs in GitHub Actions where GraphQL
+workflow in `JacobPEvans/.github-ai`, which runs in GitHub Actions where GraphQL
 works. Do not re-introduce GraphQL calls into this routine.
 
 ## Task Definitions

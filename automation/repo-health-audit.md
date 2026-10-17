@@ -12,10 +12,10 @@ render:
   variables: []
   frontmatter: strip
 source_history:
-  - repository: dryvist/.github
+  - repository: JacobPEvans/.github
     path: .github/workflows/shared/repo-health-audit-prompt.md
     commit: 686064224dfa7487ea1bf8bdddd0e87bad93f323
-  - repository: dryvist/ai-workflows
+  - repository: JacobPEvans/.github-ai
     path: .github/workflows/shared/repo-health-audit-prompt.md
     commit: fad075ea44873c3a38f6c7060a5212880a10207c
 ---

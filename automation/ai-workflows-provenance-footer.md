@@ -10,7 +10,7 @@ tags:
 timestamp: "2026-07-18T16:40:00-04:00"
 status: reference
 consumers:
-  - "dryvist/ai-workflows"
+  - "JacobPEvans/.github-ai"
 render:
   engine: envsubst
   variables:
@@ -21,7 +21,7 @@ render:
     - "WORKFLOW_NAME"
   frontmatter: strip
 source_history:
-  - repository: "dryvist/ai-workflows"
+  - repository: "JacobPEvans/.github-ai"
     path: ".github/prompts/_provenance-footer.md"
     commit: "fad075ea44873c3a38f6c7060a5212880a10207c"
 ---

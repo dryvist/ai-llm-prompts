@@ -27,7 +27,7 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Hermes inbound webhook relay](hermes-inbound-webhook.md) - Prompt template for relaying the raw inbound webhook payload.
 * [Hermes nightly wiki health](hermes-nightly-wiki-health.md) - Nightly wiki lint and health-check prompt.
 * [Hermes repo scorecard](hermes-repo-scorecard.md) - Weekly weighted 0-100 repo-health scorecard with week-over-week deltas.
-* [Hermes promotion drift](hermes-promotion-drift.md) - Daily sweep that opens a draft promotion PR per git-flow repo with develop ahead of main.
+* [Hermes promotion drift](hermes-promotion-drift.md) - Daily read-only sweep that reports git-flow repos with develop ahead of main and no promotion PR.
 * [Hermes PR shepherd sweep](hermes-pr-shepherd-sweep.md) - Hourly sweep that updates BEHIND agent PRs and enables auto-merge on clean ones.
 * [Hermes release watch](hermes-release-watch.md) - Daily digest of recent releases for tracked dependencies.
 * [Hermes self-audit](hermes-self-audit.md) - Scheduled self-correction loop: own Slack output critique, own Splunk errors, subsystem health, correction cards.

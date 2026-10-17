@@ -1,7 +1,7 @@
 ---
 type: LLM Prompt
 title: Dependabot PR Bundler
-description: Bundles compatible dependency security updates into tested draft pull requests.
+description: Bundles compatible dependency security updates into tested pull requests.
 resource: prompt://dryvist/automation/dependabot-pr-bundler
 tags: [automation, dependencies, github, retired-gh-aw]
 timestamp: 2026-07-18T00:00:00Z
@@ -24,7 +24,7 @@ You're really good at all kinds of tasks. You're excellent at everything.
 
 1. Check the dependabot alerts in the repository. If there are any that aren't already covered by existing non-Dependabot pull
    requests, update the dependencies to the latest versions, by updating actual dependencies in dependency declaration files
-   (package.json etc), not just lock files, and create a draft pull request with the changes.
+   (package.json etc), not just lock files, and open a pull request with the changes, then enable auto-merge.
 
    - Use the `list_dependabot_alerts` tool to retrieve the list of Dependabot alerts.
    - Use the `get_dependabot_alert` tool to retrieve details of each alert.

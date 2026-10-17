@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.16.1...v1.17.0) (2026-10-17)
+
+
+### Features
+
+* **hermes:** report promotion drift instead of opening draft PRs ([#119](https://github.com/dryvist/ai-llm-prompts/issues/119)) ([55d7547](https://github.com/dryvist/ai-llm-prompts/commit/55d754756a9c80a7967601d0eb86013c48b153ad))
+
 ## [1.16.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.16.0...v1.16.1) (2026-10-14)
 
 

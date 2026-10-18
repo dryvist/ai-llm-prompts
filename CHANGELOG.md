@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.21.0...v1.21.1) (2026-10-18)
+
+
+### Bug Fixes
+
+* **instructions:** drop load-gate contradiction and repeated rules from on-demand text ([#131](https://github.com/dryvist/ai-llm-prompts/issues/131)) ([cb166a2](https://github.com/dryvist/ai-llm-prompts/commit/cb166a249cd5e3e6837609924e25ed24d81d0533))
+
 ## [1.21.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.20.0...v1.21.0) (2026-10-18)
 
 

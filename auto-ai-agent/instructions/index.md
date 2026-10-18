@@ -15,12 +15,14 @@ layout.
 * [Permission System](agentsmd/docs/permission-system.md) - Shared agent instruction file.
 * [Remote Commit Workflow (DECOMMISSIONED)](agentsmd/docs/remote-commit-workflow.md) - Shared agent instruction file.
 * [Sandbox Environments for AI CLI Auto-Approval Workflows](agentsmd/docs/sandbox-evaluation.md) - Shared agent instruction file.
+* [Tool role map example](agentsmd/docs/tool-role-map.example.md) - Public example of products that can fill shared agent roles.
 * [Permissions moved to nix-claude-code](agentsmd/permissions/MOVED.md) - Shared agent instruction file.
 * [Claude Projects brief](agentsmd/projects-brief.md) - Shared agent instruction file.
 * [Agent Notifications](agentsmd/rules/agent-notifications.md) - Shared agent instruction file.
 * [CI Resilience](agentsmd/rules/on-demand/ci-resilience.md) - Shared agent instruction file.
 * [Claude Projects](agentsmd/rules/on-demand/claude-projects.md) - Shared agent instruction file.
 * [Cost-aware authoring](agentsmd/rules/on-demand/cost-aware-authoring.md) - Shared agent instruction file.
+* [Data pipeline](agentsmd/rules/on-demand/data-pipeline.md) - Shared agent instruction file.
 * [Delegation Trust](agentsmd/rules/on-demand/delegation-trust.md) - Shared agent instruction file.
 * [Dependency automation](agentsmd/rules/on-demand/dependency-automation.md) - Shared agent instruction file.
 * [Git flow](agentsmd/rules/on-demand/git-flow.md) - Shared agent instruction file.

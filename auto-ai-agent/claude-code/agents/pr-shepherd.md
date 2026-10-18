@@ -7,7 +7,7 @@ tags:
   - "claude-code"
   - "subagent"
   - "pull-requests"
-timestamp: "2026-10-12T12:00:00-04:00"
+timestamp: "2026-10-18T12:18:06-04:00"
 status: active
 consumers:
   - "dryvist/nix-ai"
@@ -17,7 +17,7 @@ render:
   frontmatter: include
 source_history:
   - repository: "dryvist/ai-llm-prompts"
-    path: "auto-ai-agent/claude-code/agents/haiku-xhigh.md"
+    path: "auto-ai-agent/claude-code/agents/executor.md"
     note: "Sibling executor definition; this agent follows its report and refusal rules."
 name: pr-shepherd
 model: haiku

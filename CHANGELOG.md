@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.18.0...v1.19.0) (2026-10-18)
+
+
+### Features
+
+* **instructions:** move the shared global agent instructions into the catalog ([#125](https://github.com/dryvist/ai-llm-prompts/issues/125)) ([f2274b6](https://github.com/dryvist/ai-llm-prompts/commit/f2274b6ebcf372b6a16c1ed37c0640f8ace09834))
+
 ## [1.18.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.17.0...v1.18.0) (2026-10-18)
 
 

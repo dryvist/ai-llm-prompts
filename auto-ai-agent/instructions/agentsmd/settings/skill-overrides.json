@@ -26,7 +26,7 @@
     "demoted tier, and without it every demoted skill is reachable only by",
     "someone who already knows its name."
   ],
-  "_regenerate": "keys come from the skill_listing 'names' array of a fresh session transcript; keep-list from: grep -rhoE '\"name\":\"Skill\",\"input\":\\{\"skill\":\"[^\"]+\"' ~/.claude/projects --include='*.jsonl' | sed 's/.*\"skill\":\"//;s/\"$//' | sort -u",
+  "_regenerate": "keys come from the skill_listing 'names' array of a fresh session log; keep-list from: grep -rhoE '\"name\":\"Skill\",\"input\":\\{\"skill\":\"[^\"]+\"' ~/.claude/projects --include='*.jsonl' | sed 's/.*\"skill\":\"//;s/\"$//' | sort -u",
   "skillOverrides": {
     "add-registry": "user-invocable-only",
     "ai-cli-harness-better-practices:track-followups": "user-invocable-only",

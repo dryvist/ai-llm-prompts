@@ -38,7 +38,7 @@ fallback when that happens.
   sequence only for real dependencies or same-file conflicts. Never gate
   spawning on machine load.
 - **Verify liveness, not just launch.** A spawn that returns an id is not a
-  working agent. Treat "no transcript/output within a sane deadline" as a
+  working agent. Treat "no output within a sane deadline" as a
   failed spawn and retry once — then fall back.
 - **Solo fallback is mandatory.** Every plan built on delegation must state
   what runs single-threaded when spawning is unavailable. The mission

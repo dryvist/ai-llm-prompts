@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-18T12:18:06-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -21,8 +21,8 @@ source_history:
 
 # Task tracking
 
-Vikunja is the task tracker. Every side quest, follow-up, and deferred item
-goes there. **Never open a GitHub issue** — GitHub carries pull requests only.
+Every side quest, follow-up, and deferred item goes to the task tracker.
+**Never open a GitHub issue** — GitHub carries pull requests only.
 
 That holds for issues that already exist, not only for new ones. A forge issue
 is never the tracker:
@@ -36,12 +36,12 @@ is never the tracker:
   public artifact on a schedule and with no review — turn the issue output off
   and read its findings where the tool reports them.
 
-Refer to Vikunja by project name and project number. Never put its URL or host
-in committed text.
+The project comes from the operator's private role map. Never put the task
+tracker URL or host in committed text.
 
 ## Side quests and follow-ups
 
-Found something worth doing that is not this task? Record it in Vikunja with
+Found something worth doing that is not this task? Record it in the task tracker with
 enough context for someone else to pick it up, then continue. Do not widen the
 current change to cover it, and do not silently drop it. A Claude project cloud
 thread hands its follow-ups off instead: see `claude-projects.md`.
@@ -51,8 +51,8 @@ a security finding, a credential detail, or internal topology goes to the
 incident tracker or the private docs site, not into a task description. "It is
 only a side quest" is not an exemption.
 
-Before creating a Vikunja task or Zammad ticket, search the tracker for an open
-item on the same work or fault. If one exists, comment on it or link it instead.
+Before creating a task or ticket, search the relevant tracker for an open item
+on the same work or fault. If one exists, comment on it or link it instead.
 A recurrence of a closed fault gets a new ticket that links the prior ones.
 Comment on a task once per milestone, never per step, and use bulk-update for multi-task changes.
 
@@ -80,7 +80,8 @@ enough to prompt a question is a documentation defect, not a question.
 A maintenance window is shared, agent-visible "hands off this target" state.
 Without one, a second session cannot tell that a host is mid-rebuild.
 
-One project, `Maintenance Windows` (project 54). One task equals one window.
+The maintenance-window project comes from the operator's private role map. One
+task equals one window.
 
 | Field | Value |
 | --- | --- |

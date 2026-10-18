@@ -1,0 +1,59 @@
+---
+name: log-platform
+description: Read logs from the central log platform, never from a host — index-time bounding, and what a missing/malformed log means.
+type: LLM Prompt
+title: "Read logs from the log platform, never from the host"
+resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/log-platform"
+tags:
+  - shared-instructions
+  - agent-instructions
+timestamp: "2026-10-18T08:44:13-04:00"
+status: active
+consumers:
+  - dryvist/nix-ai
+  - dryvist/nix-claude-code
+render: { engine: literal, variables: [], frontmatter: strip }
+source_history:
+  - repository: dryvist/ai-assistant-instructions
+    path: "agentsmd/rules/on-demand/log-platform.md"
+    note: Migrated from the instruction repository.
+---
+
+# Read logs from the log platform, never from the host
+
+- Every log read goes through the central log platform. For current system
+  state, use the `monitoring-first` skill to select the right monitoring source.
+- **Project only needed fields before printing.** Put the projection in the
+  query itself; do not fetch full records and filter them afterward.
+- **Never redact a record by position** (column index, fixed offset, or
+  `cut`/`awk` field number). A record with a missing optional field or a shorter
+  layout shifts the positions, and the sensitive value then prints unredacted.
+- **A log you cannot find in the log platform is a finding, not an
+  inconvenience.** It means the pipeline dropped it and nobody knew. Missing
+  entirely, landing in the wrong index, or present but lacking the field an
+  alert matches on all count. Raise it and fix the pipeline the way you would
+  any other defect.
+- For missing logs, diagnosis, and any direct probe, follow `monitoring-first`;
+  never use a host copy to answer the original question.
+- The point is not the query interface. Routing every log investigation through the
+  shared pipeline is the only thing that keeps it honest: data nobody reads
+  rots, and a host you can still log into hides the rot.
+- **Bound the search on index time, not event time.** Event time is whatever
+  the platform managed to parse out of the record, and bad timestamp
+  extraction is common. An event-time window conflates three different
+  situations — never arrived, arrived with a wrong timestamp, arrived late —
+  and reports all three as an empty result, so "nothing there" is not
+  evidence of absence. Ask by index time first; add event time only once you
+  know the source parses correctly.
+- **Put the index-time bounds in the BASE search, before the first pipe.**
+  They are search terms, not a global option: appended after a pipe they become
+  arguments to whatever command is last, and a platform will accept that, return
+  success, and hand back nothing. An unbounded search reported as an empty
+  result is indistinguishable from "no such events", so this reads as a clean
+  answer to a question that was never asked.
+- **Timestamps that do not parse are themselves a critical finding.** A source
+  whose event time drifts from its index time breaks every time-bounded
+  question asked of it: incident windows silently omit it, short-lookback
+  alerts can never match it while still appearing to cover it, and
+  cross-source ordering comes out false. Raise it, do not work around it by
+  widening the window.

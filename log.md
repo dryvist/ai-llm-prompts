@@ -2,6 +2,10 @@
 
 ## 2026-10-18
 
+* **Add (auto-ai-agent/instructions)**: Migrate the shared global instruction files, preserving Claude-native
+  frontmatter and source bodies; deliver the original layout through the `instructions` package with OKF
+  metadata stripped.
+
 * **Change (auto-ai-agent/claude-code)**: Replace the model-specific executor definitions with one model-neutral
   `executor` agent; the router selects the backend and effort per spawn.
 

@@ -1,22 +1,5 @@
 {
   "nodes": {
-    "ai-assistant-instructions": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1791599289,
-        "narHash": "sha256-HrfsbTRLKJQ8AV3wBm8gQQfytWZ4hz7Moh7KMeQ6b8s=",
-        "owner": "dryvist",
-        "repo": "ai-assistant-instructions",
-        "rev": "8726293d4189159500e8814ccc7e3afbec8ec859",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dryvist",
-        "ref": "v1",
-        "repo": "ai-assistant-instructions",
-        "type": "github"
-      }
-    },
     "claude-code-plugins": {
       "flake": false,
       "locked": {
@@ -52,7 +35,6 @@
     },
     "root": {
       "inputs": {
-        "ai-assistant-instructions": "ai-assistant-instructions",
         "claude-code-plugins": "claude-code-plugins",
         "nixpkgs": "nixpkgs"
       }

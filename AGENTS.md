@@ -8,6 +8,9 @@ skill-groups: [core, ai]
 This public repository is the canonical source for Dryvist-authored LLM prompts. Keep runtime prompt text here and keep consumer-specific
 schedules, credentials, deployment IDs, and application logic in their owning repositories.
 
+The shared global agent instructions live in `auto-ai-agent/instructions/`; they retain tool-native frontmatter
+keys and are delivered through the `instructions` package.
+
 ## Open Knowledge Format
 
 All prompt changes MUST comply with Open Knowledge Format (OKF) 0.1.

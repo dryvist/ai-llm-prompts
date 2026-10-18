@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.20.0...v1.21.0) (2026-10-18)
+
+
+### Features
+
+* **instructions:** name roles instead of products in the shared rules ([#129](https://github.com/dryvist/ai-llm-prompts/issues/129)) ([f572f51](https://github.com/dryvist/ai-llm-prompts/commit/f572f5198d3fcc0363480380fa680bfa78ca4841))
+
 ## [1.20.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.19.0...v1.20.0) (2026-10-18)
 
 

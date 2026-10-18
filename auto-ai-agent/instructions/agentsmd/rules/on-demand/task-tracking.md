@@ -21,8 +21,7 @@ source_history:
 
 # Task tracking
 
-Every side quest, follow-up, and deferred item goes to the task tracker.
-**Never open a GitHub issue** — GitHub carries pull requests only.
+Task routing follows [AGENTS.md](../../../AGENTS.md): never a GitHub issue.
 
 That holds for issues that already exist, not only for new ones. A forge issue
 is never the tracker:
@@ -41,7 +40,7 @@ tracker URL or host in committed text.
 
 ## Side quests and follow-ups
 
-Found something worth doing that is not this task? Record it in the task tracker with
+Found something worth doing that is not this task? Record it with
 enough context for someone else to pick it up, then continue. Do not widen the
 current change to cover it, and do not silently drop it. A Claude project cloud
 thread hands its follow-ups off instead: see `claude-projects.md`.

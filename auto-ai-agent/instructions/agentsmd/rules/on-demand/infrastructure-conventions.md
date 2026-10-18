@@ -54,11 +54,9 @@ before you continue — not later.
 - **Check before spending.** Before a path spends a resource that only a reboot
   can restore, check every known edge case. Never “try and see” when trying
   spends it.
-- **Keep recovery reboot-independent.** No recovery path depends on a reboot;
-  every guard that can block or halt logs each decision.
-- **Keep cluster lifecycle automation AI-free.** Cluster stand-up and tear-down
-  automation contains zero AI steps. If an agent finds a manual step is needed,
-  file the automation gap in the task tracker before continuing.
+- **Keep recovery reboot-independent.** Log each decision made by a guard that can block or halt recovery.
+- **Keep cluster lifecycle automation AI-free.** If an agent finds a manual step is needed, file the automation
+  gap in the task tracker before continuing.
 
 ## Always FQDN, never a hardcoded IP
 

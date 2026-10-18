@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.19.0...v1.20.0) (2026-10-18)
+
+
+### Features
+
+* **instructions:** delegate count is uncapped; only machine load gates fan-out ([#127](https://github.com/dryvist/ai-llm-prompts/issues/127)) ([dff2987](https://github.com/dryvist/ai-llm-prompts/commit/dff298737bdb184216d413e27114c5f4507583f7))
+
 ## [1.19.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.18.0...v1.19.0) (2026-10-18)
 
 

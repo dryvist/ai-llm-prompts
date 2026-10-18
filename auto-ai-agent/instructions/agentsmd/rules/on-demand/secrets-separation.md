@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-18T12:20:33-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -135,7 +135,7 @@ Try the rungs in order and never invert them:
 3. **Break-glass admin credential** — last resort, only after 1 and 2 have
    actually been tried and failed. Say so in the write-up when you use it.
 
-**The principal is not the login user.** A signed certificate carries a
+**An SSH certificate principal is not the login user.** A signed certificate carries a
 principal that may be configured against a different account than the one you
 type. A refusal when connecting as the principal's name is *not* evidence the
 authority is missing — test as the configured login user before concluding
@@ -148,6 +148,9 @@ interception for convenience. Remove the one stale entry, re-verify that host,
 and record why. The real fix is a host certificate authority.
 
 ## The failure signature to expect
+
+An HTTP 429 from a secret-store standby node means the standby is healthy, not
+that the store is down.
 
 A helper that exits successfully having exported nothing is the bug — not the
 missing secret. It sends the operator looking in the wrong place. A credential

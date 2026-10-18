@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-18T12:18:06-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -25,6 +25,8 @@ source_history:
 
 Resilience comes from being cleanly rebuildable, not from guarding things
 against deletion.
+
+Use OpenTofu with the `tofu` command for infrastructure-as-code operations.
 
 - **No destroy-protection and no "don't touch" guards.** No `protection = true`,
   no destroy-blocking preconditions. A guard that stops a rebuild is a guard
@@ -46,6 +48,17 @@ record, then configuration management converges it by FQDN.
 Needing a manual touch is a gap in the automation. Fix the gap; do not perform
 the touch and move on. If you do intervene by hand, record the automation gap
 before you continue — not later.
+
+## Unrecoverable resources
+
+- **Check before spending.** Before a path spends a resource that only a reboot
+  can restore, check every known edge case. Never “try and see” when trying
+  spends it.
+- **Keep recovery reboot-independent.** No recovery path depends on a reboot;
+  every guard that can block or halt logs each decision.
+- **Keep cluster lifecycle automation AI-free.** Cluster stand-up and tear-down
+  automation contains zero AI steps. If an agent finds a manual step is needed,
+  file the automation gap in the task tracker before continuing.
 
 ## Always FQDN, never a hardcoded IP
 

@@ -28,8 +28,8 @@ warning, error and lint finding for real; never silence, skip or bypass the chec
 
 Tool choice — **no new custom scripts**. Stop at the first rung that works:
 (1) existing flags, config, or an installed skill, command, plugin or MCP server; (2) a native platform or tool
-feature; (3) a maintained third-party tool; (4) community content (Ansible collections, OpenTofu modules, Renovate
-presets, pre-commit hooks, Actions); (5) prior art: `/github-code-search` (thousands of hits is idiomatic, three is a
+feature; (3) a maintained third-party tool; (4) community content (collections, modules, presets,
+hooks, Actions); (5) prior art: `/github-code-search` (thousands of hits is idiomatic, three is a
 mistake), context7, registries; (6) a standardized public repo. Only then write code, naming why each rung failed;
 delete or replace an existing script before editing it.
 
@@ -37,10 +37,10 @@ Git workflow: never edit on the default branch — `/refresh-repo`, then a new w
 [git-flow](agentsmd/rules/on-demand/git-flow.md): PRs target `develop` (squash-merge), `develop` → `main` by
 merge commit only. Otherwise trunk flow. Always **atomic commits**, one fix/feature/section per commit. Load
 the on-demand rule for the activity — `rule-tiers.md` is the index. Instruction-behavior changes are `feat:`/`fix:`,
-never `docs:` (docs never release).
+never `docs:`.
 
 Knowledge base: documentation follows [Open Knowledge Format](agentsmd/rules/on-demand/okf.md) — search before
-editing, capture new durable knowledge after a change.
+editing, capture new knowledge after a change.
 
 ## Where things get written (routing law, no exceptions)
 
@@ -62,7 +62,7 @@ not an exemption.
 
 Repo boundaries: `dryvist/ai-llm-prompts` `auto-ai-agent/instructions` (rules, `AGENTS.md`, workflows),
 `dryvist/nix-claude-code` `data/permissions` (tool permissions), `dryvist/claude-code-plugins` (commands,
-skills, agents, hooks). Update the private docs site in the same session.
+skills, agents, hooks).
 
 **Delegation (binding).** Session start reports `codex-quota`. While it exits 0, every delegate runs on Codex, newest
 Luna, xhigh; never Haiku. Architecture, security and planning

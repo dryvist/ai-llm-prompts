@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.3](https://github.com/dryvist/ai-llm-prompts/compare/v1.21.2...v1.21.3) (2026-10-18)
+
+
+### Bug Fixes
+
+* **instructions:** trim claude-code.md so the delivered CLAUDE.md stays within its token budget ([#135](https://github.com/dryvist/ai-llm-prompts/issues/135)) ([a8eb947](https://github.com/dryvist/ai-llm-prompts/commit/a8eb9472e8899573e3cef4e88a4e4ab99de99398))
+
 ## [1.21.2](https://github.com/dryvist/ai-llm-prompts/compare/v1.21.1...v1.21.2) (2026-10-18)
 
 

@@ -27,6 +27,12 @@ Manual Codex run (the router covers `Agent` spawns only): `codex exec -m <slug> 
 -s <read-only|workspace-write> -o <out> - < brief.md`, in the background. `<slug>` is the listed `-luna` entry with the
 lowest `priority` in `~/.codex/models_cache.json`; never write a version from memory.
 
+## Parallelism
+
+No fixed limit on delegates or Codex jobs, and no invented slot count. Before a large fan-out, read machine load
+(CPU and memory); launch freely while it stays under 80% of capacity and pause only above it. Many small, related
+tasks go to one Codex session as a task list instead of one `codex exec` each.
+
 ## Fable is a main-session planning model only
 
 No Fable subagents.

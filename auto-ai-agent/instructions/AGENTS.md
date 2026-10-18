@@ -67,7 +67,8 @@ skills, agents, hooks). Update the private docs site in the same session; most c
 **Delegation (binding).** Session start reports `codex-quota`. While it exits 0, every delegate runs on Codex, newest
 Luna, xhigh (scouting, reads, triage, review, implementation); never Haiku. Architecture, security and planning
 judgment → Sonnet latest (Opus latest only when truly needed). Codex exhausted: public-repo code, implementation and
-review → ZCode → Haiku; everything else → Haiku; ZCode takes nothing else. The `jpe-ai-delegation` router enforces
+review → ZCode → Haiku; everything else → Haiku; ZCode takes nothing else. Never cap the number of delegates; run all
+ready work in parallel and hold back only while machine load is above 80%. The `jpe-ai-delegation` router enforces
 this; brief per `brief-delegates`; details in `model-delegation.md`.
 For bounded, routine subtasks, call `~/.agents/skills/fast-subagent/scripts/fast-subagent.sh` with `LLM_ROUTER_URL` and
 `FAST_SUBAGENT_MODEL`; retain consequential judgment and decisions here.

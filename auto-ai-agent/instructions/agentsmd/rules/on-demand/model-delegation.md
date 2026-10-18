@@ -39,17 +39,15 @@ No Fable subagents.
 
 ## Skills
 
-The procedures this rule refers to are shipped as skills, not carried here — this repository holds configuration
-only. They live in the `ai-delegation` and `jpe-ai-delegation` plugins of the
-[`claude-code-plugins`](https://github.com/JacobPEvans/claude-code-plugins) marketplace:
+Procedures ship as skills in the `ai-delegation` and `jpe-ai-delegation` plugins of the
+[`claude-code-plugins`](https://github.com/JacobPEvans/claude-code-plugins) marketplace, not here:
 
-- `delegate-to-ai` — executor-neutral checks: classify the task, keep sensitive content away from third parties, verify the exact result.
+- `delegate-to-ai` — classify the task, keep sensitive content from third parties, verify the exact result.
 - `delegation-ladder` (`jpe-ai-delegation`) — routing eligibility and trusted draft-PR verification.
-- `local-subagents` — when a step is worth handing off at all, how to read the live model menu (speed, quality,
-  best-for, context, price) from the router's own contract, and how to place the call.
-- `openrouter-models` — the self-enforced spend budget, the free-tier logging caveat, and the lane for requesting a model the router does not serve.
+- `local-subagents` — when a handoff is worth it, the live model menu, and where to place the call.
+- `openrouter-models` — the spend budget, the free-tier logging caveat, and requesting a model the router lacks.
 
-None depends on Claude Code: they use shell commands and available harness tools, so a non-Claude harness consumes
-them straight from that repository. **That copy is the only authored one.** A harness adopting either deletes its
-local version in the same change rather than running both — two copies of a skill about spend and egress will drift
-on precisely the rules that carry the risk, and whichever consumer holds the stale one has no way to know.
+None depends on Claude Code. The plugin copy is the only authored one; a harness adopting a skill deletes its local copy in the same change.
+
+For bounded, routine subtasks, call `~/.agents/skills/fast-subagent/scripts/fast-subagent.sh` with `LLM_ROUTER_URL` and
+`FAST_SUBAGENT_MODEL`; the lead keeps consequential judgment.

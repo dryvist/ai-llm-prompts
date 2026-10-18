@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-18T12:18:06-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -21,7 +21,7 @@ source_history:
 
 # Incident management
 
-Zammad is the incident tracker. Outages, security findings, and weaknesses go
+The incident tracker records outages, security findings, and weaknesses. They go
 there — never into a GitHub issue, pull request body, comment, or commit
 message, and never into the task tracker.
 
@@ -47,7 +47,7 @@ Open a ticket for any of these, however small:
 A weakness you *did* fix still gets a ticket if the fix is partial or if the
 same shape exists elsewhere.
 
-Search Zammad for an open ticket on the same fault first; see [[task-tracking]].
+Search the incident tracker for an open ticket on the same fault first; see [[task-tracking]].
 
 ## Filing
 
@@ -63,7 +63,7 @@ The first article sets how the ticket closes. Include:
 - `detection_method` — how the problem surfaced (alert, review, manual check).
 
 A ticket about a weakness must link the task or PR that fixes it. If neither
-exists yet, create the task first — Vikunja, never a GitHub issue (see
+exists yet, create the task first — the task tracker, never a GitHub issue (see
 [[task-tracking]]) — then file the ticket with that task's URL in
 `resolved_when`.
 

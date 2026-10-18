@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-18T12:18:06-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -26,10 +26,9 @@ source_history:
 - Prefer native tools and installed plugins over shell equivalents.
 - Before saying a tool, command, skill, agent, or connector is unavailable,
   discover it with the runtime's tool or plugin discovery mechanism.
-- The lead makes small, fully known edits itself and reviews every diff. It
-  delegates bulk reads, scoping of more than three unread files, mechanical
-  shipping, and implementation chunks. It then synthesizes results, chooses the
-  path, and verifies the final state.
+- The lead makes small, fully known edits, reviews every diff, delegates bulk
+  reads, scoping, mechanical shipping and implementation, and verifies the
+  final state.
 
 ## Ecosystem alternatives
 
@@ -45,15 +44,15 @@ source_history:
 | Multi-file git ops | Parallel Bash tool calls | Loop script |
 | Workspace sweep / abandoned branches | `/refresh-repo --sweep` | Free-form sweep scripts |
 | Close PR + cleanup local state | `/wrap-up purge-pr <PR_NUMBER>` | `gh pr close` alone |
-| Infrastructure config | Ansible modules, Terraform resources | Configuration script |
-| Infrastructure validation | `terraform validate`, `ansible-lint`, check modes | Validation script |
-| State queries | `terraform output`, Ansible facts | Query script |
+| Infrastructure config | Ansible modules, OpenTofu resources | Configuration script |
+| Infrastructure validation | `tofu validate`, `ansible-lint`, check modes | Validation script |
+| State queries | `tofu output`, Ansible facts | Query script |
 | Delegate to external AI | `/delegate-to-ai` (Codex / native subagent) | Manual model routing |
 
 When a capability isn't natively provided by a standard tool, the answer is
 "use the tool as-is, or don't do it" — not "write a small script." A custom
-wrapper script is an unmaintained, untested-at-scale liability that duplicates
-or poorly reinvents what packaged tools already do. If a desired refinement
+wrapper script is an unmaintained liability that reinvents what packaged tools
+already do. If a desired refinement
 can't be done through the tool's native config, drop that refinement rather
 than scripting around the gap.
 

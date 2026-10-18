@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/rule-tiers
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-18T12:18:06-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -44,6 +44,7 @@ routing and the workflow index go in `AGENTS.md`. Everything below is **not** au
 | Cloning/setting up a repo, starting a change | `workspace-conventions.md` |
 | Choosing tools/subagent types | `tool-use.md` |
 | OKF bundle | `okf.md` |
+| Observability or data-feed change | `data-pipeline.md` |
 | Editing renovate config | `dependency-automation.md` |
 | Reading logs | `log-platform.md` |
 | Authoring a skill, rule, hook, agent, or harness setting | `cost-aware-authoring.md` |

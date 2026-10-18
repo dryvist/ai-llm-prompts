@@ -2,6 +2,10 @@
 
 ## 2026-10-18
 
+* **Change (auto-ai-agent/instructions)**: Route incidents and follow-ups by role and add a public example role map.
+* **Add (auto-ai-agent/instructions)**: Generic infrastructure, workspace, secrets, dependency, and observability guidance.
+* **Fix (auto-ai-agent)**: Correct the PR shepherd executor source reference.
+
 * **Add (auto-ai-agent/instructions)**: Migrate the shared global instruction files, preserving Claude-native
   frontmatter and source bodies; deliver the original layout through the `instructions` package with OKF
   metadata stripped.
@@ -37,7 +41,7 @@
 
 ## 2026-10-10
 
-* **Add (auto-ai-agent/claude-code)**: `agents/haiku-xhigh.md` and `agents/opus-medium.md`, the Claude Code subagent
+* **Add (auto-ai-agent/claude-code)**: the two model-named executor agent definitions, the Claude Code subagent
   roster migrated from the instruction repository. Defaults are xhigh effort for Haiku (never below high) and medium
   for Opus; models are the family aliases, never a version. `rules/brief-delegates.md`, an always-loaded rule that
   makes the parent state goal, scope, constraints, success check, output contract, stop conditions and difficulty in

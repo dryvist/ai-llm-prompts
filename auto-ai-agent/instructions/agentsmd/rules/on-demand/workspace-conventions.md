@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-18T12:18:06-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -68,10 +68,11 @@ corrupted session, not a cleanup.
 
 ## Before cloning
 
-Check the repository's visibility first, because it decides the transport and
-the destination. Then search the workspace for an existing clone of the same
-name. A misplaced clone is still a valid clone, so the duplicate goes unnoticed
-and the two copies drift.
+Check repository visibility to choose transport and destination, search
+`$GIT_HOME` for an existing clone outside worktree directories, confirm the
+destination uses the repository family rather than its owner, and confirm its
+basename matches the repository name. A misplaced clone is still a valid clone,
+so the duplicate goes unnoticed and the two copies drift.
 
 **A misplaced clone is a move, not a delete** — unless you have proven it holds
 nothing unique. Check all four: uncommitted changes, commits ahead of the

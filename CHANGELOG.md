@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.2](https://github.com/dryvist/ai-llm-prompts/compare/v1.21.1...v1.21.2) (2026-10-18)
+
+
+### Bug Fixes
+
+* **instructions:** trim the core AGENTS.md so the delivered file stays within its token budget ([#133](https://github.com/dryvist/ai-llm-prompts/issues/133)) ([1dc436c](https://github.com/dryvist/ai-llm-prompts/commit/1dc436ceacdd791a9853305f0bfdf1fc0602c245))
+
 ## [1.21.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.21.0...v1.21.1) (2026-10-18)
 
 

@@ -1,10 +1,9 @@
 # Claude Code subagents
 
-Subagent definitions delivered into every Claude Code session. Each file carries Claude Code's own frontmatter
-(`name`, `model`, `effort`) next to the OKF fields, and models are always the family alias, never a version.
+Subagent definitions delivered into every Claude Code session. The router chooses the executor backend and effort
+per spawn; executor definitions stay model-neutral.
 
 ## Prompts
 
-* [haiku-xhigh](haiku-xhigh.md) - Default executor for scoping, bulk reads, triage and implementation chunks.
-* [opus-medium](opus-medium.md) - Strong-reasoning executor for architecture and security judgment.
+* [executor](executor.md) - Model-neutral executor for delegated scoping, bulk reads, triage, review, shipping and implementation.
 * [pr-shepherd](pr-shepherd.md) - Drives named pull requests to merged and promotes a git-flow repo afterward.

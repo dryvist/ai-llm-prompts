@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-10-18
+
+* **Change (auto-ai-agent/claude-code)**: Replace the model-specific executor definitions with one model-neutral
+  `executor` agent; the router selects the backend and effort per spawn.
+
 ## 2026-10-14
 
 * **Add (developer-tools)**: `public-disclosure-judge.md`, a fail-closed one-token classifier for actual public disclosures.

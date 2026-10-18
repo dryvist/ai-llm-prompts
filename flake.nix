@@ -4,18 +4,13 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    ai-assistant-instructions = {
-      url = "github:dryvist/ai-assistant-instructions?ref=v1";
-      flake = false;
-    };
-
     claude-code-plugins = {
       url = "github:dryvist/claude-code-plugins?ref=v6";
       flake = false;
     };
   };
 
-  outputs = { self, nixpkgs, ai-assistant-instructions, claude-code-plugins }:
+  outputs = { self, nixpkgs, claude-code-plugins }:
     let
       systems = [
         "aarch64-darwin"
@@ -71,6 +66,16 @@
       packages = forAllSystems (system:
         let
           pkgs = import nixpkgs { inherit system; };
+          instructionsBuilder = pkgs.writeShellApplication {
+            name = "render-ai-llm-prompts-instructions";
+            runtimeInputs = [ pkgs.coreutils pkgs.findutils pkgs.gawk ];
+            text = builtins.readFile ./scripts/render-instructions.sh;
+          };
+          instructions = pkgs.runCommand "ai-llm-prompts-instructions" {
+            nativeBuildInputs = [ instructionsBuilder ];
+          } ''
+            render-ai-llm-prompts-instructions ${./auto-ai-agent/instructions} "$out"
+          '';
           mkCatalog = name: path: pkgs.linkFarm "ai-llm-prompts-${name}" [
             {
               name = "share/ai-llm-prompts/${name}";
@@ -84,7 +89,7 @@
             cp -R ${./applications}/. $out/share/ai-llm-prompts/applications/
             chmod -R u+w $out/share/ai-llm-prompts/applications
 
-            rule_file=${ai-assistant-instructions}/agentsmd/rules/operating-core.md
+            rule_file=${instructions}/agentsmd/rules/operating-core.md
             skill_file=${claude-code-plugins}/homelab-ops/skills/monitoring-first/SKILL.md
             rule_count=$(grep -F -c 'Check system state with monitoring first; follow the `monitoring-first` skill before direct shell probes.' "$rule_file")
             test "$rule_count" -eq 1
@@ -106,7 +111,7 @@
           developer-tools = mkCatalog "developer-tools" ./developer-tools;
         in
         {
-          inherit auto-ai-agent automation applications developer-tools;
+          inherit auto-ai-agent automation applications developer-tools instructions;
           default = pkgs.symlinkJoin {
             name = "ai-llm-prompts";
             paths = [ auto-ai-agent automation applications developer-tools ];

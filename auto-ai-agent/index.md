@@ -54,3 +54,7 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 
 * [Claude Code subagents](claude-code/agents/index.md) - Subagent definitions delivered into every Claude Code session.
 * [Claude Code rules](claude-code/rules/index.md) - Always-loaded rules delivered into every Claude Code session.
+
+## Shared Global Instructions
+
+* [Shared global instructions](instructions/index.md) - Shared agent instructions delivered to machines through the `instructions` package.

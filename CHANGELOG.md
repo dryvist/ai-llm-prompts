@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.17.0...v1.18.0) (2026-10-18)
+
+
+### Features
+
+* **agents:** replace the model-named executors with one model-neutral executor ([#123](https://github.com/dryvist/ai-llm-prompts/issues/123)) ([3eb9c8e](https://github.com/dryvist/ai-llm-prompts/commit/3eb9c8ed42ed0c4bfacccc6cc515e32b1b815fe1))
+
 ## [1.17.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.16.1...v1.17.0) (2026-10-17)
 
 

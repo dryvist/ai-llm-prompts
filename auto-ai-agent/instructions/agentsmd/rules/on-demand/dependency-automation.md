@@ -45,8 +45,7 @@ repos. Do not re-derive or diverge from it per repo.
   no sweep workflow.
 - **One `flake.lock` writer.** Renovate's nix `lockFileMaintenance` relocks the whole flake on
   weekends. No workflow writes another repo's lock file.
-- Renovate owns versions for managed inputs; do not hand-bump or re-pin them.
-  Fix missing coverage in Renovate instead of editing versions manually.
+- Renovate owns managed-input versions; add missing Renovate coverage instead of hand-bumping or re-pinning.
 - **First-party refs float on major tags.** Actions and reusable workflows from our own orgs use
   `@vN` (for example `@v1`), never a SHA or `@main`; a release moves the tag, so consumers need no
   bump PR. Flake inputs use `?ref=vN`; Ansible collections use a range such as `>=1,<2`.

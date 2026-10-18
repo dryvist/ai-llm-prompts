@@ -21,9 +21,7 @@ source_history:
 
 # Incident management
 
-The incident tracker records outages, security findings, and weaknesses. They go
-there — never into a GitHub issue, pull request body, comment, or commit
-message, and never into the task tracker.
+See [AGENTS.md](../../../AGENTS.md) for incident routing and disclosure; never put incidents in the task tracker.
 
 The reason is disclosure, not bookkeeping. A public repository is
 search-indexed and archived forever. An incident narrative names what broke,

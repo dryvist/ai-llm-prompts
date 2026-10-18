@@ -35,8 +35,7 @@ fallback when that happens.
   substrate must be discovered by a 10-second probe, not by losing a 10-agent
   fan-out.
 - **Parallelize ready work.** Launch all independent, ready tasks in parallel;
-  sequence only for real dependencies or same-file conflicts. Never gate
-  spawning on machine load.
+  sequence only for real dependencies or same-file conflicts.
 - **Verify liveness, not just launch.** A spawn that returns an id is not a
   working agent. Treat "no output within a sane deadline" as a
   failed spawn and retry once — then fall back.

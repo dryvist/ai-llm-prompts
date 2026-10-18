@@ -29,9 +29,8 @@ lowest `priority` in `~/.codex/models_cache.json`; never write a version from me
 
 ## Parallelism
 
-No fixed limit on delegates or Codex jobs, and no invented slot count. Before a large fan-out, read machine load
-(CPU and memory); launch freely while it stays under 80% of capacity and pause only above it. Many small, related
-tasks go to one Codex session as a task list instead of one `codex exec` each.
+Codex jobs have no fixed limit. Before a large fan-out, read CPU and memory load. Send many small, related tasks to
+one Codex session as a task list instead of separate `codex exec` calls.
 
 ## Fable is a main-session planning model only
 

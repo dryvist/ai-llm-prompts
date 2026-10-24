@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/operating-
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-24T08:56:24-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -65,7 +65,7 @@ Behavior that applies to every task (always-loaded status: `rule-tiers.md`). Com
   equivalents aren't logged in; a probe finding no session is expected, never a blocker; mint a short-lived token from the credential store at call
   time, same shell that uses it. Mint once per shell or batch and pass the token to children in memory;
   children never revoke an inherited token; never mint inside a poll or wait loop. Delegate and model API
-  routing: see [`AGENTS.md`](../../AGENTS.md) and `model-delegation.md`. Never use your own provider credential
+  routing: see [model-delegation.md](on-demand/model-delegation.md). Never use your own provider credential
   for raw model API calls; an operator-signed-in agent CLI is delegation. Fetch API model names from the router's
   contract.
 

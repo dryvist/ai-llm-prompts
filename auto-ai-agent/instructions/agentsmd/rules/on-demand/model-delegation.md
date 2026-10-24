@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-24T08:56:24-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -23,14 +23,25 @@ source_history:
 
 Canonical doctrine and routing: `prompt://dryvist/auto-ai-agent/model-delegation`.
 
-Manual Codex run (the router covers `Agent` spawns only): `codex exec -m <slug> -c 'model_reasoning_effort="xhigh"'
--s <read-only|workspace-write> -o <out> - < brief.md`, in the background. `<slug>` is the listed `-luna` entry with the
-lowest `priority` in `~/.codex/models_cache.json`; never write a version from memory.
+Session start reports `codex-quota`. Delegate through the harness Agent tool; while `codex-quota` exits 0,
+the delegation hook sends the task to Codex. Confirm in the delegate log that it ran on a Codex model,
+never Haiku. Never call `codex exec` from a tool shell; the agent hook denies it.
+
+Architecture, security and planning judgment route to latest Sonnet (latest Opus only when truly needed). When Codex
+is exhausted, public-repo code, implementation and review route to ZCode, then Haiku; everything else routes to Haiku.
+
+When a runtime must call the Codex CLI directly (sandbox entrypoints or the router itself), pass the prompt as `-`
+with finite stdin, or as a positional argument with stdin closed (`</dev/null`); always set `-o <file>`. Treat a
+non-zero exit or empty final message as failure and surface it.
+
+A delegate returns its result in the final message: one line (`STATUS|ITEM|REASON`) or a schema. Read-only delegates
+never get a report-file contract. Background work is complete only after its result is retrieved and checked; a job ID
+is not a result.
 
 ## Parallelism
 
-Codex jobs have no fixed limit. Before a large fan-out, read CPU and memory load. Send many small, related tasks to
-one Codex session as a task list instead of separate `codex exec` calls.
+Codex delegates have no fixed limit. Before a large fan-out, read CPU and memory; hold back only while machine load
+is above 80%. Batch many small, related tasks into one Agent brief when practical.
 
 ## Fable is a main-session planning model only
 

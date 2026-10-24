@@ -7,7 +7,7 @@ tags:
   - "claude-code"
   - "delegation"
   - "briefing"
-timestamp: "2026-10-10T12:00:00-04:00"
+timestamp: "2026-10-24T08:56:24-04:00"
 status: active
 consumers:
   - "dryvist/nix-ai"
@@ -29,7 +29,7 @@ parent owns that outcome. A vague brief is the parent's failure, never the deleg
 2. the exact scope (repo, absolute paths, branch or worktree) and what must not be touched;
 3. constraints, patterns to follow (`file:line`) and decisions already made, pasted rather than referred to;
 4. the success criterion: the exact check to run and the result that means done;
-5. the output contract: report file path, line cap, evidence required;
+5. the output contract: final message one line or schema; report file only for write-capable delegates;
 6. where to stop and report instead of guessing: a gate, a refusal, an ambiguity, a second failure;
 7. difficulty and risk in plain words, never a model name. Routing picks the cheapest tier the brief justifies, so
    a thin brief buys the weakest executor.

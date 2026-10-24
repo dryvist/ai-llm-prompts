@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T12:18:06-04:00"
+timestamp: "2026-10-24T08:56:24-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -47,7 +47,7 @@ source_history:
 | Infrastructure config | Ansible modules, OpenTofu resources | Configuration script |
 | Infrastructure validation | `tofu validate`, `ansible-lint`, check modes | Validation script |
 | State queries | `tofu output`, Ansible facts | Query script |
-| Delegate to external AI | `/delegate-to-ai` (Codex / native subagent) | Manual model routing |
+| Delegate to external AI | [model-delegation.md](model-delegation.md) | — |
 
 When a capability isn't natively provided by a standard tool, the answer is
 "use the tool as-is, or don't do it" — not "write a small script." A custom
@@ -60,7 +60,7 @@ For the environment-output prohibition, follow `operating-core.md`.
 
 ## Subagent type selection
 
-Route all delegated work per [`AGENTS.md`](../../../AGENTS.md). Forks run on the lead's model; never fork from Fable.
+Route all delegated work per [model-delegation.md](model-delegation.md). Forks run on the lead's model; never fork from Fable.
 
 | `subagent_type` | Use when |
 | --- | --- |
@@ -76,6 +76,6 @@ Route all delegated work per [`AGENTS.md`](../../../AGENTS.md). Forks run on the
   checked with a compact diff or test result.
 - For risky architecture, broad prompt changes, security-sensitive changes, or
   plans that feel under-specified, request adversarial critique via
-  `/delegate-to-ai`; follow `model-delegation.md` for routing.
+  `/delegate-to-ai`; follow [model-delegation.md](model-delegation.md) for routing.
 - Require every delegated result to include outcome, evidence, inspected or
   changed paths, risks, and the next recommended action.

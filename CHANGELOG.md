@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.22.0...v1.23.0) (2026-10-24)
+
+
+### Features
+
+* **instructions:** start program-scale work with a tracker pass ([#139](https://github.com/dryvist/ai-llm-prompts/issues/139)) ([c6dce98](https://github.com/dryvist/ai-llm-prompts/commit/c6dce988098f609c4683486fd45b5af022956741))
+
 ## [1.22.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.21.3...v1.22.0) (2026-10-24)
 
 

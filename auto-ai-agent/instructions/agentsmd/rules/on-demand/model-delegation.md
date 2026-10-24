@@ -24,8 +24,8 @@ source_history:
 Canonical doctrine and routing: `prompt://dryvist/auto-ai-agent/model-delegation`.
 
 Session start reports `codex-quota`. Delegate through the harness Agent tool; while `codex-quota` exits 0,
-the delegation hook sends the task to Codex (newest model, xhigh) on stdin. Check that the delegate transcript
-shows a Codex model, never Haiku. Never call `codex exec` from a tool shell; the agent hook denies it.
+the delegation hook sends the task to Codex. Confirm in the delegate log that it ran on a Codex model,
+never Haiku. Never call `codex exec` from a tool shell; the agent hook denies it.
 
 Architecture, security and planning judgment route to latest Sonnet (latest Opus only when truly needed). When Codex
 is exhausted, public-repo code, implementation and review route to ZCode, then Haiku; everything else routes to Haiku.

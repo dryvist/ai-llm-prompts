@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.24.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.23.0...v1.24.0) (2026-10-24)
+
+
+### Features
+
+* **instructions:** make model-delegation the single home of the Codex call contract ([#141](https://github.com/dryvist/ai-llm-prompts/issues/141)) ([88e33ce](https://github.com/dryvist/ai-llm-prompts/commit/88e33ce43209e07992f1bae0edd55b8a82bdd00e))
+
 ## [1.23.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.22.0...v1.23.0) (2026-10-24)
 
 

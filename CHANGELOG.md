@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.21.3...v1.22.0) (2026-10-24)
+
+
+### Features
+
+* point prose writing at the user voice file ([#137](https://github.com/dryvist/ai-llm-prompts/issues/137)) ([554c5d0](https://github.com/dryvist/ai-llm-prompts/commit/554c5d0d78b8157a2aa8705b514a19d89afb5628))
+
 ## [1.21.3](https://github.com/dryvist/ai-llm-prompts/compare/v1.21.2...v1.21.3) (2026-10-18)
 
 

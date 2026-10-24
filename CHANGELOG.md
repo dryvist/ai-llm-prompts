@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.24.0...v1.25.0) (2026-10-24)
+
+
+### Features
+
+* **instructions:** start and sync branches with Git Town ([#143](https://github.com/dryvist/ai-llm-prompts/issues/143)) ([e0afb49](https://github.com/dryvist/ai-llm-prompts/commit/e0afb49f0a39be4f6864c6cb143f4c7bf37d51ca))
+
 ## [1.24.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.23.0...v1.24.0) (2026-10-24)
 
 

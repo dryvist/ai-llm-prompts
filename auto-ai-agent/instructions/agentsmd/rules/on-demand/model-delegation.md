@@ -24,7 +24,7 @@ source_history:
 Canonical doctrine and routing: `prompt://dryvist/auto-ai-agent/model-delegation`.
 
 Session start reports `codex-quota`. Delegate through the harness Agent tool; while `codex-quota` exits 0,
-the delegation router picks Codex (newest Luna, xhigh) and pipes the brief on stdin. Verify the delegate transcript
+the delegation router picks Codex (newest model, xhigh) and pipes the brief on stdin. Verify the delegate transcript
 shows a Codex model, never Haiku. Never call `codex exec` from a tool shell; the agent hook denies it.
 
 Architecture, security and planning judgment route to latest Sonnet (latest Opus only when truly needed). When Codex

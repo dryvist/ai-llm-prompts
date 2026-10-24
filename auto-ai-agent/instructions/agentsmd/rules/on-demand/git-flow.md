@@ -1,13 +1,13 @@
 ---
 name: git-flow
-description: Branching and merge model — develop is the default integration branch, main is production; squash into develop, merge commits only into main; atomic commits; git-flow-next drives branch lifecycle
+description: Branching and merge model — develop is the default integration branch, main is production; squash into develop, merge commits only into main; atomic commits; Git Town starts and syncs branches by rebase
 type: LLM Prompt
 title: "Git flow"
 resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/git-flow"
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-24T15:30:15-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -21,9 +21,9 @@ source_history:
 
 # Git flow
 
-Repos use the git-flow model as implemented by
-[git-flow-next](https://github.com/gittower/git-flow-next). The `git flow`
-CLI is installed and configured globally (nix-managed `gitflow.*` git config).
+Repos use the git-flow branch model. [Git Town](https://www.git-town.com) starts,
+syncs and proposes branches; it is installed and configured globally (nix-managed
+git config, rebase sync, `main` and `develop` perennial).
 
 ## Detect adoption first
 
@@ -96,11 +96,11 @@ signal. This check applies to git-flow repos only; a trunk repo has no `develop`
    Create `.worktrees/` if absent; keep it gitignored. The repo root checkout
    always stays on the default branch (`develop`, or `main` on trunk repos) —
    never check a feature branch out at the root.
-2. Start the feature branch there: `git flow feature start <name>` — pass the
-   name WITHOUT the `feature/` prefix (the tool prepends it; passing it twice
-   yields `feature/feature/…`). Branch names carry the session id (see the
-   session-coordination rule): `<issue>-<sid8>-<slug>`, e.g.
-   `git flow feature start 123-03a3a401-fix-inventory-loader`, and the
+2. Start the feature branch there with `git town hack <name>`, or let the
+   harness worktree create it. Git Town fetches first and bases the branch on
+   the fresh tip of `git-town.main-branch` (`develop` here). Branch names carry
+   the session id (see the session-coordination rule): `<issue>-<sid8>-<slug>`,
+   e.g. `git town hack 123-03a3a401-fix-inventory-loader`, and the
    worktree dir matches the name. This makes branch and worktree names unique
    per session — two sessions can never collide on either. Never invent an
    issue number; for issue-less maintenance drop that segment
@@ -143,13 +143,15 @@ before rebasing across bot commits to cut the conflict surface.
 - Renovate dependency PRs target `develop` (the default branch). Do not add a
   repo-level `baseBranches` forcing `main`.
 
-## git-flow-next usage
+## Git Town usage
 
-- `git flow feature start <name>` / `git flow release start <version>` /
-  `git flow hotfix start <name>` create correctly-based branches.
-- `git flow finish` from any topic branch detects the branch type, but it
-  lands work by merging and pushing the target branch directly — which both
-  `main` and `develop` reject here. Always finish through the PR flow above;
-  `finish` is only for local branch cleanup.
-- Config keys live in git config (`gitflow.branch.*`); do not override them
-  per-repo without a recorded reason.
+- **Start:** `git town hack <name>`. Never branch from a local `main` or
+  `develop`; the agent hooks deny `checkout -b`, `switch -c` and a worktree add
+  whose start point is not `origin/…`.
+- **Sync:** `git town sync` rebases the branch onto the fresh parent and
+  pushes with lease. Never merge the base into a PR branch: a merge commit
+  fails the org's Conventional Commit ruleset.
+- **Propose:** `git town propose` opens the PR against the parent.
+- **Hotfix:** `git worktree add --no-track -b hotfix/<name> <abs-path> origin/main`.
+- **Per-repo config:** a git-flow repo sets `git-town.main-branch=develop`
+  (or commits `.git-branches.toml`); everything else comes from the global config.

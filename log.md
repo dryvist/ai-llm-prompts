@@ -2,6 +2,7 @@
 
 ## 2026-10-24
 
+* **Update (auto-ai-agent/instructions)**: `git-flow.md` starts and syncs branches with Git Town by rebase and drops git-flow-next.
 * **Update (auto-ai-agent/instructions)**: Centralize the Codex call contract in `model-delegation.md`, align delegate
   output expectations, and point routing references to the canonical rule.
 

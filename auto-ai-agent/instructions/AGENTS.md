@@ -39,6 +39,8 @@ merge commit only. Otherwise trunk flow. Always **atomic commits**, one fix/feat
 the on-demand rule for the activity — `rule-tiers.md` is the index. Instruction-behavior changes are `feat:`/`fix:`,
 never `docs:`.
 
+Writing voice: prose a person will read follows `~/.agents/voice.md` when that file exists.
+
 Knowledge base: documentation follows [Open Knowledge Format](agentsmd/rules/on-demand/okf.md) — search before
 editing, capture new knowledge after a change.
 

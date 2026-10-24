@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.25.0...v1.25.1) (2026-10-24)
+
+
+### Bug Fixes
+
+* **instructions:** drop the retired git-flow-next skill override ([#145](https://github.com/dryvist/ai-llm-prompts/issues/145)) ([51096a8](https://github.com/dryvist/ai-llm-prompts/commit/51096a891a69756b5765725d9898c920a77136c9))
+
 ## [1.25.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.24.0...v1.25.0) (2026-10-24)
 
 

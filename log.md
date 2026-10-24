@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-10-23
+
+* **Add (auto-ai-agent/instructions)**: `task-tracking.md` starts program-scale work with a tracker pass
+  (inventory, dedupe and close, retarget, file epics) and keeps epics current at each milestone.
+
 ## 2026-10-18
 
 * **Change (auto-ai-agent/instructions)**: Route incidents and follow-ups by role and add a public example role map.

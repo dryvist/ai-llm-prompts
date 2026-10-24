@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T12:18:06-04:00"
+timestamp: "2026-10-23T21:03:46-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -54,6 +54,21 @@ Before creating a task or ticket, search the relevant tracker for an open item
 on the same work or fault. If one exists, comment on it or link it instead.
 A recurrence of a closed fault gets a new ticket that links the prior ones.
 Comment on a task once per milestone, never per step, and use bulk-update for multi-task changes.
+
+## Program-scale work
+
+Work that spans several workstreams starts with a tracker pass, before any
+code changes:
+
+1. **Inventory** the open tasks the program touches.
+2. **Dedupe and close.** Merge duplicates into one canonical task. Close
+   finished, superseded, or obsolete tasks, and cite the evidence.
+3. **Retarget** tasks that the new direction changes.
+4. **File the epics.** One program epic, with one child epic per workstream.
+   Link existing tasks under their epic instead of filing copies.
+
+Then keep the tracker current: update each epic at every milestone, and close
+it only when its check passes.
 
 ## Finding the right project
 

@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-10-24
+
+* **Update (auto-ai-agent/instructions)**: Centralize the Codex call contract in `model-delegation.md`, align delegate
+  output expectations, and point routing references to the canonical rule.
+
 ## 2026-10-23
 
 * **Add (auto-ai-agent/instructions)**: `task-tracking.md` starts program-scale work with a tracker pass

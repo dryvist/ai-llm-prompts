@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-24T08:56:24-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -54,7 +54,7 @@ verify their output before merging. Launch all independent, ready work in
 parallel; sequence only for real dependencies or same-file conflicts. Probe
 the spawn substrate before the first fan-out; if spawning fails, take the solo
 path.
-Delegation routing is in [`AGENTS.md`](../../../AGENTS.md).
+Delegation routing is in [model-delegation.md](model-delegation.md).
 
 ## Cache-breakers (avoid mid-session)
 

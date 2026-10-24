@@ -6,7 +6,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/AGENTS"
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T12:18:06-04:00"
+timestamp: "2026-10-24T08:56:24-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -66,9 +66,4 @@ Repo boundaries: `dryvist/ai-llm-prompts` `auto-ai-agent/instructions` (rules, `
 `dryvist/nix-claude-code` `data/permissions` (tool permissions), `dryvist/claude-code-plugins` (commands,
 skills, agents, hooks).
 
-**Delegation (binding).** Session start reports `codex-quota`. While it exits 0, every delegate runs on Codex, newest
-Luna, xhigh; never Haiku. Architecture, security and planning
-judgment → Sonnet latest (Opus latest only when truly needed). Codex exhausted: public-repo code, implementation and
-review → ZCode → Haiku; everything else → Haiku. Never cap the number of delegates; hold back
-only while machine load is above 80%. The `jpe-ai-delegation` router enforces
-this; brief per `brief-delegates`; details in `model-delegation.md`.
+**Delegation (binding).** Before spawning any delegate, read and follow [model-delegation.md](agentsmd/rules/on-demand/model-delegation.md).

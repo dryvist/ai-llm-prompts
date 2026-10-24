@@ -6,7 +6,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/projects-brief"
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-24T08:56:24-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -119,7 +119,7 @@ only from the repository's own lockfile or dev shell.
 
 - Launch all independent, ready threads in parallel; sequence only for real dependencies or same-file conflicts.
   Confirm thread creation works before the first fan-out; if it fails, take the solo path.
-- Follow [`AGENTS.md`](../AGENTS.md) for delegated-work routing.
+- Follow [model-delegation.md](rules/on-demand/model-delegation.md) for delegated-work routing.
 - Before calling work done, run the repository's own checks (pre-commit, tests, linters) and paste the summary lines.
   A cloud thread cannot fetch Nix flake inputs, so it runs the same checks with the tools it has, says which ran
   outside the dev shell, and leaves the dev-shell run to CI.

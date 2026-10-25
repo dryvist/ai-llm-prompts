@@ -6,7 +6,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/projects-brief"
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-24T08:56:24-04:00"
+timestamp: "2026-10-25T13:24:22-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -75,7 +75,8 @@ system, privileged rebuilds, and every infrastructure converge or apply. When a 
 
 ## Git and pull requests
 
-- Branch `feature/<sid8>-<slug>` from the repository's default branch and target it. `<sid8>` is the first 8
+- Branch `<type>/<sid8>-<slug>` from the repository's default branch and target it. `<type>` is the
+  Conventional Commits type (`feat`, `fix`, …). `<sid8>` is the first 8
   characters after `cse_` in `CLAUDE_CODE_REMOTE_SESSION_ID`, or of the local session ID.
 - Open a ready PR at your first commit; never a draft. The open PR is your claim on the work; check for an open PR
   on the same change before you start.

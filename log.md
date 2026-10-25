@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-10-25
+
+* **Update (auto-ai-agent/instructions)**: Branch names start with their Conventional Commits type (`feat/`, `fix/`, …) on
+  trunk and git-flow repos alike; `feature/` is retired.
+
 ## 2026-10-24
 
 * **Update (auto-ai-agent/instructions)**: `git-flow.md` starts and syncs branches with Git Town by rebase and drops git-flow-next.

@@ -42,7 +42,7 @@ or `git remote show origin`).
 | --- | --- | --- |
 | `main` | Production. Protected; no direct pushes. | **Merge commits only** — squash and rebase into `main` are banned, with no exceptions |
 | `develop` | Default integration branch. Protected; no direct pushes. | Squash-merged PRs, including the release PR; a merge commit only for a PR from a hotfix branch |
-| `<type>/*` | One change's work; `<type>` is its Conventional Commits type (`feat`, `fix`, `docs`, …), never `feature` | Branched from fresh `develop` |
+| `<type>/*` | One change's work; `<type>` is its Conventional Commits type, never `feature` | Branched from fresh `develop` |
 | `hotfix/*` | Urgent production fix | Branched from `main`; PR to `main`, merge commit; then a PR from the hotfix branch (never `main`) to `develop`, merge commit |
 
 `main` is never merged back into `develop`. Stabilization fixes land on `develop` through
@@ -98,15 +98,11 @@ signal. This check applies to git-flow repos only; a trunk repo has no `develop`
    never check a feature branch out at the root.
 2. Start the feature branch there with `git town hack <name>`, or let the
    harness worktree create it. Git Town fetches first and bases the branch on
-   the fresh tip of `git-town.main-branch` (`develop` here). Branch names carry
-   the Conventional Commits type and the session id (see the
-   session-coordination rule): `<type>/<issue>-<sid8>-<slug>`, e.g.
-   `git town hack fix/123-03a3a401-inventory-loader`. Git Town adds no
-   prefix, so pass the full name. The worktree dir matches the name after the
-   `/`. This makes branch and worktree names unique
-   per session — two sessions can never collide on either. Never invent an
-   issue number; for issue-less maintenance drop that segment
-   (`<sid8>-<slug>`). **One session, one branch**: never commit to or push
+   the fresh tip of `git-town.main-branch` (`develop` here). Pass the full
+   name, `<type>/<issue>-<sid8>-<slug>` (session id: session-coordination
+   rule), e.g. `git town hack fix/123-03a3a401-inventory-loader`; the worktree
+   dir is the part after `/`. Names are thus unique per session. Never invent
+   an issue number; without one, drop that segment. **One session, one branch**: never commit to or push
    another session's branch.
 3. Commit **atomically**: one fix, one feature, or one coherent section of
    updates per commit — never a grab-bag. Follow Conventional Commits.

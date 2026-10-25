@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-18T08:44:13-04:00"
+timestamp: "2026-10-25T13:24:22-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -80,7 +80,7 @@ Before starting on an issue, bug, or feature:
 
 ## One session, one branch
 
-Branches follow `feature/<issue>-<sid8>-<slug>` (see the git-flow rule).
+Branches follow `<type>/<issue>-<sid8>-<slug>`, `<type>` being the Conventional Commits type (see the git-flow rule).
 Never check out, commit to, or push another session's branch. This makes
 git-level push races structurally impossible; there are no git locks to take.
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.2](https://github.com/dryvist/ai-llm-prompts/compare/v1.25.1...v1.25.2) (2026-10-25)
+
+
+### Bug Fixes
+
+* **instructions:** name branches by Conventional Commits type ([#148](https://github.com/dryvist/ai-llm-prompts/issues/148)) ([ed93f2a](https://github.com/dryvist/ai-llm-prompts/commit/ed93f2a8c6fcc5ac1f400ffcf15750e244b36d5b))
+
 ## [1.25.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.25.0...v1.25.1) (2026-10-24)
 
 

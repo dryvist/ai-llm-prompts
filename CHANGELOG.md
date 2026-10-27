@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.3](https://github.com/dryvist/ai-llm-prompts/compare/v1.25.2...v1.25.3) (2026-10-27)
+
+
+### Bug Fixes
+
+* **instructions:** start branches with git town hack ([#150](https://github.com/dryvist/ai-llm-prompts/issues/150)) ([f02f634](https://github.com/dryvist/ai-llm-prompts/commit/f02f63485611932db234d28c07a4cbef9b476bcc))
+
 ## [1.25.2](https://github.com/dryvist/ai-llm-prompts/compare/v1.25.1...v1.25.2) (2026-10-25)
 
 

@@ -6,7 +6,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/AGENTS"
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-24T08:56:24-04:00"
+timestamp: "2026-10-26T20:40:53-04:00"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -33,7 +33,7 @@ hooks, Actions); (5) prior art: `/github-code-search` (thousands of hits is idio
 mistake), context7, registries; (6) a standardized public repo. Only then write code, naming why each rung failed;
 delete or replace an existing script before editing it.
 
-Git workflow: never edit on the default branch — `/refresh-repo`, then a new worktree. `develop` default branch →
+Git workflow: never edit on the default branch — start a worktree with `git town hack`. `develop` default branch →
 [git-flow](agentsmd/rules/on-demand/git-flow.md): PRs target `develop` (squash-merge), `develop` → `main` by
 merge commit only. Otherwise trunk flow. Always **atomic commits**, one fix/feature/section per commit. Load
 the on-demand rule for the activity — `rule-tiers.md` is the index. Instruction-behavior changes are `feat:`/`fix:`,

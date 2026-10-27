@@ -1,5 +1,9 @@
 # Change Log
 
+## 2026-10-26
+
+* **Update (auto-ai-agent/instructions)**: `AGENTS.md` starts branches with `git town hack` instead of `/refresh-repo`.
+
 ## 2026-10-25
 
 * **Update (auto-ai-agent/instructions)**: Branch names start with their Conventional Commits type (`feat/`, `fix/`, …) on

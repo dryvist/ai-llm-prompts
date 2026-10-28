@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.4](https://github.com/dryvist/ai-llm-prompts/compare/v1.25.3...v1.25.4) (2026-10-28)
+
+
+### Bug Fixes
+
+* agents hold PRs with draft or human:review and never arm auto-merge ([#147](https://github.com/dryvist/ai-llm-prompts/issues/147)) ([d821ee9](https://github.com/dryvist/ai-llm-prompts/commit/d821ee9dec29970e2268c2b9947af806fc4f9b98))
+
 ## [1.25.3](https://github.com/dryvist/ai-llm-prompts/compare/v1.25.2...v1.25.3) (2026-10-27)
 
 

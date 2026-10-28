@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.26.0...v1.26.1) (2026-10-28)
+
+
+### Bug Fixes
+
+* **delegation:** state what a Codex worker cannot do in its sandbox ([#155](https://github.com/dryvist/ai-llm-prompts/issues/155)) ([e83989d](https://github.com/dryvist/ai-llm-prompts/commit/e83989da63ac9e169863864e38d56eb1fe6d031d))
+
 ## [1.26.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.25.4...v1.26.0) (2026-10-28)
 
 

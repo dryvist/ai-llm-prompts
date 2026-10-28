@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.25.4...v1.26.0) (2026-10-28)
+
+
+### Features
+
+* **delegation:** document widening a blocked Codex worker ([#153](https://github.com/dryvist/ai-llm-prompts/issues/153)) ([4eb2d2c](https://github.com/dryvist/ai-llm-prompts/commit/4eb2d2cf29a8e21366fa0d3a99da381e69536995))
+
 ## [1.25.4](https://github.com/dryvist/ai-llm-prompts/compare/v1.25.3...v1.25.4) (2026-10-28)
 
 

@@ -119,10 +119,9 @@ signal. This check applies to git-flow repos only; a trunk repo has no `develop`
 6. **Every change to `develop` goes through a PR** — the org ruleset enforces
    it, so a direct push is rejected (`GH013: Repository rule violations`).
    Never plan a "quick direct commit" to `develop`; branch and open a PR.
-7. **Merging**: `gh pr merge <n> --squash` is rejected with "the base branch
-   policy prohibits the merge" while required checks are still settling. Use
-   `gh pr merge <n> --squash --auto` — it merges as soon as the policy is
-   satisfied. The same applies to `--merge` on promotion PRs.
+7. **Merging**: The org `pr-automerge` workflow arms non-draft PRs without
+   `human:review`, never a `develop` to `main` promotion. Agents never arm
+   auto-merge; a draft or `human:review` holds a PR.
 
 ## Bot-owned files in rebases and merges
 

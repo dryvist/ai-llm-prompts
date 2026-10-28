@@ -122,9 +122,8 @@ signal. This check applies to git-flow repos only; a trunk repo has no `develop`
    it, so a direct push is rejected (`GH013: Repository rule violations`).
    Never plan a "quick direct commit" to `develop`; branch and open a PR.
 7. **Merging**: The org `pr-automerge` workflow arms non-draft PRs without
-   `human:review`. It uses a merge commit for `main` on git-flow repos and
-   squash otherwise. It never arms `develop` to `main` promotions. Keep a PR as
-   a draft or add `human:review` when it must wait. Agents never arm auto-merge.
+   `human:review`, never a `develop` to `main` promotion. Agents never arm
+   auto-merge; a draft or `human:review` holds a PR.
 
 ## Bot-owned files in rebases and merges
 

@@ -53,9 +53,11 @@ only for the named blocker:
 
 | Blocker | Lead adds |
 | --- | --- |
-| Write outside the working directory (another repo, a worktree's `.git`, the scratchpad) | `-C <worktree>` and one `--add-dir` per directory |
-| GitHub fetch, push or API | `GH_TOKEN` and `GITHUB_TOKEN` minted for that one repo in the subshell, plus `ignore_default_excludes=true`, because Codex strips `*TOKEN*` variables by default |
+| Write outside the working directory (another repo, the scratchpad) | `-C <worktree>` and one `--add-dir` per directory |
+| Git writes (`fetch`, `rebase`, `commit`, `push`) | Nothing: the sandbox protects `.git`, even a directory listed with `--add-dir`. The worker edits files and leaves them uncommitted; the lead runs every git write |
+| GitHub fetch, push or API | `GH_TOKEN` and `GITHUB_TOKEN` minted for that one repo in the subshell, plus `ignore_default_excludes=true`, because Codex strips `*TOKEN*` variables by default. The worker reads GitHub content through `gh api`, because `raw.githubusercontent.com` is blocked |
 | Another internal service | One short-lived, narrowly scoped credential in one variable, minted the same way. Writes to trackers and incidents stay with the lead's own tools |
+| Host state (process list, `launchctl`, `sysctl`) or a build tool such as `nix` | The lead runs the probe or the build. A repo's own `AGENTS.md` may tell the worker to use `nix`; the brief says not to, because the call stalls on the cache write |
 | A blocked network domain | The proxy allowlist in nix config, not a per-run flag |
 | Everything else | `-s danger-full-access` only after the operator approves it for this step |
 

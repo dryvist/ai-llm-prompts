@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.27.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.26.1...v1.27.0) (2026-10-29)
+
+
+### Features
+
+* **operating-core:** schedule off the round clock ([#157](https://github.com/dryvist/ai-llm-prompts/issues/157)) ([c7688de](https://github.com/dryvist/ai-llm-prompts/commit/c7688ded37294bd850323d4d73bd2f79febb2a68))
+
 ## [1.26.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.26.0...v1.26.1) (2026-10-28)
 
 

@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-25T13:24:22-04:00"
+timestamp: "2026-10-29T22:50:32Z"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -44,6 +44,9 @@ or `git remote show origin`).
 | `develop` | Default integration branch. Protected; no direct pushes. | Squash-merged PRs, including the release PR; a merge commit only for a PR from a hotfix branch |
 | `<type>/*` | One change's work; `<type>` is its Conventional Commits type, never `feature` | Branched from fresh `develop` |
 | `hotfix/*` | Urgent production fix | Branched from `main`; PR to `main`, merge commit; then a PR from the hotfix branch (never `main`) to `develop`, merge commit |
+
+Main Source Gate allows only `develop` or same-repo `hotfix/*` into
+`main`; all other source branches are blocked.
 
 `main` is never merged back into `develop`. Stabilization fixes land on `develop` through
 ordinary PRs.

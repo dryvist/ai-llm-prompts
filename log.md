@@ -1,5 +1,9 @@
 # Change Log
 
+## 2026-10-29
+
+* **Update (auto-ai-agent/instructions)**: `git-flow.md` states the Main Source Gate allow-list for merges into `main`.
+
 ## 2026-10-26
 
 * **Update (auto-ai-agent/instructions)**: `AGENTS.md` starts branches with `git town hack` instead of `/refresh-repo`.

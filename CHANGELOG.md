@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.28.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.27.1...v1.28.0) (2026-10-29)
+
+
+### Features
+
+* **git-flow:** document Main Source Gate allow-list ([#161](https://github.com/dryvist/ai-llm-prompts/issues/161)) ([b25f737](https://github.com/dryvist/ai-llm-prompts/commit/b25f737b9ed2ac764c0ac45b143a1e7eb5f4aa96))
+
 ## [1.27.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.27.0...v1.27.1) (2026-10-29)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.27.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.27.0...v1.27.1) (2026-10-29)
+
+
+### Bug Fixes
+
+* **rules:** native schedule skew satisfies the schedule rule ([#159](https://github.com/dryvist/ai-llm-prompts/issues/159)) ([0e4ed84](https://github.com/dryvist/ai-llm-prompts/commit/0e4ed842d203e8a4f5e2c4af4acf4b3147a461c1))
+
 ## [1.27.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.26.1...v1.27.0) (2026-10-29)
 
 

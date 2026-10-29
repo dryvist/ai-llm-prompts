@@ -45,8 +45,8 @@ or `git remote show origin`).
 | `<type>/*` | One change's work; `<type>` is its Conventional Commits type, never `feature` | Branched from fresh `develop` |
 | `hotfix/*` | Urgent production fix | Branched from `main`; PR to `main`, merge commit; then a PR from the hotfix branch (never `main`) to `develop`, merge commit |
 
-On git-flow repositories an enterprise ruleset (the Main Source Gate check) lets only
-`develop`, or a `hotfix/*` branch of the same repository, merge into `main`; any other head is blocked.
+Main Source Gate allows only `develop` or same-repo `hotfix/*` into
+`main`; all other source branches are blocked.
 
 `main` is never merged back into `develop`. Stabilization fixes land on `develop` through
 ordinary PRs.

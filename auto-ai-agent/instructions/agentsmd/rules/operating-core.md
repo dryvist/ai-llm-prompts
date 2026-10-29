@@ -44,11 +44,10 @@ Behavior that applies to every task (always-loaded status: `rule-tiers.md`). Com
   output safe. Check a variable with a presence test, or print names only.
 - **Measure.** Warm before you measure — the first run carries cold-start cost; one noisy sample is an
   anecdote, replicate before concluding.
-- **Schedules.** Never schedule a job, timer, snapshot, replication, backup, poll, CI cron or maintenance window
-  at :00, :15, :30, :45 or an exact hour/midnight start. Pick an odd minute (and a second where the tool allows),
-  and spread each class across its allowed window so CPU, disk and network load stay flat. Use a fixed per-host/job
-  offset or a hash of the job name; prefer native `RandomizedDelaySec`/`FixedRandomDelay`, template minute fields
-  and cron offsets over scripts. Declare offsets in the source of truth, never by hand; add no scheduler layer.
+- **Schedules.** Nothing starts exactly on :00, :15, :30 or :45, or at an exact hour or midnight.
+  If the tool has native skew, use it and keep the nominal time: systemd `RandomizedDelaySec` with
+  `FixedRandomDelay=true`, or Splunk `allow_skew`. If it has none (cron, Proxmox jobs, GitHub Actions), set an odd
+  minute. Keep the skew inside the job's window. Declare it in the source of truth; add no scripts.
 - **Autonomy** (reversibility gates it): small/reversible/local — just do it, commit when the task calls for
   it. Destructive/externally visible (delete, force-push, live-infra converge): confirm first unless durably
   authorized. Never disable the check that caught a blocker to route around it. A denial binds to the action,

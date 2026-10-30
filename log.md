@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-10-30
+
+* **Update (auto-ai-agent/instructions)**: `model-delegation.md` uses configured Herdr for agent work and declares
+  remote targeting, explicit harness fallback, and unchanged routing and authority gates.
+
 ## 2026-10-29
 
 * **Update (auto-ai-agent/instructions)**: `git-flow.md` states the Main Source Gate allow-list for merges into `main`.

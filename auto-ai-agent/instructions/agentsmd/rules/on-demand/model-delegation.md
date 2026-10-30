@@ -7,7 +7,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-24T08:56:24-04:00"
+timestamp: "2026-10-30T01:44:55Z"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -23,9 +23,19 @@ source_history:
 
 Canonical doctrine and routing: `prompt://dryvist/auto-ai-agent/model-delegation`.
 
-Session start reports `codex-quota`. Delegate through the harness Agent tool; while `codex-quota` exits 0,
-the delegation hook sends the task to Codex. Confirm in the delegate log that it ran on a Codex model,
-never Haiku. The agent hook denies `codex exec` from a tool shell unless stdin comes from a prompt file.
+Use configured Herdr by default for cross-agent and background agent work. Read the official Herdr skill
+matching the selected server release and follow it. This rule authorizes targeting an explicitly configured
+saved machine with `--machine`, or a configured `--remote` target, even when work started outside Herdr; this
+authorization differs from the 0.9.5 skill's inside-pane-only condition for that target. Keep its other safety
+checks; do not fabricate `HERDR_ENV`. Do not infer a target, start a local server, or silently change execution
+location when the selected target is unavailable; report the failure.
+
+If Herdr is not configured or available, state that and use the harness Agent tool as the fallback. Disclose
+the fallback location; if it is not already authorized, ask before launching work there. Apply the same routing,
+content eligibility, credential, read-only, and approval rules on either path; Herdr does not grant new authority.
+Session start reports `codex-quota`. While `codex-quota` exits 0, use Codex for eligible delegated work; in the
+harness fallback, the delegation hook routes it. Confirm the actual delegate used a Codex model, never Haiku.
+The agent hook denies `codex exec` from a tool shell unless stdin comes from a prompt file.
 
 Architecture, security and planning judgment route to latest Sonnet (latest Opus only when truly needed). When Codex
 is exhausted, public-repo code, implementation and review route to ZCode, then Haiku; everything else routes to Haiku.
@@ -85,6 +95,3 @@ Procedures ship as skills in the `ai-delegation` and `jpe-ai-delegation` plugins
 - `openrouter-models` — the spend budget, the free-tier logging caveat, and requesting a model the router lacks.
 
 None depends on Claude Code. The plugin copy is the only authored one; a harness adopting a skill deletes its local copy in the same change.
-
-For bounded, routine subtasks, call `~/.agents/skills/fast-subagent/scripts/fast-subagent.sh` with `LLM_ROUTER_URL` and
-`FAST_SUBAGENT_MODEL`; the lead keeps consequential judgment.

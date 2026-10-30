@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.29.0...v1.29.1) (2026-10-30)
+
+
+### Bug Fixes
+
+* **prompts:** use configured memory for monitoring ([c82d004](https://github.com/dryvist/ai-llm-prompts/commit/c82d0042024f5e07e019e0e4e9a44a3e2d7ce704))
+
 ## [1.29.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.28.0...v1.29.0) (2026-10-30)
 
 

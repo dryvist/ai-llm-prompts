@@ -34,12 +34,12 @@ Prompts for continuously running local agents, shared autonomous behavior, monit
 * [Hermes secrets policy audit](hermes-secrets-policy-audit.md) - Issue-only scan for credential and private-topology leaks, never a pull request.
 * [Hermes direct-cron reporting footer](hermes-direct-cron-footer.md) - Evidence and report-shape contract appended to every direct-cron prompt.
 * [Hermes direct-cron footer, quiet when healthy](hermes-direct-cron-footer-quiet.md) - Same contract for a job whose all-clear goes to a quiet channel.
-* [Hermes service pulse](hermes-service-pulse.md) - Hourly service pulse that learns its baselines, flaky list and thresholds in Hindsight between runs.
+* [Hermes service pulse](hermes-service-pulse.md) - Hourly service pulse that keeps compact baselines and a flaky list in the available memory.
 * [Hermes Splunk deep dive](hermes-splunk-deepdive.md) - Quiet Splunk index or sourcetype characterization prompt.
 * [Hermes Splunk digest](hermes-splunk-digest.md) - Hourly delta-aware Splunk status digest prompt.
 * [Hermes Splunk license audit](hermes-splunk-license.md) - Two-hourly Splunk audit of system messages, health report and license usage, learning in Hindsight.
 * [Hermes Splunk parsing sweep](hermes-splunk-parsing.md) - Bounded Splunk data-quality monitoring prompt.
-* [Hermes Splunk platform health](hermes-splunk-health.md) - Two-hourly open-ended review of Splunk's own health, including license, learning in Hindsight.
+* [Hermes Splunk platform health](hermes-splunk-health.md) - Two-hourly Splunk health review with compact memory baselines.
 * [Hermes Splunk security sweep](hermes-splunk-security.md) - Bounded Splunk security-lens monitoring prompt.
 * [Hermes Zammad review](hermes-zammad-review.md) - Proactive open-incident lifecycle sweep across all Zammad queues.
 * [Hermes Splunk triage](hermes-splunk-triage.md) - Broad bounded Splunk anomaly-sweep prompt.

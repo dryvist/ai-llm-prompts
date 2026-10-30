@@ -2,6 +2,7 @@
 
 ## 2026-10-30
 
+* **Update (auto-ai-agent)**: Service-pulse and Splunk-health prompts use the active memory provider and configured probes.
 * **Update (auto-ai-agent/instructions)**: `model-delegation.md` uses configured Herdr for agent work and declares
   remote targeting, explicit harness fallback, and unchanged routing and authority gates.
 

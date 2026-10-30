@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.28.0...v1.29.0) (2026-10-30)
+
+
+### Features
+
+* use configured Herdr for agent orchestration ([#163](https://github.com/dryvist/ai-llm-prompts/issues/163)) ([0a90b84](https://github.com/dryvist/ai-llm-prompts/commit/0a90b846b9495f48df483b8a0e747d40f60a194c))
+
 ## [1.28.0](https://github.com/dryvist/ai-llm-prompts/compare/v1.27.1...v1.28.0) (2026-10-29)
 
 

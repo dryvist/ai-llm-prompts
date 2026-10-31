@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-10-31
+
+* **Update (auto-ai-agent/instructions)**: `AGENTS.md` states the one delegation routing order: Codex, zcode-job sandbox,
+  Z.ai GLM, OpenCode Go, then Haiku `xhigh`. `model-delegation.md` keeps CLI procedure and links to it.
+
 ## 2026-10-30
 
 * **Update (auto-ai-agent)**: Service-pulse and Splunk-health prompts use the active memory provider and configured probes.

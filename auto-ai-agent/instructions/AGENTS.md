@@ -6,7 +6,7 @@ resource: "prompt://dryvist/auto-ai-agent/instructions/AGENTS"
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-26T20:40:53-04:00"
+timestamp: "2026-10-31T18:17:15Z"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -66,4 +66,23 @@ Repo boundaries: `dryvist/ai-llm-prompts` `auto-ai-agent/instructions` (rules, `
 `dryvist/nix-claude-code` `data/permissions` (tool permissions), `dryvist/claude-code-plugins` (commands,
 skills, agents, hooks).
 
-**Delegation (binding).** Before spawning any delegate, read and follow [model-delegation.md](agentsmd/rules/on-demand/model-delegation.md).
+**Delegation routing (binding, the only routing statement).** Route each delegated task to the first rung that qualifies.
+Check `codex-quota` first.
+
+1. **Codex**, while `codex-quota` exits 0. Pick the model by class:
+   - bulk, reads and triage: Luna `xhigh`.
+   - bulk work that is still somewhat complicated: Luna `max`.
+   - auth, secrets, router, memory and cluster work: Luna `max`. Name `[class: bulk-complex]` in the description.
+   - standard implementation: Terra `medium`.
+   - complex work, plan, and design or architecture review: Terra `high`.
+   Never Terra above `high`, never Luna above `max`.
+2. **zcode-job sandbox**, while Codex is capped. Coding tasks only. Public repos qualify. A private repo qualifies only when
+   it has the repo property `ai-untrusted-ok=true` and its payload passes classification before dispatch. The output is a
+   ready PR labelled `human:review`. Leak-scan it before merge. Never auto-merge it.
+3. **Z.ai GLM**, then **OpenCode Go**, while Codex is capped.
+4. **Haiku `xhigh`**, the last resort, only when rungs 1 to 3 do not qualify.
+
+Never Sonnet, Opus, or Fable subagents. Never send secrets, credentials, inventory, or incident content to any executor.
+Antigravity (`agy`, Gemini 3.8 Flash) is a second-opinion reviewer, not an executor. Use it on high-risk diffs in public or
+trusted repos; its call is in the `jpe-ai-delegation` plugin's `delegation-ladder` skill. The Codex CLI procedure is in
+[model-delegation.md](agentsmd/rules/on-demand/model-delegation.md). That plugin's skill and hook implement this order.

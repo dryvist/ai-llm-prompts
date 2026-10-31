@@ -1,13 +1,13 @@
 ---
 name: model-delegation
-description: Routing rules for delegated work across Codex, Claude, and the model router
+description: CLI procedure for delegated work through Codex, with the routing order defined in AGENTS.md
 type: LLM Prompt
 title: "Model delegation"
 resource: "prompt://dryvist/auto-ai-agent/instructions/agentsmd/rules/on-demand/model-delegation"
 tags:
   - shared-instructions
   - agent-instructions
-timestamp: "2026-10-30T01:44:55Z"
+timestamp: "2026-10-31T18:17:15Z"
 status: active
 consumers:
   - dryvist/nix-ai
@@ -21,7 +21,7 @@ source_history:
 
 # Model delegation
 
-Canonical doctrine and routing: `prompt://dryvist/auto-ai-agent/model-delegation`.
+Routing order: [AGENTS.md](../../../AGENTS.md), "Delegation routing". Shared delegation doctrine: `prompt://dryvist/auto-ai-agent/model-delegation`.
 
 Use configured Herdr by default for cross-agent and background agent work. Read the official Herdr skill
 matching the selected server release and follow it. This rule authorizes targeting an explicitly configured
@@ -33,12 +33,9 @@ location when the selected target is unavailable; report the failure.
 If Herdr is not configured or available, state that and use the harness Agent tool as the fallback. Disclose
 the fallback location; if it is not already authorized, ask before launching work there. Apply the same routing,
 content eligibility, credential, read-only, and approval rules on either path; Herdr does not grant new authority.
-Session start reports `codex-quota`. While `codex-quota` exits 0, use Codex for eligible delegated work; in the
-harness fallback, the delegation hook routes it. Confirm the actual delegate used a Codex model, never Haiku.
+Session start reports `codex-quota`. The routing order is in [AGENTS.md](../../../AGENTS.md), under "Delegation
+routing"; this file covers CLI procedure only. While `codex-quota` exits 0, the delegate must be a Codex model.
 The agent hook denies `codex exec` from a tool shell unless stdin comes from a prompt file.
-
-Architecture, security and planning judgment route to latest Sonnet (latest Opus only when truly needed). When Codex
-is exhausted, public-repo code, implementation and review route to ZCode, then Haiku; everything else routes to Haiku.
 
 When a runtime must call the Codex CLI directly (sandbox entrypoints or the router itself), pass the prompt as `-`
 with finite stdin, or as a positional argument with stdin closed (`</dev/null`); always set `-o <file>`. Treat a

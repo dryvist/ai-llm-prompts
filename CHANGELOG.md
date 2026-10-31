@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.2](https://github.com/dryvist/ai-llm-prompts/compare/v1.29.1...v1.29.2) (2026-10-31)
+
+
+### Bug Fixes
+
+* **instructions:** state one delegation routing order in AGENTS.md ([#167](https://github.com/dryvist/ai-llm-prompts/issues/167)) ([7cd3f95](https://github.com/dryvist/ai-llm-prompts/commit/7cd3f950da361381be233ffd09b3584e88c57fa0))
+
 ## [1.29.1](https://github.com/dryvist/ai-llm-prompts/compare/v1.29.0...v1.29.1) (2026-10-30)
 
 
